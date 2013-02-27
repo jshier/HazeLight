@@ -23,7 +23,6 @@
 		31ECF78816DDD7FA002BF567 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31ECF75F16DDD7FA002BF567 /* UIKit.framework */; };
 		31ECF78916DDD7FA002BF567 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31ECF76116DDD7FA002BF567 /* Foundation.framework */; };
 		31ECF79116DDD7FA002BF567 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 31ECF78F16DDD7FA002BF567 /* InfoPlist.strings */; };
-		31ECF79416DDD7FA002BF567 /* iCloudFlareTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 31ECF79316DDD7FA002BF567 /* iCloudFlareTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,8 +58,6 @@
 		31ECF78616DDD7FA002BF567 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		31ECF78E16DDD7FA002BF567 /* iCloudFlareTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iCloudFlareTests-Info.plist"; sourceTree = "<group>"; };
 		31ECF79016DDD7FA002BF567 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		31ECF79216DDD7FA002BF567 /* iCloudFlareTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iCloudFlareTests.h; sourceTree = "<group>"; };
-		31ECF79316DDD7FA002BF567 /* iCloudFlareTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iCloudFlareTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,8 +146,6 @@
 		31ECF78C16DDD7FA002BF567 /* iCloudFlareTests */ = {
 			isa = PBXGroup;
 			children = (
-				31ECF79216DDD7FA002BF567 /* iCloudFlareTests.h */,
-				31ECF79316DDD7FA002BF567 /* iCloudFlareTests.m */,
 				31ECF78D16DDD7FA002BF567 /* Supporting Files */,
 			);
 			path = iCloudFlareTests;
@@ -287,7 +282,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				31ECF79416DDD7FA002BF567 /* iCloudFlareTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,6 +454,7 @@
 				31ECF79916DDD7FA002BF567 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		31ECF79A16DDD7FA002BF567 /* Build configuration list for PBXNativeTarget "iCloudFlareTests" */ = {
 			isa = XCConfigurationList;
@@ -468,6 +463,7 @@
 				31ECF79C16DDD7FA002BF567 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
