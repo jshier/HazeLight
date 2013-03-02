@@ -7,12 +7,13 @@
 //
 
 #import "ICFMasterViewController.h"
-
 #import "ICFDetailViewController.h"
+#import "ICFUser.h"
+#import "ICFAddUserViewController.h"
 
 @interface ICFMasterViewController ()
 
-@property (strong, nonatomic) NSMutableArray *objects;
+@property (strong, nonatomic) NSMutableArray *users;
 
 @end
 
@@ -28,9 +29,6 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
-
-    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
-    self.navigationItem.rightBarButtonItem = addButton;
 }
 
 - (void)didReceiveMemoryWarning
@@ -39,14 +37,19 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)insertNewObject:(id)sender
+- (IBAction)addNewUser:(UIStoryboardSegue *)segue
 {
-    if (!self.objects) {
-        self.objects = [[NSMutableArray alloc] init];
+    if (!self.users) {
+        self.users = [[NSMutableArray alloc] init];
     }
-    [self.objects insertObject:[NSDate date] atIndex:0];
+    ICFAddUserViewController *addUserController = [segue sourceViewController];
+    [self.users insertObject:[[ICFUser alloc] initWithEmail:addUserController.email.text apiKey:addUserController.apiKey.text] atIndex:0];
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
     [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+}
+- (IBAction)cancelAddNewUser:(UIStoryboardSegue *)segue
+{
+    
 }
 
 #pragma mark - Table View
@@ -58,15 +61,14 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.objects.count;
+    return self.users.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
 
-    NSDate *object = self.objects[indexPath.row];
-    cell.textLabel.text = [object description];
+    cell.textLabel.text = ((ICFUser *)self.users[indexPath.row]).email;
     return cell;
 }
 
@@ -79,7 +81,7 @@
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        [self.objects removeObjectAtIndex:indexPath.row];
+        [self.users removeObjectAtIndex:indexPath.row];
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
@@ -106,7 +108,7 @@
 {
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        NSDate *object = self.objects[indexPath.row];
+        NSDate *object = self.users[indexPath.row];
         [[segue destinationViewController] setDetailItem:object];
     }
 }

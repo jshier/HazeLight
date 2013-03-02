@@ -10,4 +10,7 @@
 
 @interface ICFMasterViewController : UITableViewController
 
+- (IBAction)addNewUser:(UIStoryboardSegue *)segue;
+- (IBAction)cancelAddNewUser:(UIStoryboardSegue *)segue;
+
 @end

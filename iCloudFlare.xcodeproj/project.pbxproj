@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3151BF4016E1B02800881A86 /* ICFUserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3151BF3F16E1B02800881A86 /* ICFUserTests.m */; };
 		3151BF4316E1B0AF00881A86 /* ICFUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3151BF4216E1B0AF00881A86 /* ICFUser.m */; };
+		3151BF4616E1C6EC00881A86 /* ICFAddUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3151BF4516E1C6EC00881A86 /* ICFAddUserViewController.m */; };
 		31ECF76016DDD7FA002BF567 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31ECF75F16DDD7FA002BF567 /* UIKit.framework */; };
 		31ECF76216DDD7FA002BF567 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31ECF76116DDD7FA002BF567 /* Foundation.framework */; };
 		31ECF76416DDD7FA002BF567 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31ECF76316DDD7FA002BF567 /* CoreGraphics.framework */; };
@@ -42,6 +43,8 @@
 		3151BF3F16E1B02800881A86 /* ICFUserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICFUserTests.m; sourceTree = "<group>"; };
 		3151BF4116E1B0AF00881A86 /* ICFUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICFUser.h; sourceTree = "<group>"; };
 		3151BF4216E1B0AF00881A86 /* ICFUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICFUser.m; sourceTree = "<group>"; };
+		3151BF4416E1C6EC00881A86 /* ICFAddUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICFAddUserViewController.h; sourceTree = "<group>"; };
+		3151BF4516E1C6EC00881A86 /* ICFAddUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICFAddUserViewController.m; sourceTree = "<group>"; };
 		31ECF75C16DDD7FA002BF567 /* iCloudFlare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iCloudFlare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31ECF75F16DDD7FA002BF567 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		31ECF76116DDD7FA002BF567 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -130,6 +133,8 @@
 				31ECF77B16DDD7FA002BF567 /* ICFMasterViewController.m */,
 				31ECF77D16DDD7FA002BF567 /* ICFDetailViewController.h */,
 				31ECF77E16DDD7FA002BF567 /* ICFDetailViewController.m */,
+				3151BF4416E1C6EC00881A86 /* ICFAddUserViewController.h */,
+				3151BF4516E1C6EC00881A86 /* ICFAddUserViewController.m */,
 				3151BF4116E1B0AF00881A86 /* ICFUser.h */,
 				3151BF4216E1B0AF00881A86 /* ICFUser.m */,
 				31ECF76616DDD7FA002BF567 /* Supporting Files */,
@@ -286,6 +291,7 @@
 				31ECF77C16DDD7FA002BF567 /* ICFMasterViewController.m in Sources */,
 				31ECF77F16DDD7FA002BF567 /* ICFDetailViewController.m in Sources */,
 				3151BF4316E1B0AF00881A86 /* ICFUser.m in Sources */,
+				3151BF4616E1C6EC00881A86 /* ICFAddUserViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
