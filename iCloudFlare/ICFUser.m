@@ -10,4 +10,15 @@
 
 @implementation ICFUser
 
+- (id)initWithEmail:(NSString *)email apiKey:(NSString *)apiKey
+{
+    if ((self = [super init]))
+    {
+        _email = email;
+        _apiKey = apiKey;
+    }
+
+    return self;
+}
+
 @end
