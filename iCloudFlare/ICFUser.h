@@ -10,8 +10,8 @@
 
 @interface ICFUser : NSObject
 
-@property (weak, nonatomic, readonly) NSString *email;
-@property (weak, nonatomic, readonly) NSString *apiKey;
+@property (nonatomic, readonly) NSString *email;
+@property (nonatomic, readonly) NSString *apiKey;
 
 - (id)initWithEmail:(NSString *)email apiKey:(NSString *)apiKey;
 
