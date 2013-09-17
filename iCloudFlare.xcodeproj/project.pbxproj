@@ -227,6 +227,11 @@
 				CLASSPREFIX = ICF;
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Jon Shier";
+				TargetAttributes = {
+					31ECF75B16DDD7FA002BF567 = {
+						DevelopmentTeam = 555RUP2XT7;
+					};
+				};
 			};
 			buildConfigurationList = 31ECF75716DDD7FA002BF567 /* Build configuration list for PBXProject "iCloudFlare" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -418,9 +423,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iCloudFlare/iCloudFlare-Prefix.pch";
 				INFOPLIST_FILE = "iCloudFlare/iCloudFlare-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -431,9 +438,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iCloudFlare/iCloudFlare-Prefix.pch";
 				INFOPLIST_FILE = "iCloudFlare/iCloudFlare-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
