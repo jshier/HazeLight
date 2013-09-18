@@ -6,8 +6,8 @@
 //  Copyright (c) 2013 Jon Shier. All rights reserved.
 //
 
-#import <SenTestingKit/SenTestingKit.h>
+#import <XCTest/XCTest.h>
 
-@interface ICFUserTests : SenTestCase
+@interface ICFUserTests : XCTestCase
 
 @end

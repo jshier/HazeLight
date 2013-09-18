@@ -14,19 +14,19 @@
 - (void)testThatUserExists
 {
     ICFUser *user = [[ICFUser alloc] init];
-    STAssertNotNil(user, @"Should be able to create ICFUser instance.");
+    XCTAssertNotNil(user, @"Should be able to create ICFUser instance.");
 }
 
 - (void)testThatUserCanBeCreatedWithEmail
 {
     ICFUser *user = [[ICFUser alloc] initWithEmail:@"email" apiKey:nil];
-    STAssertEqualObjects(user.email, @"email", @"ICFUser should be initialized with email specified.");
+    XCTAssertEqualObjects(user.email, @"email", @"ICFUser should be initialized with email specified.");
 }
 
 - (void)testThatUserCanBeCreatedWithAPIKey
 {
     ICFUser *user = [[ICFUser alloc] initWithEmail:nil apiKey:@"key"];
-    STAssertEqualObjects(user.apiKey, @"key", @"ICFUser should be initialized with API key specified.");
+    XCTAssertEqualObjects(user.apiKey, @"key", @"ICFUser should be initialized with API key specified.");
 }
 
 @end

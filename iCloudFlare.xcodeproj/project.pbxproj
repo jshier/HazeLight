@@ -19,7 +19,6 @@
 		31ECF77916DDD7FA002BF567 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31ECF77716DDD7FA002BF567 /* MainStoryboard.storyboard */; };
 		31ECF77C16DDD7FA002BF567 /* ICFMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31ECF77B16DDD7FA002BF567 /* ICFMasterViewController.m */; };
 		31ECF77F16DDD7FA002BF567 /* ICFDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31ECF77E16DDD7FA002BF567 /* ICFDetailViewController.m */; };
-		31ECF78716DDD7FA002BF567 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31ECF78616DDD7FA002BF567 /* SenTestingKit.framework */; };
 		31ECF78816DDD7FA002BF567 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31ECF75F16DDD7FA002BF567 /* UIKit.framework */; };
 		31ECF78916DDD7FA002BF567 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31ECF76116DDD7FA002BF567 /* Foundation.framework */; };
 		31ECF79116DDD7FA002BF567 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 31ECF78F16DDD7FA002BF567 /* InfoPlist.strings */; };
@@ -62,8 +61,7 @@
 		31ECF77B16DDD7FA002BF567 /* ICFMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ICFMasterViewController.m; sourceTree = "<group>"; };
 		31ECF77D16DDD7FA002BF567 /* ICFDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ICFDetailViewController.h; sourceTree = "<group>"; };
 		31ECF77E16DDD7FA002BF567 /* ICFDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ICFDetailViewController.m; sourceTree = "<group>"; };
-		31ECF78516DDD7FA002BF567 /* iCloudFlareTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iCloudFlareTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		31ECF78616DDD7FA002BF567 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		31ECF78516DDD7FA002BF567 /* iCloudFlareTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iCloudFlareTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		31ECF78E16DDD7FA002BF567 /* iCloudFlareTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iCloudFlareTests-Info.plist"; sourceTree = "<group>"; };
 		31ECF79016DDD7FA002BF567 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -80,7 +78,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				31ECF78716DDD7FA002BF567 /* SenTestingKit.framework in Frameworks */,
 				31ECF78816DDD7FA002BF567 /* UIKit.framework in Frameworks */,
 				31ECF78916DDD7FA002BF567 /* Foundation.framework in Frameworks */,
 			);
@@ -103,7 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				31ECF75C16DDD7FA002BF567 /* iCloudFlare.app */,
-				31ECF78516DDD7FA002BF567 /* iCloudFlareTests.octest */,
+				31ECF78516DDD7FA002BF567 /* iCloudFlareTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -114,7 +111,6 @@
 				31ECF75F16DDD7FA002BF567 /* UIKit.framework */,
 				31ECF76116DDD7FA002BF567 /* Foundation.framework */,
 				31ECF76316DDD7FA002BF567 /* CoreGraphics.framework */,
-				31ECF78616DDD7FA002BF567 /* SenTestingKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -209,8 +205,8 @@
 			);
 			name = iCloudFlareTests;
 			productName = iCloudFlareTests;
-			productReference = 31ECF78516DDD7FA002BF567 /* iCloudFlareTests.octest */;
-			productType = "com.apple.product-type.bundle";
+			productReference = 31ECF78516DDD7FA002BF567 /* iCloudFlareTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -463,7 +459,6 @@
 					"-Wno-objc-interface-ivars",
 					"-Wno-gnu",
 				);
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
 		};
@@ -486,7 +481,6 @@
 					"-Wno-objc-interface-ivars",
 					"-Wno-gnu",
 				);
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
 		};
