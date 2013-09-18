@@ -19,8 +19,6 @@
 		31ECF77916DDD7FA002BF567 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31ECF77716DDD7FA002BF567 /* MainStoryboard.storyboard */; };
 		31ECF77C16DDD7FA002BF567 /* ICFMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31ECF77B16DDD7FA002BF567 /* ICFMasterViewController.m */; };
 		31ECF77F16DDD7FA002BF567 /* ICFDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31ECF77E16DDD7FA002BF567 /* ICFDetailViewController.m */; };
-		31ECF78816DDD7FA002BF567 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31ECF75F16DDD7FA002BF567 /* UIKit.framework */; };
-		31ECF78916DDD7FA002BF567 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31ECF76116DDD7FA002BF567 /* Foundation.framework */; };
 		31ECF79116DDD7FA002BF567 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 31ECF78F16DDD7FA002BF567 /* InfoPlist.strings */; };
 /* End PBXBuildFile section */
 
@@ -47,9 +45,6 @@
 		31E29F321736385D00F3E575 /* ICFCommunicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICFCommunicator.h; sourceTree = "<group>"; };
 		31E29F331736385D00F3E575 /* ICFCommunicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICFCommunicator.m; sourceTree = "<group>"; };
 		31ECF75C16DDD7FA002BF567 /* iCloudFlare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iCloudFlare.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		31ECF75F16DDD7FA002BF567 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		31ECF76116DDD7FA002BF567 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		31ECF76316DDD7FA002BF567 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		31ECF76716DDD7FA002BF567 /* iCloudFlare-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iCloudFlare-Info.plist"; sourceTree = "<group>"; };
 		31ECF76916DDD7FA002BF567 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		31ECF76B16DDD7FA002BF567 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -77,8 +72,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				31ECF78816DDD7FA002BF567 /* UIKit.framework in Frameworks */,
-				31ECF78916DDD7FA002BF567 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,9 +100,6 @@
 		31ECF75E16DDD7FA002BF567 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				31ECF75F16DDD7FA002BF567 /* UIKit.framework */,
-				31ECF76116DDD7FA002BF567 /* Foundation.framework */,
-				31ECF76316DDD7FA002BF567 /* CoreGraphics.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
