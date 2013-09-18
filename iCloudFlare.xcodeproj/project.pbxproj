@@ -13,9 +13,6 @@
 		3151BF4616E1C6EC00881A86 /* ICFAddUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3151BF4516E1C6EC00881A86 /* ICFAddUserViewController.m */; };
 		31E29F311736305600F3E575 /* ICFDomain.m in Sources */ = {isa = PBXBuildFile; fileRef = 31E29F301736305600F3E575 /* ICFDomain.m */; };
 		31E29F341736385D00F3E575 /* ICFCommunicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 31E29F331736385D00F3E575 /* ICFCommunicator.m */; };
-		31ECF76016DDD7FA002BF567 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31ECF75F16DDD7FA002BF567 /* UIKit.framework */; };
-		31ECF76216DDD7FA002BF567 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31ECF76116DDD7FA002BF567 /* Foundation.framework */; };
-		31ECF76416DDD7FA002BF567 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31ECF76316DDD7FA002BF567 /* CoreGraphics.framework */; };
 		31ECF76A16DDD7FA002BF567 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 31ECF76816DDD7FA002BF567 /* InfoPlist.strings */; };
 		31ECF76C16DDD7FA002BF567 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 31ECF76B16DDD7FA002BF567 /* main.m */; };
 		31ECF77016DDD7FA002BF567 /* ICFAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 31ECF76F16DDD7FA002BF567 /* ICFAppDelegate.m */; };
@@ -76,9 +73,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				31ECF76016DDD7FA002BF567 /* UIKit.framework in Frameworks */,
-				31ECF76216DDD7FA002BF567 /* Foundation.framework in Frameworks */,
-				31ECF76416DDD7FA002BF567 /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
