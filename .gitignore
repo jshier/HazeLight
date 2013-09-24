@@ -2,5 +2,4 @@
 .DS_Store
 
 # Xcode user files
-/iCloudFlare.xcodeproj/project.xcworkspace/
-/iCloudFlare.xcodeproj/xcuserdata/
+HazeLight.xcodeproj/project.xcworkspace/xcuserdata
