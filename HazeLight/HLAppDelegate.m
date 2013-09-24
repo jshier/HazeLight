@@ -6,9 +6,9 @@
 //  Copyright (c) 2013 Jon Shier. All rights reserved.
 //
 
-#import "ICFAppDelegate.h"
+#import "HLAppDelegate.h"
 
-@implementation ICFAppDelegate
+@implementation HLAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {

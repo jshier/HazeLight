@@ -6,9 +6,9 @@
 //  Copyright (c) 2013 Jon Shier. All rights reserved.
 //
 
-#import "ICFAddUserViewController.h"
+#import "HLAddUserViewController.h"
 
-@implementation ICFAddUserViewController
+@implementation HLAddUserViewController
 
 - (void)viewWillAppear:(BOOL)animated
 {

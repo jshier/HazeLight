@@ -6,26 +6,26 @@
 //  Copyright (c) 2013 Jon Shier. All rights reserved.
 //
 
-#import "ICFUserTests.h"
-#import "ICFUser.h"
+#import "HLUserTests.h"
+#import "HLUser.h"
 
-@implementation ICFUserTests
+@implementation HLUserTests
 
 - (void)testThatUserExists
 {
-    ICFUser *user = [[ICFUser alloc] init];
+    HLUser *user = [[HLUser alloc] init];
     XCTAssertNotNil(user, @"Should be able to create ICFUser instance.");
 }
 
 - (void)testThatUserCanBeCreatedWithEmail
 {
-    ICFUser *user = [[ICFUser alloc] initWithEmail:@"email" apiKey:nil];
+    HLUser *user = [[HLUser alloc] initWithEmail:@"email" apiKey:nil];
     XCTAssertEqualObjects(user.email, @"email", @"ICFUser should be initialized with email specified.");
 }
 
 - (void)testThatUserCanBeCreatedWithAPIKey
 {
-    ICFUser *user = [[ICFUser alloc] initWithEmail:nil apiKey:@"key"];
+    HLUser *user = [[HLUser alloc] initWithEmail:nil apiKey:@"key"];
     XCTAssertEqualObjects(user.apiKey, @"key", @"ICFUser should be initialized with API key specified.");
 }
 

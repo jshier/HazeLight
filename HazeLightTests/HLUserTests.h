@@ -8,6 +8,6 @@
 
 #import <XCTest/XCTest.h>
 
-@interface ICFUserTests : XCTestCase
+@interface HLUserTests : XCTestCase
 
 @end

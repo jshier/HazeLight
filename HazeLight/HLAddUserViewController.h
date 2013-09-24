@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ICFAddUserViewController : UIViewController <UIAlertViewDelegate>
+@interface HLAddUserViewController : UIViewController <UIAlertViewDelegate>
 
 @property (weak) IBOutlet UITextField *email;
 @property (weak) IBOutlet UITextField *apiKey;

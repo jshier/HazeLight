@@ -8,11 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-#import "ICFAppDelegate.h"
+#import "HLAppDelegate.h"
 
 int main(int argc, char *argv[])
 {
     @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([ICFAppDelegate class]));
+        return UIApplicationMain(argc, argv, nil, NSStringFromClass([HLAppDelegate class]));
     }
 }

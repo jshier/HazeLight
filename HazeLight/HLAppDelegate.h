@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ICFAppDelegate : UIResponder <UIApplicationDelegate>
+@interface HLAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 

@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface ICFUser : NSObject
+@interface HLUser : NSObject
 
 @property (nonatomic, readonly) NSString *email;
 @property (nonatomic, readonly) NSString *apiKey;

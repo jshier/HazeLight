@@ -6,9 +6,9 @@
 //  Copyright (c) 2013 Jon Shier. All rights reserved.
 //
 
-#import "ICFUser.h"
+#import "HLUser.h"
 
-@implementation ICFUser
+@implementation HLUser
 
 - (id)initWithEmail:(NSString *)email apiKey:(NSString *)apiKey
 {

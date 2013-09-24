@@ -8,10 +8,10 @@
 //  Defined from the zone_load_multi response attributes defined in section 3.2 of the CloudFlare API doc. (https://www.cloudflare.com/docs/client-api.html)
 #import <Foundation/Foundation.h>
 
-@class ICFUser;
+@class HLUser;
 
-@interface ICFDomain : NSObject
-@property (nonatomic) ICFUser *user;
+@interface HLDomain : NSObject
+@property (nonatomic) HLUser *user;
 @property (nonatomic) NSString *zoneID;
 @property (nonatomic) NSString *userID;
 @property (nonatomic) NSString *zoneName;

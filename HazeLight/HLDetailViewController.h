@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ICFDetailViewController : UIViewController
+@interface HLDetailViewController : UIViewController
 
 @property (strong, nonatomic) id detailItem;
 

@@ -6,8 +6,8 @@
 //  Copyright (c) 2013 Jon Shier. All rights reserved.
 //
 
-#import "ICFCommunicator.h"
+#import "HLCommunicator.h"
 
-@implementation ICFCommunicator
+@implementation HLCommunicator
 
 @end

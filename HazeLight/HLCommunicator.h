@@ -1,13 +1,13 @@
 //
-//  ICFDomain.m
+//  ICFCommunicator.h
 //  iCloudFlare
 //
 //  Created by Jon Shier on 5/5/13.
 //  Copyright (c) 2013 Jon Shier. All rights reserved.
 //
 
-#import "ICFDomain.h"
+#import <Foundation/Foundation.h>
 
-@implementation ICFDomain
+@interface HLCommunicator : NSObject <NSURLConnectionDataDelegate>
 
 @end

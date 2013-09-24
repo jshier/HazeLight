@@ -6,13 +6,13 @@
 //  Copyright (c) 2013 Jon Shier. All rights reserved.
 //
 
-#import "ICFDetailViewController.h"
+#import "HLDetailViewController.h"
 
-@interface ICFDetailViewController ()
+@interface HLDetailViewController ()
 - (void)configureView;
 @end
 
-@implementation ICFDetailViewController
+@implementation HLDetailViewController
 
 #pragma mark - Managing the detail item
 
