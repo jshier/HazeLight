@@ -11,29 +11,30 @@
 @class HLUser;
 
 @interface HLDomain : NSObject
+
 @property (nonatomic) HLUser *user;
-@property (nonatomic) NSString *zoneID;
-@property (nonatomic) NSString *userID;
-@property (nonatomic) NSString *zoneName;
-@property (nonatomic) NSString *displayName;
-@property (nonatomic) NSString *zoneStatus;
-@property (nonatomic) NSString *zoneMode;
-@property (nonatomic) NSString *hostID;
-@property (nonatomic) NSString *zoneType;
-@property (nonatomic) NSString *hostPubname;
-@property (nonatomic) NSString *hostWebsite;
-@property (nonatomic) NSString *vtxt;
-@property (nonatomic) NSArray *fullQualifiedDNSNames;
-@property (nonatomic) NSString *step;
-@property (nonatomic) NSString *zoneStatusClass;
-@property (nonatomic) NSString *zoneStatusDescription;
-@property (nonatomic) NSArray *nameserverVanityMap;
-@property (nonatomic) NSString *originalRegistrar;
-@property (nonatomic) NSString *originalDNSHost;
-@property (nonatomic) NSArray *originalNameserverNames;
-@property (nonatomic) NSDictionary *properties;
-@property (nonatomic) NSDictionary *confirmationCodes;
-@property (nonatomic) NSArray *allows;
+@property (nonatomic, copy) NSString *zoneID;
+@property (nonatomic, copy) NSString *userID;
+@property (nonatomic, copy) NSString *zoneName;
+@property (nonatomic, copy) NSString *displayName;
+@property (nonatomic, copy) NSString *zoneStatus;
+@property (nonatomic, copy) NSString *zoneMode;
+@property (nonatomic, copy) NSString *hostID;
+@property (nonatomic, copy) NSString *zoneType;
+@property (nonatomic, copy) NSString *hostPubname;
+@property (nonatomic, copy) NSString *hostWebsite;
+@property (nonatomic, copy) NSString *vtxt;
+@property (nonatomic, copy) NSArray *fullQualifiedDNSNames;
+@property (nonatomic, copy) NSString *step;
+@property (nonatomic, copy) NSString *zoneStatusClass;
+@property (nonatomic, copy) NSString *zoneStatusDescription;
+@property (nonatomic, copy) NSArray *nameserverVanityMap;
+@property (nonatomic, copy) NSString *originalRegistrar;
+@property (nonatomic, copy) NSString *originalDNSHost;
+@property (nonatomic, copy) NSArray *originalNameserverNames;
+@property (nonatomic, copy) NSDictionary *properties;
+@property (nonatomic, copy) NSDictionary *confirmationCodes;
+@property (nonatomic, copy) NSArray *allows;
 
 
 @end
