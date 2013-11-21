@@ -1,6 +1,6 @@
 //
-//  ICFAddUserViewController.h
-//  iCloudFlare
+//  HLAddUserViewController.h
+//  HazeLight
 //
 //  Created by Jon Shier on 3/2/13.
 //  Copyright (c) 2013 Jon Shier. All rights reserved.
