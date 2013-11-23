@@ -202,7 +202,7 @@
 		31ECF75416DDD7FA002BF567 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				CLASSPREFIX = ICF;
+				CLASSPREFIX = HL;
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Jon Shier";
 				TargetAttributes = {
