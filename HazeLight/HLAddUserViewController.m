@@ -34,7 +34,7 @@
         }
         
         NSLog(@"Possible API Key: %@", possibleAPIKey);
-        NSLog(@"Key length: %d", [possibleAPIKey length]);
+        NSLog(@"Key length: %lu", (unsigned long)[possibleAPIKey length]);
     }
 }
 

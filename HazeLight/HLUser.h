@@ -12,6 +12,7 @@
 
 @property (nonatomic, readonly) NSString *email;
 @property (nonatomic, readonly) NSString *apiKey;
+@property (nonatomic, copy) NSArray *domains;
 
 - (id)initWithEmail:(NSString *)email apiKey:(NSString *)apiKey;
 

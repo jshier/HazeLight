@@ -19,6 +19,7 @@
 
 - (void)setUp
 {
+    [super setUp];
     _user = [[HLUser alloc] initWithEmail:@"email" apiKey:@"key"];
 }
 

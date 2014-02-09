@@ -13,6 +13,7 @@
 @interface HLDomain : NSObject
 
 @property (nonatomic) HLUser *user;
+@property (nonatomic, copy) NSDictionary *records;
 @property (nonatomic, copy) NSString *zoneID;
 @property (nonatomic, copy) NSString *userID;
 @property (nonatomic, copy) NSString *zoneName;
@@ -35,6 +36,5 @@
 @property (nonatomic, copy) NSDictionary *properties;
 @property (nonatomic, copy) NSDictionary *confirmationCodes;
 @property (nonatomic, copy) NSArray *allows;
-
 
 @end

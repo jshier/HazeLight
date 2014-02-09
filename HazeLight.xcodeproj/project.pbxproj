@@ -20,6 +20,8 @@
 		31A40A9E17F10C6C00F5DE2E /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31A40A9C17F10C6C00F5DE2E /* MainStoryboard.storyboard */; };
 		31E8538517F10CFA003DB9FD /* HLUserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 31E8538417F10CFA003DB9FD /* HLUserTests.m */; };
 		31E8538A17F10D06003DB9FD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 31E8538817F10D06003DB9FD /* InfoPlist.strings */; };
+		31EBBD44184ECC010085B300 /* HLRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 31EBBD43184ECC010085B300 /* HLRecord.m */; };
+		31EBBD46184EE2410085B300 /* HLRecordTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 31EBBD45184EE2410085B300 /* HLRecordTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,9 @@
 		31E8538417F10CFA003DB9FD /* HLUserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = HLUserTests.m; path = HazeLightTests/HLUserTests.m; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		31E8538617F10D01003DB9FD /* HazeLightTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "HazeLightTests-Info.plist"; path = "HazeLightTests/HazeLightTests-Info.plist"; sourceTree = SOURCE_ROOT; };
 		31E8538917F10D06003DB9FD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = HazeLightTests/en.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
+		31EBBD42184ECC010085B300 /* HLRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLRecord.h; sourceTree = SOURCE_ROOT; };
+		31EBBD43184ECC010085B300 /* HLRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLRecord.m; sourceTree = SOURCE_ROOT; };
+		31EBBD45184EE2410085B300 /* HLRecordTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLRecordTests.m; sourceTree = SOURCE_ROOT; };
 		31ECF75C16DDD7FA002BF567 /* HazeLight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HazeLight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31ECF78516DDD7FA002BF567 /* HazeLightTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HazeLightTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -121,6 +126,8 @@
 				31A40A8C17F10C1500F5DE2E /* HLMasterViewController.m */,
 				31A40A8D17F10C1500F5DE2E /* HLUser.h */,
 				31A40A8E17F10C1500F5DE2E /* HLUser.m */,
+				31EBBD42184ECC010085B300 /* HLRecord.h */,
+				31EBBD43184ECC010085B300 /* HLRecord.m */,
 				31ECF76616DDD7FA002BF567 /* Supporting Files */,
 			);
 			name = HazeLight;
@@ -142,6 +149,7 @@
 			children = (
 				314624A1183DB4BD00C2E257 /* HLDomainTests.m */,
 				31E8538417F10CFA003DB9FD /* HLUserTests.m */,
+				31EBBD45184EE2410085B300 /* HLRecordTests.m */,
 				31ECF78D16DDD7FA002BF567 /* Supporting Files */,
 			);
 			name = HazeLightTests;
@@ -274,6 +282,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				31A40A9017F10C1500F5DE2E /* HLAppDelegate.m in Sources */,
+				31EBBD44184ECC010085B300 /* HLRecord.m in Sources */,
 				31A40A9517F10C1500F5DE2E /* HLUser.m in Sources */,
 				31A40A9417F10C1500F5DE2E /* HLMasterViewController.m in Sources */,
 				31A40A9217F10C1500F5DE2E /* HLDetailViewController.m in Sources */,
@@ -290,6 +299,7 @@
 			files = (
 				31E8538517F10CFA003DB9FD /* HLUserTests.m in Sources */,
 				314624A2183DB4BD00C2E257 /* HLDomainTests.m in Sources */,
+				31EBBD46184EE2410085B300 /* HLRecordTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -19,6 +19,7 @@
 
 - (void)setUp
 {
+    [super setUp];
     //FIXME: Need custom intializer for receieved dictionary. Test attributes for now.
     _domain = [[HLDomain alloc] init];
     self.domain.zoneID = @"zoneID";
