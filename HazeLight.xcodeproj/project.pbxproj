@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2888BA9E820949B3AF084933 /* libPods-HazeLightUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 02597190A8D2483EAF5C2E61 /* libPods-HazeLightUITests.a */; };
 		314624A2183DB4BD00C2E257 /* HLTDomainTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 314624A1183DB4BD00C2E257 /* HLTDomainTests.m */; };
+		3171719218AF1DB10099E71D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31DB355218AF14B500255C69 /* XCTest.framework */; };
 		31A40A8F17F10C1500F5DE2E /* HLTAddUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A40A8217F10C1500F5DE2E /* HLTAddUserViewController.m */; };
 		31A40A9017F10C1500F5DE2E /* HLTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A40A8417F10C1500F5DE2E /* HLTAppDelegate.m */; };
 		31A40A9117F10C1500F5DE2E /* HLTCommunicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A40A8617F10C1500F5DE2E /* HLTCommunicator.m */; };
@@ -20,12 +21,8 @@
 		31A40A9917F10C4B00F5DE2E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A40A9817F10C4B00F5DE2E /* main.m */; };
 		31A40A9E17F10C6C00F5DE2E /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31A40A9C17F10C6C00F5DE2E /* MainStoryboard.storyboard */; };
 		31DB355318AF14B500255C69 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31DB355218AF14B500255C69 /* XCTest.framework */; };
-		31DB355518AF14B500255C69 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31DB355418AF14B500255C69 /* Foundation.framework */; };
-		31DB355718AF14B500255C69 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31DB355618AF14B500255C69 /* UIKit.framework */; };
 		31DB355D18AF14B500255C69 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 31DB355B18AF14B500255C69 /* InfoPlist.strings */; };
 		31DB356B18AF14C300255C69 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31DB355218AF14B500255C69 /* XCTest.framework */; };
-		31DB356C18AF14C400255C69 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31DB355418AF14B500255C69 /* Foundation.framework */; };
-		31DB356D18AF14C400255C69 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31DB355618AF14B500255C69 /* UIKit.framework */; };
 		31DB357318AF14C400255C69 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 31DB357118AF14C400255C69 /* InfoPlist.strings */; };
 		31E8538517F10CFA003DB9FD /* HLTUserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 31E8538417F10CFA003DB9FD /* HLTUserTests.m */; };
 		31E8538A17F10D06003DB9FD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 31E8538817F10D06003DB9FD /* InfoPlist.strings */; };
@@ -110,8 +107,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				31DB355318AF14B500255C69 /* XCTest.framework in Frameworks */,
-				31DB355718AF14B500255C69 /* UIKit.framework in Frameworks */,
-				31DB355518AF14B500255C69 /* Foundation.framework in Frameworks */,
 				F12990DE196F4BBBAB6C56A8 /* libPods-HazeLightAPITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -121,8 +116,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				31DB356B18AF14C300255C69 /* XCTest.framework in Frameworks */,
-				31DB356D18AF14C400255C69 /* UIKit.framework in Frameworks */,
-				31DB356C18AF14C400255C69 /* Foundation.framework in Frameworks */,
 				2888BA9E820949B3AF084933 /* libPods-HazeLightUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,6 +131,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3171719218AF1DB10099E71D /* XCTest.framework in Frameworks */,
 				765CB26C30604A64B1C50978 /* libPods-HazeLightLogicTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -647,12 +641,6 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HazeLightAPITests/HazeLightAPITests-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -666,7 +654,6 @@
 				INFOPLIST_FILE = "HazeLightAPITests/HazeLightAPITests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
 			};
 			name = Debug;
 		};
@@ -679,12 +666,6 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				ENABLE_NS_ASSERTIONS = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HazeLightAPITests/HazeLightAPITests-Prefix.pch";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -694,7 +675,6 @@
 				INFOPLIST_FILE = "HazeLightAPITests/HazeLightAPITests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
 		};
@@ -706,12 +686,6 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HazeLightUITests/HazeLightUITests-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -725,7 +699,6 @@
 				INFOPLIST_FILE = "HazeLightUITests/HazeLightUITests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
 			};
 			name = Debug;
 		};
@@ -738,12 +711,6 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				ENABLE_NS_ASSERTIONS = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HazeLightUITests/HazeLightUITests-Prefix.pch";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -753,7 +720,6 @@
 				INFOPLIST_FILE = "HazeLightUITests/HazeLightUITests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
 		};
