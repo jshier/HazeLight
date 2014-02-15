@@ -7,9 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2888BA9E820949B3AF084933 /* libPods-HazeLightUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 02597190A8D2483EAF5C2E61 /* libPods-HazeLightUITests.a */; };
 		314624A2183DB4BD00C2E257 /* HLTDomainTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 314624A1183DB4BD00C2E257 /* HLTDomainTests.m */; };
-		3171719218AF1DB10099E71D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31DB355218AF14B500255C69 /* XCTest.framework */; };
 		31A40A8F17F10C1500F5DE2E /* HLTAddUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A40A8217F10C1500F5DE2E /* HLTAddUserViewController.m */; };
 		31A40A9017F10C1500F5DE2E /* HLTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A40A8417F10C1500F5DE2E /* HLTAppDelegate.m */; };
 		31A40A9117F10C1500F5DE2E /* HLTCommunicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A40A8617F10C1500F5DE2E /* HLTCommunicator.m */; };
@@ -20,16 +18,12 @@
 		31A40A9717F10C4400F5DE2E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31A40A9617F10C4400F5DE2E /* Images.xcassets */; };
 		31A40A9917F10C4B00F5DE2E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A40A9817F10C4B00F5DE2E /* main.m */; };
 		31A40A9E17F10C6C00F5DE2E /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31A40A9C17F10C6C00F5DE2E /* MainStoryboard.storyboard */; };
-		31DB355318AF14B500255C69 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31DB355218AF14B500255C69 /* XCTest.framework */; };
 		31DB355D18AF14B500255C69 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 31DB355B18AF14B500255C69 /* InfoPlist.strings */; };
-		31DB356B18AF14C300255C69 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31DB355218AF14B500255C69 /* XCTest.framework */; };
 		31DB357318AF14C400255C69 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 31DB357118AF14C400255C69 /* InfoPlist.strings */; };
 		31E8538517F10CFA003DB9FD /* HLTUserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 31E8538417F10CFA003DB9FD /* HLTUserTests.m */; };
 		31E8538A17F10D06003DB9FD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 31E8538817F10D06003DB9FD /* InfoPlist.strings */; };
 		31EBBD44184ECC010085B300 /* HLTRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 31EBBD43184ECC010085B300 /* HLTRecord.m */; };
 		31EBBD46184EE2410085B300 /* HLTRecordTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 31EBBD45184EE2410085B300 /* HLTRecordTests.m */; };
-		765CB26C30604A64B1C50978 /* libPods-HazeLightLogicTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 68745D2A967A45898B9A6437 /* libPods-HazeLightLogicTests.a */; };
-		F12990DE196F4BBBAB6C56A8 /* libPods-HazeLightAPITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D9566C946794B5F8ED51F05 /* libPods-HazeLightAPITests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,7 +51,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		02597190A8D2483EAF5C2E61 /* libPods-HazeLightUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HazeLightUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		314624A1183DB4BD00C2E257 /* HLTDomainTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HLTDomainTests.m; path = HazeLightTests/HLTDomainTests.m; sourceTree = SOURCE_ROOT; };
 		31A40A8117F10C1500F5DE2E /* HLTAddUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = HLTAddUserViewController.h; path = HazeLight/HLTAddUserViewController.h; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		31A40A8217F10C1500F5DE2E /* HLTAddUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = HLTAddUserViewController.m; path = HazeLight/HLTAddUserViewController.m; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
@@ -78,9 +71,6 @@
 		31A40A9A17F10C5200F5DE2E /* HazeLight-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "HazeLight-Info.plist"; path = "HazeLight/HazeLight-Info.plist"; sourceTree = SOURCE_ROOT; };
 		31A40A9D17F10C6C00F5DE2E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = HazeLight/en.lproj/MainStoryboard.storyboard; sourceTree = SOURCE_ROOT; };
 		31DB355118AF14B500255C69 /* HazeLightAPITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HazeLightAPITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		31DB355218AF14B500255C69 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		31DB355418AF14B500255C69 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		31DB355618AF14B500255C69 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		31DB355A18AF14B500255C69 /* HazeLightAPITests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HazeLightAPITests-Info.plist"; sourceTree = "<group>"; };
 		31DB355C18AF14B500255C69 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		31DB356A18AF14C300255C69 /* HazeLightUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HazeLightUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -94,11 +84,6 @@
 		31EBBD45184EE2410085B300 /* HLTRecordTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLTRecordTests.m; sourceTree = SOURCE_ROOT; };
 		31ECF75C16DDD7FA002BF567 /* HazeLight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HazeLight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31ECF78516DDD7FA002BF567 /* HazeLightTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HazeLightTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		68745D2A967A45898B9A6437 /* libPods-HazeLightLogicTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HazeLightLogicTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6EEBBDC66B894C5B89378798 /* Pods-HazeLightLogicTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HazeLightLogicTests.xcconfig"; path = "Pods/Pods-HazeLightLogicTests.xcconfig"; sourceTree = "<group>"; };
-		7D9566C946794B5F8ED51F05 /* libPods-HazeLightAPITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HazeLightAPITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8E5C42016DF04837BD931EAA /* Pods-HazeLightAPITests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HazeLightAPITests.xcconfig"; path = "Pods/Pods-HazeLightAPITests.xcconfig"; sourceTree = "<group>"; };
-		C8DC6D1F837E40A1A0868B57 /* Pods-HazeLightUITests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HazeLightUITests.xcconfig"; path = "Pods/Pods-HazeLightUITests.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,8 +91,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				31DB355318AF14B500255C69 /* XCTest.framework in Frameworks */,
-				F12990DE196F4BBBAB6C56A8 /* libPods-HazeLightAPITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,8 +98,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				31DB356B18AF14C300255C69 /* XCTest.framework in Frameworks */,
-				2888BA9E820949B3AF084933 /* libPods-HazeLightUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,8 +112,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3171719218AF1DB10099E71D /* XCTest.framework in Frameworks */,
-				765CB26C30604A64B1C50978 /* libPods-HazeLightLogicTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,11 +159,7 @@
 				31ECF78C16DDD7FA002BF567 /* HazeLightLogicTests */,
 				31DB355818AF14B500255C69 /* HazeLightAPITests */,
 				31DB356E18AF14C400255C69 /* HazeLightUITests */,
-				31ECF75E16DDD7FA002BF567 /* Frameworks */,
 				31ECF75D16DDD7FA002BF567 /* Products */,
-				8E5C42016DF04837BD931EAA /* Pods-HazeLightAPITests.xcconfig */,
-				6EEBBDC66B894C5B89378798 /* Pods-HazeLightLogicTests.xcconfig */,
-				C8DC6D1F837E40A1A0868B57 /* Pods-HazeLightUITests.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -197,19 +172,6 @@
 				31DB356A18AF14C300255C69 /* HazeLightUITests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		31ECF75E16DDD7FA002BF567 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				31DB355218AF14B500255C69 /* XCTest.framework */,
-				31DB355418AF14B500255C69 /* Foundation.framework */,
-				31DB355618AF14B500255C69 /* UIKit.framework */,
-				7D9566C946794B5F8ED51F05 /* libPods-HazeLightAPITests.a */,
-				68745D2A967A45898B9A6437 /* libPods-HazeLightLogicTests.a */,
-				02597190A8D2483EAF5C2E61 /* libPods-HazeLightUITests.a */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		31ECF76516DDD7FA002BF567 /* HazeLight */ = {
@@ -635,7 +597,6 @@
 /* Begin XCBuildConfiguration section */
 		31DB356418AF14B500255C69 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8E5C42016DF04837BD931EAA /* Pods-HazeLightAPITests.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/HazeLight.app/HazeLight";
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -659,7 +620,6 @@
 		};
 		31DB356518AF14B500255C69 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8E5C42016DF04837BD931EAA /* Pods-HazeLightAPITests.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/HazeLight.app/HazeLight";
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -680,7 +640,6 @@
 		};
 		31DB357A18AF14C400255C69 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C8DC6D1F837E40A1A0868B57 /* Pods-HazeLightUITests.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/HazeLight.app/HazeLight";
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -704,7 +663,6 @@
 		};
 		31DB357B18AF14C400255C69 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C8DC6D1F837E40A1A0868B57 /* Pods-HazeLightUITests.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/HazeLight.app/HazeLight";
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -832,7 +790,6 @@
 		};
 		31ECF79B16DDD7FA002BF567 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6EEBBDC66B894C5B89378798 /* Pods-HazeLightLogicTests.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/HazeLight.app/HazeLight";
 				INFOPLIST_FILE = "HazeLightTests/HazeLightTests-Info.plist";
@@ -843,7 +800,6 @@
 		};
 		31ECF79C16DDD7FA002BF567 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6EEBBDC66B894C5B89378798 /* Pods-HazeLightLogicTests.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/HazeLight.app/HazeLight";
 				INFOPLIST_FILE = "HazeLightTests/HazeLightTests-Info.plist";
