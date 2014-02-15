@@ -3,3 +3,6 @@
 
 # Xcode user files
 HazeLight.xcodeproj/project.xcworkspace/xcuserdata
+
+#CocoaPods directory
+Pods
