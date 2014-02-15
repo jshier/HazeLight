@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3145565418AF1F830095A27C /* HLTCommunicatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3145565318AF1F830095A27C /* HLTCommunicatorTests.m */; };
 		314624A2183DB4BD00C2E257 /* HLTDomainTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 314624A1183DB4BD00C2E257 /* HLTDomainTests.m */; };
 		31A40A8F17F10C1500F5DE2E /* HLTAddUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A40A8217F10C1500F5DE2E /* HLTAddUserViewController.m */; };
 		31A40A9017F10C1500F5DE2E /* HLTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A40A8417F10C1500F5DE2E /* HLTAppDelegate.m */; };
@@ -24,6 +25,9 @@
 		31E8538A17F10D06003DB9FD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 31E8538817F10D06003DB9FD /* InfoPlist.strings */; };
 		31EBBD44184ECC010085B300 /* HLTRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 31EBBD43184ECC010085B300 /* HLTRecord.m */; };
 		31EBBD46184EE2410085B300 /* HLTRecordTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 31EBBD45184EE2410085B300 /* HLTRecordTests.m */; };
+		7DB1020F285B49E78A0310AD /* libPods-HazeLightAPITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 923359B3CE2A46E990BB8948 /* libPods-HazeLightAPITests.a */; };
+		840E84F3A8A64DFBA35F2ECC /* libPods-HazeLightUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E20E181D21DF4DD4BAF4EA21 /* libPods-HazeLightUITests.a */; };
+		BFDEFC24B0344D2EBEAD3D8C /* libPods-HazeLightLogicTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 28B5E954392242F6982F704D /* libPods-HazeLightLogicTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		28B5E954392242F6982F704D /* libPods-HazeLightLogicTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HazeLightLogicTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3145565318AF1F830095A27C /* HLTCommunicatorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HLTCommunicatorTests.m; path = HazeLightTests/HLTCommunicatorTests.m; sourceTree = SOURCE_ROOT; };
 		314624A1183DB4BD00C2E257 /* HLTDomainTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HLTDomainTests.m; path = HazeLightTests/HLTDomainTests.m; sourceTree = SOURCE_ROOT; };
 		31A40A8117F10C1500F5DE2E /* HLTAddUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = HLTAddUserViewController.h; path = HazeLight/HLTAddUserViewController.h; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		31A40A8217F10C1500F5DE2E /* HLTAddUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = HLTAddUserViewController.m; path = HazeLight/HLTAddUserViewController.m; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
@@ -84,6 +90,11 @@
 		31EBBD45184EE2410085B300 /* HLTRecordTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLTRecordTests.m; sourceTree = SOURCE_ROOT; };
 		31ECF75C16DDD7FA002BF567 /* HazeLight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HazeLight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31ECF78516DDD7FA002BF567 /* HazeLightTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HazeLightTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6AC5ACEB43844D168694513A /* Pods-HazeLightAPITests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HazeLightAPITests.xcconfig"; path = "Pods/Pods-HazeLightAPITests.xcconfig"; sourceTree = "<group>"; };
+		745F87D66B934B1B9F9C099D /* Pods-HazeLightLogicTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HazeLightLogicTests.xcconfig"; path = "Pods/Pods-HazeLightLogicTests.xcconfig"; sourceTree = "<group>"; };
+		923359B3CE2A46E990BB8948 /* libPods-HazeLightAPITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HazeLightAPITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC5F84FDB16049EFAECF9239 /* Pods-HazeLightUITests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HazeLightUITests.xcconfig"; path = "Pods/Pods-HazeLightUITests.xcconfig"; sourceTree = "<group>"; };
+		E20E181D21DF4DD4BAF4EA21 /* libPods-HazeLightUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HazeLightUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DB1020F285B49E78A0310AD /* libPods-HazeLightAPITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				840E84F3A8A64DFBA35F2ECC /* libPods-HazeLightUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +125,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFDEFC24B0344D2EBEAD3D8C /* libPods-HazeLightLogicTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,6 +174,10 @@
 				31DB355818AF14B500255C69 /* HazeLightAPITests */,
 				31DB356E18AF14C400255C69 /* HazeLightUITests */,
 				31ECF75D16DDD7FA002BF567 /* Products */,
+				4BCFB985EBDE487D8B19A53F /* Frameworks */,
+				745F87D66B934B1B9F9C099D /* Pods-HazeLightLogicTests.xcconfig */,
+				6AC5ACEB43844D168694513A /* Pods-HazeLightAPITests.xcconfig */,
+				BC5F84FDB16049EFAECF9239 /* Pods-HazeLightUITests.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -213,6 +231,7 @@
 		31ECF78C16DDD7FA002BF567 /* HazeLightLogicTests */ = {
 			isa = PBXGroup;
 			children = (
+				3145565318AF1F830095A27C /* HLTCommunicatorTests.m */,
 				314624A1183DB4BD00C2E257 /* HLTDomainTests.m */,
 				31E8538417F10CFA003DB9FD /* HLTUserTests.m */,
 				31EBBD45184EE2410085B300 /* HLTRecordTests.m */,
@@ -229,6 +248,16 @@
 				31E8538817F10D06003DB9FD /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4BCFB985EBDE487D8B19A53F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				923359B3CE2A46E990BB8948 /* libPods-HazeLightAPITests.a */,
+				28B5E954392242F6982F704D /* libPods-HazeLightLogicTests.a */,
+				E20E181D21DF4DD4BAF4EA21 /* libPods-HazeLightUITests.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -597,6 +626,7 @@
 /* Begin XCBuildConfiguration section */
 		31DB356418AF14B500255C69 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6AC5ACEB43844D168694513A /* Pods-HazeLightAPITests.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/HazeLight.app/HazeLight";
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -620,6 +650,7 @@
 		};
 		31DB356518AF14B500255C69 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6AC5ACEB43844D168694513A /* Pods-HazeLightAPITests.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/HazeLight.app/HazeLight";
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -640,6 +671,7 @@
 		};
 		31DB357A18AF14C400255C69 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC5F84FDB16049EFAECF9239 /* Pods-HazeLightUITests.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/HazeLight.app/HazeLight";
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -663,6 +695,7 @@
 		};
 		31DB357B18AF14C400255C69 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC5F84FDB16049EFAECF9239 /* Pods-HazeLightUITests.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/HazeLight.app/HazeLight";
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -790,6 +823,7 @@
 		};
 		31ECF79B16DDD7FA002BF567 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 745F87D66B934B1B9F9C099D /* Pods-HazeLightLogicTests.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/HazeLight.app/HazeLight";
 				INFOPLIST_FILE = "HazeLightTests/HazeLightTests-Info.plist";
@@ -800,6 +834,7 @@
 		};
 		31ECF79C16DDD7FA002BF567 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 745F87D66B934B1B9F9C099D /* Pods-HazeLightLogicTests.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/HazeLight.app/HazeLight";
 				INFOPLIST_FILE = "HazeLightTests/HazeLightTests-Info.plist";
