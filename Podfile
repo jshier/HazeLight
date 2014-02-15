@@ -1,4 +1,5 @@
 platform :ios, "7.1"
+inhibit_all_warnings!
 
 target "HazeLight" do
 
