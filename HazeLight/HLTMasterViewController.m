@@ -1,23 +1,23 @@
 //
-//  HLMasterViewController.m
+//  HLTMasterViewController.m
 //  HazeLight
 //
 //  Created by Jon Shier on 2/27/13.
 //  Copyright (c) 2013 Jon Shier. All rights reserved.
 //
 
-#import "HLMasterViewController.h"
-#import "HLDetailViewController.h"
-#import "HLUser.h"
-#import "HLAddUserViewController.h"
+#import "HLTMasterViewController.h"
+#import "HLTDetailViewController.h"
+#import "HLTUser.h"
+#import "HLTAddUserViewController.h"
 
-@interface HLMasterViewController ()
+@interface HLTMasterViewController ()
 
 @property (strong, nonatomic) NSMutableArray *users;
 
 @end
 
-@implementation HLMasterViewController
+@implementation HLTMasterViewController
 
 - (void)awakeFromNib
 {
@@ -42,8 +42,8 @@
     if (!self.users) {
         self.users = [[NSMutableArray alloc] init];
     }
-    HLAddUserViewController *addUserController = [segue sourceViewController];
-    [self.users insertObject:[[HLUser alloc] initWithEmail:addUserController.email.text apiKey:addUserController.apiKey.text] atIndex:0];
+    HLTAddUserViewController *addUserController = [segue sourceViewController];
+    [self.users insertObject:[[HLTUser alloc] initWithEmail:addUserController.email.text apiKey:addUserController.apiKey.text] atIndex:0];
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
     [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
@@ -68,7 +68,7 @@
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
 
-    cell.textLabel.text = ((HLUser *)self.users[indexPath.row]).email;
+    cell.textLabel.text = ((HLTUser *)self.users[indexPath.row]).email;
     return cell;
 }
 

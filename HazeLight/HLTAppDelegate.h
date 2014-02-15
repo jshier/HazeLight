@@ -1,5 +1,5 @@
 //
-//  HLAppDelegate.h
+//  HLTAppDelegate.h
 //  HazeLight
 //
 //  Created by Jon Shier on 2/27/13.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HLAppDelegate : UIResponder <UIApplicationDelegate>
+@interface HLTAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 

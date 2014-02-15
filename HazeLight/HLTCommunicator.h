@@ -1,5 +1,5 @@
 //
-//  HLCommunicator.h
+//  HLTCommunicator.h
 //  HazeLight
 //
 //  Created by Jon Shier on 5/5/13.
@@ -8,6 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-@interface HLCommunicator : NSObject <NSURLConnectionDataDelegate>
+@interface HLTCommunicator : NSObject <NSURLConnectionDataDelegate>
 
 @end

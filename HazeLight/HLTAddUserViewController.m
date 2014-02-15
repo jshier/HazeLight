@@ -1,14 +1,14 @@
 //
-//  HLAddUserViewController.m
+//  HLTAddUserViewController.m
 //  HazeLight
 //
 //  Created by Jon Shier on 3/2/13.
 //  Copyright (c) 2013 Jon Shier. All rights reserved.
 //
 
-#import "HLAddUserViewController.h"
+#import "HLTAddUserViewController.h"
 
-@implementation HLAddUserViewController
+@implementation HLTAddUserViewController
 
 - (void)viewWillAppear:(BOOL)animated
 {

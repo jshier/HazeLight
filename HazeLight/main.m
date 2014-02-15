@@ -8,11 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-#import "HLAppDelegate.h"
+#import "HLTAppDelegate.h"
 
 int main(int argc, char *argv[])
 {
     @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([HLAppDelegate class]));
+        return UIApplicationMain(argc, argv, nil, NSStringFromClass([HLTAppDelegate class]));
     }
 }

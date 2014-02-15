@@ -1,5 +1,5 @@
 //
-//  HLDomain.h
+//  HLTDomain.h
 //  HazeLight
 //
 //  Created by Jon Shier on 5/5/13.
@@ -8,11 +8,11 @@
 //  Defined from the zone_load_multi response attributes defined in section 3.2 of the CloudFlare API doc. (https://www.cloudflare.com/docs/client-api.html)
 #import <Foundation/Foundation.h>
 
-@class HLUser;
+@class HLTUser;
 
-@interface HLDomain : NSObject
+@interface HLTDomain : NSObject
 
-@property (nonatomic) HLUser *user;
+@property (nonatomic) HLTUser *user;
 @property (nonatomic, copy) NSDictionary *records;
 @property (nonatomic, copy) NSString *zoneID;
 @property (nonatomic, copy) NSString *userID;

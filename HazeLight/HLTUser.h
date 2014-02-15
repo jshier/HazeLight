@@ -1,5 +1,5 @@
 //
-//  HLUser.h
+//  HLTUser.h
 //  HazeLight
 //
 //  Created by Jon Shier on 3/1/13.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface HLUser : NSObject
+@interface HLTUser : NSObject
 
 @property (nonatomic, readonly) NSString *email;
 @property (nonatomic, readonly) NSString *apiKey;

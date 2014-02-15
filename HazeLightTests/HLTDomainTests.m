@@ -1,5 +1,5 @@
 //
-//  HLDomainTests.m
+//  HLTDomainTests.m
 //  HazeLight
 //
 //  Created by Jon Shier on 11/20/13.
@@ -7,21 +7,21 @@
 //
 
 #import <XCTest/XCTest.h>
-#import "HLDomain.h"
+#import "HLTDomain.h"
 
-@interface HLDomainTests : XCTestCase
+@interface HLTDomainTests : XCTestCase
 
-@property (nonatomic) HLDomain *domain;
+@property (nonatomic) HLTDomain *domain;
 
 @end
 
-@implementation HLDomainTests
+@implementation HLTDomainTests
 
 - (void)setUp
 {
     [super setUp];
     //FIXME: Need custom intializer for receieved dictionary. Test attributes for now.
-    _domain = [[HLDomain alloc] init];
+    _domain = [[HLTDomain alloc] init];
     self.domain.zoneID = @"zoneID";
     self.domain.userID = @"userID";
     self.domain.zoneName = @"zoneName";

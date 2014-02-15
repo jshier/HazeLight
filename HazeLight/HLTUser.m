@@ -1,14 +1,14 @@
 //
-//  HLUser.m
+//  HLTUser.m
 //  HazeLight
 //
 //  Created by Jon Shier on 3/1/13.
 //  Copyright (c) 2013 Jon Shier. All rights reserved.
 //
 
-#import "HLUser.h"
+#import "HLTUser.h"
 
-@implementation HLUser
+@implementation HLTUser
 
 - (id)initWithEmail:(NSString *)email apiKey:(NSString *)apiKey
 {

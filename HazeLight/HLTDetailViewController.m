@@ -1,18 +1,18 @@
 //
-//  HLDetailViewController.m
+//  HLTDetailViewController.m
 //  HazeLight
 //
 //  Created by Jon Shier on 2/27/13.
 //  Copyright (c) 2013 Jon Shier. All rights reserved.
 //
 
-#import "HLDetailViewController.h"
+#import "HLTDetailViewController.h"
 
-@interface HLDetailViewController ()
+@interface HLTDetailViewController ()
 - (void)configureView;
 @end
 
-@implementation HLDetailViewController
+@implementation HLTDetailViewController
 
 #pragma mark - Managing the detail item
 

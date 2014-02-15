@@ -1,5 +1,5 @@
 //
-//  HLRecordTests.m
+//  HLTRecordTests.m
 //  HazeLight
 //
 //  Created by Jon Shier on 12/3/13.
@@ -7,21 +7,21 @@
 //
 
 #import <XCTest/XCTest.h>
-#import "HLRecord.h"
+#import "HLTRecord.h"
 
-@interface HLRecordTests : XCTestCase
+@interface HLTRecordTests : XCTestCase
 
-@property (nonatomic) HLRecord *record;
+@property (nonatomic) HLTRecord *record;
 
 @end
 
-@implementation HLRecordTests
+@implementation HLTRecordTests
 
 - (void)setUp
 {
     [super setUp];
     //FIXME: Should test custom initializer.
-    _record = [[HLRecord alloc] init];
+    _record = [[HLTRecord alloc] init];
     _record.recordID = @"recordID";
     _record.recordTag = @"recordTag";
     _record.zoneName = @"zoneName";

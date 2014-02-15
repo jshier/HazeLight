@@ -1,5 +1,5 @@
 //
-//  HLMasterViewController.h
+//  HLTMasterViewController.h
 //  HazeLight
 //
 //  Created by Jon Shier on 2/27/13.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HLMasterViewController : UITableViewController
+@interface HLTMasterViewController : UITableViewController
 
 - (IBAction)addNewUser:(UIStoryboardSegue *)segue;
 - (IBAction)cancelAddNewUser:(UIStoryboardSegue *)segue;

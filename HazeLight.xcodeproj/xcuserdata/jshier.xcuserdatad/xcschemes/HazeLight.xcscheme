@@ -34,7 +34,27 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "31ECF78416DDD7FA002BF567"
                BuildableName = "HazeLightTests.xctest"
-               BlueprintName = "HazeLightTests"
+               BlueprintName = "HazeLightLogicTests"
+               ReferencedContainer = "container:HazeLight.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "31DB355018AF14B500255C69"
+               BuildableName = "HazeLightAPITests.xctest"
+               BlueprintName = "HazeLightAPITests"
+               ReferencedContainer = "container:HazeLight.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "31DB356918AF14C300255C69"
+               BuildableName = "HazeLightUITests.xctest"
+               BlueprintName = "HazeLightUITests"
                ReferencedContainer = "container:HazeLight.xcodeproj">
             </BuildableReference>
          </TestableReference>

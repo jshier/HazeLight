@@ -1,5 +1,5 @@
 //
-//  HLAddUserViewController.h
+//  HLTAddUserViewController.h
 //  HazeLight
 //
 //  Created by Jon Shier on 3/2/13.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HLAddUserViewController : UIViewController <UIAlertViewDelegate>
+@interface HLTAddUserViewController : UIViewController <UIAlertViewDelegate>
 
 @property (weak) IBOutlet UITextField *email;
 @property (weak) IBOutlet UITextField *apiKey;

@@ -1,5 +1,5 @@
 //
-//  HLDetailViewController.h
+//  HLTDetailViewController.h
 //  HazeLight
 //
 //  Created by Jon Shier on 2/27/13.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HLDetailViewController : UIViewController
+@interface HLTDetailViewController : UIViewController
 
 @property (nonatomic) id detailItem;
 

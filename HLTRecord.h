@@ -1,5 +1,5 @@
 //
-//  HLRecord.h
+//  HLTRecord.h
 //  HazeLight
 //
 //  Created by Jon Shier on 12/3/13.
@@ -9,7 +9,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface HLRecord : NSObject
+@interface HLTRecord : NSObject
 
 @property (nonatomic, copy) NSString *recordID;
 @property (nonatomic, copy) NSString *recordTag;
