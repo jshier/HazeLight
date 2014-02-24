@@ -8,3 +8,5 @@ HazeLight.xcworkspace
 #CocoaPods directory
 Pods
 HazeLight/apiKey.txt
+
+HazeLight/email.txt

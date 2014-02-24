@@ -33,6 +33,10 @@
 		31B6C21318B043E900D75872 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 31B6C21118B043E900D75872 /* InfoPlist.strings */; };
 		31DB355D18AF14B500255C69 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 31DB355B18AF14B500255C69 /* InfoPlist.strings */; };
 		31DB357318AF14C400255C69 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 31DB357118AF14C400255C69 /* InfoPlist.strings */; };
+		31E235A418BB03030046CF0F /* email.txt in Resources */ = {isa = PBXBuildFile; fileRef = 31E235A318BB03030046CF0F /* email.txt */; };
+		31E235A518BB03030046CF0F /* email.txt in Resources */ = {isa = PBXBuildFile; fileRef = 31E235A318BB03030046CF0F /* email.txt */; };
+		31E235A618BB03030046CF0F /* email.txt in Resources */ = {isa = PBXBuildFile; fileRef = 31E235A318BB03030046CF0F /* email.txt */; };
+		31E235A718BB03030046CF0F /* email.txt in Resources */ = {isa = PBXBuildFile; fileRef = 31E235A318BB03030046CF0F /* email.txt */; };
 		7DB1020F285B49E78A0310AD /* libPods-HazeLightAPITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 923359B3CE2A46E990BB8948 /* libPods-HazeLightAPITests.a */; };
 		840E84F3A8A64DFBA35F2ECC /* libPods-HazeLightUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E20E181D21DF4DD4BAF4EA21 /* libPods-HazeLightUITests.a */; };
 		BFDEFC24B0344D2EBEAD3D8C /* libPods-HazeLightLogicTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 28B5E954392242F6982F704D /* libPods-HazeLightLogicTests.a */; };
@@ -101,6 +105,7 @@
 		31DB356A18AF14C300255C69 /* HazeLightUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HazeLightUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		31DB357018AF14C400255C69 /* HazeLightUITests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HazeLightUITests-Info.plist"; sourceTree = "<group>"; };
 		31DB357218AF14C400255C69 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		31E235A318BB03030046CF0F /* email.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = email.txt; path = HazeLight/email.txt; sourceTree = SOURCE_ROOT; };
 		31ECF75C16DDD7FA002BF567 /* HazeLight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HazeLight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31ECF78516DDD7FA002BF567 /* HazeLightTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HazeLightTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AC5ACEB43844D168694513A /* Pods-HazeLightAPITests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HazeLightAPITests.xcconfig"; path = "Pods/Pods-HazeLightAPITests.xcconfig"; sourceTree = "<group>"; };
@@ -239,6 +244,7 @@
 			isa = PBXGroup;
 			children = (
 				316C001118BAFFB700BB5301 /* apiKey.txt */,
+				31E235A318BB03030046CF0F /* email.txt */,
 				31A40A9617F10C4400F5DE2E /* Images.xcassets */,
 				31A40A9A17F10C5200F5DE2E /* HazeLight-Info.plist */,
 				31A40A9817F10C4B00F5DE2E /* main.m */,
@@ -410,6 +416,7 @@
 			files = (
 				31DB355D18AF14B500255C69 /* InfoPlist.strings in Resources */,
 				316C001418BAFFB700BB5301 /* apiKey.txt in Resources */,
+				31E235A618BB03030046CF0F /* email.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,6 +426,7 @@
 			files = (
 				31DB357318AF14C400255C69 /* InfoPlist.strings in Resources */,
 				316C001518BAFFB700BB5301 /* apiKey.txt in Resources */,
+				31E235A718BB03030046CF0F /* email.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,6 +437,7 @@
 				31A40A9717F10C4400F5DE2E /* Images.xcassets in Resources */,
 				316C001218BAFFB700BB5301 /* apiKey.txt in Resources */,
 				31A40A9E17F10C6C00F5DE2E /* MainStoryboard.storyboard in Resources */,
+				31E235A418BB03030046CF0F /* email.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,6 +447,7 @@
 			files = (
 				31B6C21318B043E900D75872 /* InfoPlist.strings in Resources */,
 				316C001318BAFFB700BB5301 /* apiKey.txt in Resources */,
+				31E235A518BB03030046CF0F /* email.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

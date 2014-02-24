@@ -18,8 +18,10 @@
 {
     NSBundle *classBundle = [NSBundle bundleForClass:[self class]];
     NSURL *apiKeyURL = [classBundle URLForResource:@"apiKey" withExtension:@"txt"];
+    NSURL *emailURL = [classBundle URLForResource:@"email" withExtension:@"txt"];
     NSString *apiKey = [NSString stringWithContentsOfURL:apiKeyURL encoding:NSUTF8StringEncoding error:NULL];
-    [[HLTCommunicator sharedCommunicator] fetchDomainsForUser:[[HLTUser alloc] initWithEmail:@"jon@jonshier.com" apiKey:apiKey]
+    NSString *email = [NSString stringWithContentsOfURL:emailURL encoding:NSUTF8StringEncoding error:NULL];
+    [[HLTCommunicator sharedCommunicator] fetchDomainsForUser:[[HLTUser alloc] initWithEmail:email apiKey:apiKey]
                                                       success:^(NSURLSessionDataTask *task, NSArray *domains) {
                                                           NSLog(@"Domains: %@", domains);
                                                           for (HLTDomain *domain in domains) {
