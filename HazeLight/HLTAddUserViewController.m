@@ -30,7 +30,6 @@
             [alertView addButtonWithTitle:@"Yes"];
             alertView.cancelButtonIndex = 0;
             [alertView show];
-            
         }
         
         NSLog(@"Possible API Key: %@", possibleAPIKey);

@@ -6,7 +6,8 @@
 //  Copyright (c) 2013 Jon Shier. All rights reserved.
 //
 //  Defined from the zone_load_multi response attributes defined in section 3.2 of the CloudFlare API doc. (https://www.cloudflare.com/docs/client-api.html)
-#import <Foundation/Foundation.h>
+
+@import Foundation;
 
 @class HLTUser;
 
@@ -36,5 +37,7 @@
 @property (nonatomic, copy) NSDictionary *properties;
 @property (nonatomic, copy) NSDictionary *confirmationCodes;
 @property (nonatomic, copy) NSArray *allows;
+
+- (instancetype)initWithUser:(HLTUser *)user andResponseDictionary:(NSDictionary *)dictionary;
 
 @end

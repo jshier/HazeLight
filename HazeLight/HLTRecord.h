@@ -7,7 +7,7 @@
 //
 //  Defined from the rec_load_all response attributes defined in section 3.3 of the CloudFlare API documentation (http://www.cloudflare.com/docs/client-api.html)
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 
 @interface HLTRecord : NSObject
 
