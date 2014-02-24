@@ -3,9 +3,9 @@ HazeLight
 
 HazeLight is a basic client for CloudFlare™ on iOS 7. Developed using the Cocoa Touch APIs and test driven development, it is still a work in progress.
 
-CloudFlare API Key
+CloudFlare API Key and Email Address
 =========
-HazeLight requires a CloudFlare API key to function. Create the file apiKey.txt containing your CloudFlare API key for development purposes. Never commit this file to the repository.
+HazeLight requires an email address and associated CloudFlare API key to function. Create the files email.txt and apiKey.txt containing your CloudFlare email API key for development purposes. Never commit these files to the repository.
 
 How to Build
 =========
