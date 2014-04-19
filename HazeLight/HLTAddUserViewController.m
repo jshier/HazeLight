@@ -35,6 +35,8 @@
         NSLog(@"Possible API Key: %@", possibleAPIKey);
         NSLog(@"Key length: %lu", (unsigned long)[possibleAPIKey length]);
     }
+    
+    [super viewWillAppear:animated];
 }
 
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
