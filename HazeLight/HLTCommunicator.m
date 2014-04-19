@@ -11,7 +11,7 @@
 #import "HLTUser.h"
 #import "HLTStatsResponse.h"
 
-static NSString *baseURLString = @"https://www.cloudflare.com/api_json.html";
+static NSString * const baseURLString = @"https://www.cloudflare.com/api_json.html";
 
 @interface HLTCommunicator ()
 
