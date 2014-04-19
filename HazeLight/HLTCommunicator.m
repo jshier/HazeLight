@@ -83,6 +83,7 @@ static NSString * const baseURLString = @"https://www.cloudflare.com/api_json.ht
     NSData *postData = [[NSString stringWithFormat:@"a=%@&tkn=%@&email=%@", type, user.apiKey, user.email] dataUsingEncoding:NSUTF8StringEncoding];
     
     __block NSURLSessionDataTask *task = [self.session dataTaskWithRequest:[self requestWithBodyData:postData] completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+        NSLog(@"Response JSON: %@", [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
         if (error) {
             if (failure) {
                 failure(task, error);
