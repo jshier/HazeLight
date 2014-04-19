@@ -97,6 +97,7 @@
 		31A40A9817F10C4B00F5DE2E /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = main.m; path = HazeLight/main.m; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		31A40A9A17F10C5200F5DE2E /* HazeLight-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "HazeLight-Info.plist"; path = "HazeLight/HazeLight-Info.plist"; sourceTree = SOURCE_ROOT; };
 		31A40A9D17F10C6C00F5DE2E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = HazeLight/en.lproj/MainStoryboard.storyboard; sourceTree = SOURCE_ROOT; };
+		31B47CBA1902EDBB004F29D0 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		31B6C21218B043E900D75872 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = HazeLightLogicTests/en.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
 		31B6C21418B043EF00D75872 /* HazeLightLogicTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "HazeLightLogicTests-Info.plist"; path = "HazeLightLogicTests/HazeLightLogicTests-Info.plist"; sourceTree = SOURCE_ROOT; };
 		31DB355118AF14B500255C69 /* HazeLightAPITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HazeLightAPITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -277,6 +278,7 @@
 		4BCFB985EBDE487D8B19A53F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				31B47CBA1902EDBB004F29D0 /* XCTest.framework */,
 				923359B3CE2A46E990BB8948 /* libPods-HazeLightAPITests.a */,
 				28B5E954392242F6982F704D /* libPods-HazeLightLogicTests.a */,
 				E20E181D21DF4DD4BAF4EA21 /* libPods-HazeLightUITests.a */,
@@ -669,7 +671,10 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				GCC_PREFIX_HEADER = "HazeLightAPITests/HazeLightAPITests-Prefix.pch";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -694,7 +699,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				ENABLE_NS_ASSERTIONS = NO;
-				GCC_PREFIX_HEADER = "HazeLightAPITests/HazeLightAPITests-Prefix.pch";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -714,7 +722,10 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				GCC_PREFIX_HEADER = "HazeLightUITests/HazeLightUITests-Prefix.pch";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -739,7 +750,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				ENABLE_NS_ASSERTIONS = NO;
-				GCC_PREFIX_HEADER = "HazeLightUITests/HazeLightUITests-Prefix.pch";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -769,6 +783,11 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COMPRESS_PNG_FILES = NO;
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -781,7 +800,6 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				WARNING_CFLAGS = (
@@ -811,12 +829,16 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COMPRESS_PNG_FILES = NO;
 				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -863,6 +885,10 @@
 			baseConfigurationReference = 745F87D66B934B1B9F9C099D /* Pods-HazeLightLogicTests.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/HazeLight.app/HazeLight";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
 				INFOPLIST_FILE = "HazeLightLogicTests/HazeLightLogicTests-Info.plist";
 				PRODUCT_NAME = HazeLightTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
@@ -874,6 +900,10 @@
 			baseConfigurationReference = 745F87D66B934B1B9F9C099D /* Pods-HazeLightLogicTests.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/HazeLight.app/HazeLight";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
 				INFOPLIST_FILE = "HazeLightLogicTests/HazeLightLogicTests-Info.plist";
 				PRODUCT_NAME = HazeLightTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
