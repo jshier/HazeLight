@@ -14,6 +14,8 @@ target :HazeLightAPITests, :exclusive => true do
 end
 
 target :HazeLightUITests, :exclusive => true do
+	pod 'KIF'
+	pod 'Kiwi/XCTest'
 	pod 'Kiwi-KIF/XCTest'
 end
 
