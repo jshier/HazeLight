@@ -17,28 +17,28 @@
     if (self) {
         _user = user;
         
-        _allows = replaceWithNilIfNSNull(dictionary[@"allow"]);
-        _confirmationCodes = replaceWithNilIfNSNull(dictionary[@"confirm_code"]);
-        _displayName = replaceWithNilIfNSNull(dictionary[@"display_name"]);
-        _fullQualifiedDNSNames = replaceWithNilIfNSNull(dictionary[@"fqdns"]);
-        _hostID = replaceWithNilIfNSNull(dictionary[@"host_id"]);
-        _hostPubname = replaceWithNilIfNSNull(dictionary[@"host_pubname"]);
-        _hostWebsite = replaceWithNilIfNSNull(dictionary[@"host_website"]);
-        _nameserverVanityMap = replaceWithNilIfNSNull(dictionary[@"ns_vanity_map"]);
-        _originalDNSHost = replaceWithNilIfNSNull(dictionary[@"orig_dnshost"]);
-        _originalNameserverNames = replaceWithNilIfNSNull(dictionary[@"orig_ns_names"]);
-        _originalRegistrar = replaceWithNilIfNSNull(dictionary[@"orig_registrar"]);
-        _properties = replaceWithNilIfNSNull(dictionary[@"props"]);
-        _step = replaceWithNilIfNSNull(dictionary[@"step"]);
-        _userID = replaceWithNilIfNSNull(dictionary[@"user_id"]);
-        _vtxt = replaceWithNilIfNSNull(dictionary[@"vtxt"]);
-        _zoneID = replaceWithNilIfNSNull(dictionary[@"zone_id"]);
-        _zoneMode = replaceWithNilIfNSNull(dictionary[@"zone_mode"]);
-        _zoneName = replaceWithNilIfNSNull(dictionary[@"zone_name"]);
-        _zoneStatus = replaceWithNilIfNSNull(dictionary[@"zone_status"]);
-        _zoneStatusClass = replaceWithNilIfNSNull(dictionary[@"zone_status_class"]);
-        _zoneStatusDescription = replaceWithNilIfNSNull(dictionary[@"zone_status_desc"]);
-        _zoneType = replaceWithNilIfNSNull(dictionary[@"zone_type"]);
+        _allows = dictionary[@"allow"];
+        _confirmationCodes = dictionary[@"confirm_code"];
+        _displayName = dictionary[@"display_name"];
+        _fullQualifiedDNSNames = dictionary[@"fqdns"];
+        _hostID = dictionary[@"host_id"];
+        _hostPubname = dictionary[@"host_pubname"];
+        _hostWebsite = dictionary[@"host_website"];
+        _nameserverVanityMap = dictionary[@"ns_vanity_map"];
+        _originalDNSHost = dictionary[@"orig_dnshost"];
+        _originalNameserverNames = dictionary[@"orig_ns_names"];
+        _originalRegistrar = dictionary[@"orig_registrar"];
+        _properties = dictionary[@"props"];
+        _step = dictionary[@"step"];
+        _userID = dictionary[@"user_id"];
+        _vtxt = dictionary[@"vtxt"];
+        _zoneID = dictionary[@"zone_id"];
+        _zoneMode = dictionary[@"zone_mode"];
+        _zoneName = dictionary[@"zone_name"];
+        _zoneStatus = dictionary[@"zone_status"];
+        _zoneStatusClass = dictionary[@"zone_status_class"];
+        _zoneStatusDescription = dictionary[@"zone_status_desc"];
+        _zoneType = dictionary[@"zone_type"];
     }
     
     return self;
