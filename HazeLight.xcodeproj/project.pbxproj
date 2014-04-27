@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3109F2E8190DC4CB00A30C31 /* HLTUtilityFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3109F2E7190DC4CB00A30C31 /* HLTUtilityFunctions.m */; };
 		31560CB418AF4F8500F46516 /* HLTRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 31560CB318AF4F8500F46516 /* HLTRecord.m */; };
 		31560CB918AF4F9A00F46516 /* HLTCommunicatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 31560CB518AF4F9A00F46516 /* HLTCommunicatorTests.m */; };
 		31560CBA18AF4F9A00F46516 /* HLTDomainTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 31560CB618AF4F9A00F46516 /* HLTDomainTests.m */; };
@@ -68,6 +69,7 @@
 
 /* Begin PBXFileReference section */
 		28B5E954392242F6982F704D /* libPods-HazeLightLogicTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HazeLightLogicTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3109F2E7190DC4CB00A30C31 /* HLTUtilityFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HLTUtilityFunctions.m; path = HazeLight/HLTUtilityFunctions.m; sourceTree = SOURCE_ROOT; };
 		31560CB218AF4F8500F46516 /* HLTRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HLTRecord.h; path = HazeLight/HLTRecord.h; sourceTree = SOURCE_ROOT; };
 		31560CB318AF4F8500F46516 /* HLTRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HLTRecord.m; path = HazeLight/HLTRecord.m; sourceTree = SOURCE_ROOT; };
 		31560CB518AF4F9A00F46516 /* HLTCommunicatorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HLTCommunicatorTests.m; path = HazeLightLogicTests/HLTCommunicatorTests.m; sourceTree = SOURCE_ROOT; };
@@ -235,6 +237,7 @@
 				31A40A8D17F10C1500F5DE2E /* HLTUser.h */,
 				31A40A8E17F10C1500F5DE2E /* HLTUser.m */,
 				316C000B18BAFBD700BB5301 /* HLTUtilityFunctions.h */,
+				3109F2E7190DC4CB00A30C31 /* HLTUtilityFunctions.m */,
 				31ECF76616DDD7FA002BF567 /* Supporting Files */,
 			);
 			name = HazeLight;
@@ -591,6 +594,7 @@
 				31A40A8F17F10C1500F5DE2E /* HLTAddUserViewController.m in Sources */,
 				31A40A9917F10C4B00F5DE2E /* main.m in Sources */,
 				31A40A9317F10C1500F5DE2E /* HLTDomain.m in Sources */,
+				3109F2E8190DC4CB00A30C31 /* HLTUtilityFunctions.m in Sources */,
 				31560CB418AF4F8500F46516 /* HLTRecord.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

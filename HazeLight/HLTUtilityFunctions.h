@@ -8,7 +8,6 @@
 
 @import Foundation;
 
-id replaceWithNilIfNSNull(id object)
-{
-    return ((object == [NSNull null]) ? nil : object);
-}
+id replaceNullWithNil(id object);
+id replaceNilWithNull(id object);
+id removeKeysWithNullValuesFromObject(id object);
