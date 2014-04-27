@@ -10,6 +10,7 @@
 #import "HLTDomain.h"
 #import "HLTUser.h"
 #import "HLTStatsResponse.h"
+#import "HLTUtilityFunctions.h"
 
 static NSString * const baseURLString = @"https://www.cloudflare.com/api_json.html";
 
@@ -57,7 +58,7 @@ static NSString * const baseURLString = @"https://www.cloudflare.com/api_json.ht
             }
         } else {
             NSError *decodeError;
-            NSDictionary *responseDictionary = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&decodeError];
+            NSDictionary *responseDictionary = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&decodeError];
             if (decodeError) {
                 if (failure) {
                     failure(task, decodeError);
@@ -83,19 +84,19 @@ static NSString * const baseURLString = @"https://www.cloudflare.com/api_json.ht
     NSData *postData = [[NSString stringWithFormat:@"a=%@&tkn=%@&email=%@", type, user.apiKey, user.email] dataUsingEncoding:NSUTF8StringEncoding];
     
     __block NSURLSessionDataTask *task = [self.session dataTaskWithRequest:[self requestWithBodyData:postData] completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-        NSLog(@"Response JSON: %@", [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
         if (error) {
             if (failure) {
                 failure(task, error);
             }
         } else {
             NSError *decodeError;
-            NSDictionary *responseDictionary = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&decodeError];
+            NSDictionary *responseDictionary = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&decodeError];
             if (decodeError) {
                 if (failure) {
                     failure(task, decodeError);
                 }
             }
+            responseDictionary = removeKeysWithNullValuesFromObject(responseDictionary);
             NSArray *rawDomains = responseDictionary[@"response"][@"zones"][@"objs"];
             NSMutableArray *domains = [[NSMutableArray alloc] init];
             for (NSDictionary *domainDict in rawDomains) {
