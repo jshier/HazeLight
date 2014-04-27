@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3109F2E8190DC4CB00A30C31 /* HLTUtilityFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3109F2E7190DC4CB00A30C31 /* HLTUtilityFunctions.m */; };
+		3109F2EC190DCE4D00A30C31 /* dummy-domain-response.json in Resources */ = {isa = PBXBuildFile; fileRef = 3109F2EA190DCE4D00A30C31 /* dummy-domain-response.json */; };
+		3109F2ED190DCE4D00A30C31 /* dummy-stats-response.json in Resources */ = {isa = PBXBuildFile; fileRef = 3109F2EB190DCE4D00A30C31 /* dummy-stats-response.json */; };
 		31560CB418AF4F8500F46516 /* HLTRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 31560CB318AF4F8500F46516 /* HLTRecord.m */; };
 		31560CB918AF4F9A00F46516 /* HLTCommunicatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 31560CB518AF4F9A00F46516 /* HLTCommunicatorTests.m */; };
 		31560CBA18AF4F9A00F46516 /* HLTDomainTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 31560CB618AF4F9A00F46516 /* HLTDomainTests.m */; };
@@ -70,6 +72,8 @@
 /* Begin PBXFileReference section */
 		28B5E954392242F6982F704D /* libPods-HazeLightLogicTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HazeLightLogicTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3109F2E7190DC4CB00A30C31 /* HLTUtilityFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HLTUtilityFunctions.m; path = HazeLight/HLTUtilityFunctions.m; sourceTree = SOURCE_ROOT; };
+		3109F2EA190DCE4D00A30C31 /* dummy-domain-response.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "dummy-domain-response.json"; sourceTree = "<group>"; };
+		3109F2EB190DCE4D00A30C31 /* dummy-stats-response.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "dummy-stats-response.json"; sourceTree = "<group>"; };
 		31560CB218AF4F8500F46516 /* HLTRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HLTRecord.h; path = HazeLight/HLTRecord.h; sourceTree = SOURCE_ROOT; };
 		31560CB318AF4F8500F46516 /* HLTRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HLTRecord.m; path = HazeLight/HLTRecord.m; sourceTree = SOURCE_ROOT; };
 		31560CB518AF4F9A00F46516 /* HLTCommunicatorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HLTCommunicatorTests.m; path = HazeLightLogicTests/HLTCommunicatorTests.m; sourceTree = SOURCE_ROOT; };
@@ -153,6 +157,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3109F2E9190DCE4D00A30C31 /* Dummy Responses */ = {
+			isa = PBXGroup;
+			children = (
+				3109F2EA190DCE4D00A30C31 /* dummy-domain-response.json */,
+				3109F2EB190DCE4D00A30C31 /* dummy-stats-response.json */,
+			);
+			name = "Dummy Responses";
+			path = "HazeLightLogicTests/Dummy Responses";
+			sourceTree = SOURCE_ROOT;
+		};
 		31DB355818AF14B500255C69 /* HazeLightAPITests */ = {
 			isa = PBXGroup;
 			children = (
@@ -263,6 +277,7 @@
 				31560CB618AF4F9A00F46516 /* HLTDomainTests.m */,
 				31560CB718AF4F9A00F46516 /* HLTRecordTests.m */,
 				31560CB818AF4F9A00F46516 /* HLTUserTests.m */,
+				3109F2E9190DCE4D00A30C31 /* Dummy Responses */,
 				31ECF78D16DDD7FA002BF567 /* Supporting Files */,
 			);
 			name = HazeLightLogicTests;
@@ -450,9 +465,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3109F2ED190DCE4D00A30C31 /* dummy-stats-response.json in Resources */,
 				31B6C21318B043E900D75872 /* InfoPlist.strings in Resources */,
 				316C001318BAFFB700BB5301 /* apiKey.txt in Resources */,
 				31E235A518BB03030046CF0F /* email.txt in Resources */,
+				3109F2EC190DCE4D00A30C31 /* dummy-domain-response.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
