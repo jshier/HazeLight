@@ -33,17 +33,27 @@ describe(@"HLTCommunicator", ^{
         
     });
     context(@"fetchStatsWithDomain:withInterval:sucess:failure:", ^{
-        context(@"is called with appropriate input", ^{
+        context(@"on success", ^{
             beforeEach(^{
                 
             });
-            context(@"and receives an appropriate response", ^{
-                it(@"should correctly parse the response", ^{
-                    
-                });
-                it(@"should produce correct output", ^{
-                    
-                });
+            it(@"returns a stats object with the correct data", ^{
+                
+            });
+            it(@"returns an NSURLSessionDataTask object", ^{
+                
+            });
+
+        });
+        context(@"on failure", ^{
+            beforeEach(^{
+                
+            });
+            it(@"returns an NSError object", ^{
+                
+            });
+            it(@"returns an NSURLSessionDataTask object", ^{
+                
             });
         });
     });
