@@ -33,7 +33,7 @@
     self.domain.hostPubname = @"hostPubname";
     self.domain.hostWebsite = @"hostWebsite";
     self.domain.vtxt = @"vtxt";
-    self.domain.fullQualifiedDNSNames = @[@"DNSName1", @"DNSName2"];
+    self.domain.fullyQualifiedDNSNames = @[@"DNSName1", @"DNSName2"];
     self.domain.step = @"step";
     self.domain.zoneStatusClass = @"zoneStatusClass";
     self.domain.zoneStatusDescription = @"zoneStatusDescription";
@@ -110,7 +110,7 @@
 
 - (void)testDomainHasFullQualifiedDNSNames
 {
-    XCTAssertEqualObjects(self.domain.fullQualifiedDNSNames, (@[@"DNSName1", @"DNSName2"]), @"Domain should have fullQualifiedDNSNames.");
+    XCTAssertEqualObjects(self.domain.fullyQualifiedDNSNames, (@[@"DNSName1", @"DNSName2"]), @"Domain should have fullQualifiedDNSNames.");
 }
 
 - (void)testDomainHasStep
