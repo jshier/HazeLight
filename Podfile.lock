@@ -10,15 +10,18 @@ PODS:
   - Kiwi/XCTest (2.2.4):
     - Kiwi/ARC
     - Kiwi/NonARC
+  - OHHTTPStubs (3.1.0)
 
 DEPENDENCIES:
   - KIF
   - Kiwi-KIF/XCTest
   - Kiwi/XCTest
+  - OHHTTPStubs
 
 SPEC CHECKSUMS:
   KIF: 908d9a64faa939ad96581c90f9cc256649a2014a
   Kiwi: d60d7498b640a16f58b01925fc3c8d7c4d809f66
   Kiwi-KIF: b5391f7f57e91f43fdb2d4227d64277a67cf9e09
+  OHHTTPStubs: d67c42c0212f0883ddb8592375aa0dc00dc50a36
 
 COCOAPODS: 0.32.1

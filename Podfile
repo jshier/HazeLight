@@ -6,7 +6,8 @@ target "HazeLight" do
 end
 
 target :HazeLightLogicTests, :exclusive => true do
-	pod 'Kiwi/XCTest' 
+	pod 'Kiwi/XCTest'
+	pod 'OHHTTPStubs'
 end
 
 target :HazeLightAPITests, :exclusive => true do
