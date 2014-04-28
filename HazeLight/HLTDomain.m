@@ -20,7 +20,7 @@
         _allows = dictionary[@"allow"];
         _confirmationCodes = dictionary[@"confirm_code"];
         _displayName = dictionary[@"display_name"];
-        _fullQualifiedDNSNames = dictionary[@"fqdns"];
+        _fullyQualifiedDNSNames = dictionary[@"fqdns"];
         _hostID = dictionary[@"host_id"];
         _hostPubname = dictionary[@"host_pubname"];
         _hostWebsite = dictionary[@"host_website"];
@@ -42,6 +42,37 @@
     }
     
     return self;
+}
+
+- (NSString *)description
+{
+    NSDictionary *description = @{@"user": replaceNilWithNull(self.user),
+                                  @"records": replaceNilWithNull(self.records),
+                                  @"zoneID": replaceNilWithNull(self.zoneID),
+                                  @"userID": replaceNilWithNull(self.userID),
+                                  @"zoneName": replaceNilWithNull(self.zoneName),
+                                  @"displayName": replaceNilWithNull(self.displayName),
+                                  @"zoneStatus": replaceNilWithNull(self.zoneStatus),
+                                  @"zoneMode": replaceNilWithNull(self.zoneMode),
+                                  @"hostID": replaceNilWithNull(self.hostID),
+                                  @"zoneType": replaceNilWithNull(self.zoneType),
+                                  @"hostPubname": replaceNilWithNull(self.hostPubname),
+                                  @"hostWebsite": replaceNilWithNull(self.hostWebsite),
+                                  @"vtxt": replaceNilWithNull(self.vtxt),
+                                  @"fullyQualifiedDNSNames": replaceNilWithNull(self.fullyQualifiedDNSNames),
+                                  @"step": replaceNilWithNull(self.step),
+                                  @"zoneStatusClass": replaceNilWithNull(self.zoneStatusClass),
+                                  @"zoneStatusDescription": replaceNilWithNull(self.zoneStatusDescription),
+                                  @"nameserverVanityMap": replaceNilWithNull(self.nameserverVanityMap),
+                                  @"originalRegistrar": replaceNilWithNull(self.originalRegistrar),
+                                  @"originalDNSHost": replaceNilWithNull(self.originalDNSHost),
+                                  @"originalNameserverNames": replaceNilWithNull(self.originalNameserverNames),
+                                  @"properties": replaceNilWithNull(self.properties),
+                                  @"confirmationCodes": replaceNilWithNull(self.confirmationCodes),
+                                  @"allows": replaceNilWithNull(self.allows)};
+    
+    return [description description];
+                                  
 }
 
 @end

@@ -26,7 +26,7 @@
 @property (nonatomic, copy) NSString *hostPubname;
 @property (nonatomic, copy) NSString *hostWebsite;
 @property (nonatomic, copy) NSString *vtxt;
-@property (nonatomic, copy) NSArray *fullQualifiedDNSNames;
+@property (nonatomic, copy) NSArray *fullyQualifiedDNSNames;
 @property (nonatomic, copy) NSString *step;
 @property (nonatomic, copy) NSString *zoneStatusClass;
 @property (nonatomic, copy) NSString *zoneStatusDescription;
