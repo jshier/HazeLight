@@ -89,11 +89,23 @@ static NSString * const baseURLString = @"https://www.cloudflare.com/api_json.ht
                 failure(task, error);
             }
         } else {
+            if (((NSHTTPURLResponse *)response).statusCode != 200) {
+                NSError *responseError = [NSError errorWithDomain:@"HLTCommunicatorErrorDomain" code:1 userInfo:nil];
+                if (failure) {
+                    failure(task, responseError);
+                }
+            }
             NSError *decodeError;
             NSDictionary *responseDictionary = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&decodeError];
             if (decodeError) {
                 if (failure) {
                     failure(task, decodeError);
+                }
+            }
+            if ([responseDictionary[@"result"] isEqualToString:@"error"]) {
+                NSError *responseError = [NSError errorWithDomain:@"HLTCommunicatorErrorDomain" code:2 userInfo:responseDictionary];
+                if (failure) {
+                    failure(task, responseError);
                 }
             }
             responseDictionary = removeKeysWithNullValuesFromObject(responseDictionary);
