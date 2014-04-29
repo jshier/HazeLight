@@ -52,21 +52,13 @@ static NSString * const baseURLString = @"https://www.cloudflare.com/api_json.ht
     NSData *postData = [[NSString stringWithFormat:@"a=%@&tkn=%@&email=%@&z=%@&interval=%@", type, domain.user.apiKey, domain.user.email, domain.zoneName, @(interval)] dataUsingEncoding:NSUTF8StringEncoding];
 
     __block NSURLSessionDataTask *task = [self.session dataTaskWithRequest:[self requestWithBodyData:postData] completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-        if (error) {
-            if (failure) {
-                failure(task, error);
-            }
-        } else {
-            NSError *decodeError;
-            NSDictionary *responseDictionary = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&decodeError];
-            if (decodeError) {
-                if (failure) {
-                    failure(task, decodeError);
-                }
-            }
-            if (success) {
-                success(task, [[HLTStatsResponse alloc] initWithDomain:domain andResponseDictionary:responseDictionary[@"response"][@"result"][@"objs"][0]]);
-            }
+        NSDictionary *responseDictionary = [self checkFailureForTask:task
+                                                                data:data
+                                                            response:response
+                                                               error:error
+                                                             failure:failure];
+        if (success) {
+            success(task, [[HLTStatsResponse alloc] initWithDomain:domain andResponseDictionary:responseDictionary[@"response"][@"result"][@"objs"][0]]);
         }
     }];
     
@@ -84,45 +76,62 @@ static NSString * const baseURLString = @"https://www.cloudflare.com/api_json.ht
     NSData *postData = [[NSString stringWithFormat:@"a=%@&tkn=%@&email=%@", type, user.apiKey, user.email] dataUsingEncoding:NSUTF8StringEncoding];
     
     __block NSURLSessionDataTask *task = [self.session dataTaskWithRequest:[self requestWithBodyData:postData] completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-        if (error) {
-            if (failure) {
-                failure(task, error);
-            }
-        } else {
-            if (((NSHTTPURLResponse *)response).statusCode != 200) {
-                NSError *responseError = [NSError errorWithDomain:@"HLTCommunicatorErrorDomain" code:1 userInfo:nil];
-                if (failure) {
-                    failure(task, responseError);
-                }
-            }
-            NSError *decodeError;
-            NSDictionary *responseDictionary = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&decodeError];
-            if (decodeError) {
-                if (failure) {
-                    failure(task, decodeError);
-                }
-            }
-            if ([responseDictionary[@"result"] isEqualToString:@"error"]) {
-                NSError *responseError = [NSError errorWithDomain:@"HLTCommunicatorErrorDomain" code:2 userInfo:responseDictionary];
-                if (failure) {
-                    failure(task, responseError);
-                }
-            }
-            responseDictionary = removeKeysWithNullValuesFromObject(responseDictionary);
-            NSArray *rawDomains = responseDictionary[@"response"][@"zones"][@"objs"];
-            NSMutableArray *domains = [[NSMutableArray alloc] init];
-            for (NSDictionary *domainDict in rawDomains) {
-                [domains addObject:[[HLTDomain alloc] initWithUser:user andResponseDictionary:domainDict]];
-            }
-            if (success) {
-                success(task, [domains copy]);
-            }
+        NSDictionary *responseDictionary = [self checkFailureForTask:task
+                                                                data:data
+                                                            response:response
+                                                               error:error
+                                                             failure:failure];
+        NSArray *rawDomains = responseDictionary[@"response"][@"zones"][@"objs"];
+        NSMutableArray *domains = [[NSMutableArray alloc] init];
+        for (NSDictionary *domainDict in rawDomains) {
+            [domains addObject:[[HLTDomain alloc] initWithUser:user andResponseDictionary:domainDict]];
+        }
+        if (success) {
+            success(task, [domains copy]);
         }
     }];
     
     [task resume];
     
     return task;
+}
+
+- (NSDictionary *)checkFailureForTask:(NSURLSessionDataTask *)task
+                                 data:(NSData *)data
+                             response:(NSURLResponse *)response
+                                error:(NSError *)error
+                              failure:(void (^)(NSURLSessionDataTask *task, NSError *error))failure
+{
+    NSDictionary *responseDictionary;
+    if (error) {
+        if (failure) {
+            failure(task, error);
+        }
+    }
+    else {
+        if (((NSHTTPURLResponse *)response).statusCode != 200) {
+            NSError *responseError = [NSError errorWithDomain:@"HLTCommunicatorErrorDomain" code:1 userInfo:nil];
+            if (failure) {
+                failure(task, responseError);
+            }
+        }
+        NSError *decodeError;
+        responseDictionary = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&decodeError];
+        if (decodeError) {
+            if (failure) {
+                failure(task, decodeError);
+            }
+        }
+        if ([responseDictionary[@"result"] isEqualToString:@"error"]) {
+            NSError *responseError = [NSError errorWithDomain:@"HLTCommunicatorErrorDomain" code:2 userInfo:responseDictionary];
+            if (failure) {
+                failure(task, responseError);
+            }
+        }
+        responseDictionary = removeKeysWithNullValuesFromObject(responseDictionary);
+    }
+    
+    return responseDictionary;
 }
 
 - (NSURLRequest *)requestWithBodyData:(NSData *)data
