@@ -17,16 +17,18 @@
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, copy) NSString *displayName;
 @property (nonatomic, copy) NSString *type;
-@property (nonatomic, copy) NSString *prio; //What is this?
+@property (nonatomic, copy) NSString *priority; //What is this?
 @property (nonatomic, copy) NSString *content;
 @property (nonatomic, copy) NSString *displayContent;
-@property (nonatomic, copy) NSString *ttl;
-@property (nonatomic) NSNumber *ttlCeiling;
-@property (nonatomic, copy) NSString *sslID;
-@property (nonatomic, copy) NSString *sslStatus;
-@property (nonatomic, copy) NSString *sslExpiresOn;
+@property (nonatomic, copy) NSString *TTL;
+@property (nonatomic) NSNumber *TTLCeiling;
+@property (nonatomic, copy) NSString *SSLID;
+@property (nonatomic, copy) NSString *SSLStatus;
+@property (nonatomic, copy) NSString *SSLExpiresOn;
 @property (nonatomic) NSNumber *autoTTL;
 @property (nonatomic, copy) NSString *serviceMode;
-@property (nonatomic, copy) NSDictionary *props;
+@property (nonatomic, copy) NSDictionary *properties;
+
+- (instancetype)initWithResponseDictionary:(NSDictionary *)dict;
 
 @end
