@@ -20,25 +20,31 @@
 - (void)setUp
 {
     [super setUp];
-    //FIXME: Should test custom initializer.
-    _record = [[HLTRecord alloc] init];
-    _record.recordID = @"recordID";
-    _record.recordTag = @"recordTag";
-    _record.zoneName = @"zoneName";
-    _record.name = @"name";
-    _record.displayName = @"displayName";
-    _record.type = @"type";
-    _record.prio = @"prio";
-    _record.content = @"content";
-    _record.displayContent = @"displayContent";
-    _record.ttl = @"ttl";
-    _record.ttlCeiling = @100;
-    _record.sslID = @"sslID";
-    _record.sslStatus = @"sslStatus";
-    _record.sslExpiresOn = @"sslExpiresOn";
-    _record.autoTTL = @100;
-    _record.serviceMode = @"serviceMode";
-    _record.props = @{@"key1": @"object1", @"key2": @"object2"};
+
+    NSDictionary *sampleDictionary = @{@"rec_id": @"16606009",
+                                       @"rec_tag": @"7f8e77bac02ba65d34e20c4b994a202c",
+                                       @"zone_name": @"example.com",
+                                       @"name": @"direct.example.com",
+                                       @"display_name": @"direct",
+                                       @"type": @"A",
+                                       @"prio": @"priority",
+                                       @"content": @"[server IP]",
+                                       @"display_content": @"[server IP]",
+                                       @"ttl": @"1",
+                                       @"ttl_ceil": @86400,
+                                       @"ssl_id": @"SSLID",
+                                       @"ssl_status": @"SSLStatus",
+                                       @"ssl_expires_on": @"SSLExpiresOn",
+                                       @"auto_ttl": @1,
+                                       @"service_mode": @"0",
+                                       @"props": @{@"proxiable": @1,
+                                                   @"cloud_on": @0,
+                                                   @"cf_open": @1,
+                                                   @"ssl": @0,
+                                                   @"expired_ssl": @0,
+                                                   @"expiring_ssl": @0,
+                                                   @"pending_ssl": @0}};
+    _record = [[HLTRecord alloc] initWithResponseDictionary:sampleDictionary];
 }
 
 - (void)tearDown
@@ -49,87 +55,93 @@
 
 - (void)testRecordHasRecordID
 {
-    XCTAssertEqualObjects(self.record.recordID, @"recordID", @"Record should have a recordID.");
+    XCTAssertEqualObjects(self.record.recordID, @"16606009", @"Record should have a recordID.");
 }
 
 - (void)testRecordHasRecordTag
 {
-    XCTAssertEqualObjects(self.record.recordTag, @"recordTag", @"Record should have recordTag.");
+    XCTAssertEqualObjects(self.record.recordTag, @"7f8e77bac02ba65d34e20c4b994a202c", @"Record should have recordTag.");
 }
 
 - (void)testRecordHasZoneName
 {
-    XCTAssertEqualObjects(self.record.zoneName, @"zoneName", @"Record should have zone name.");
+    XCTAssertEqualObjects(self.record.zoneName, @"example.com", @"Record should have zone name.");
 }
 
 - (void)testRecordHasName
 {
-    XCTAssertEqualObjects(self.record.name, @"name", @"Record should have name.");
+    XCTAssertEqualObjects(self.record.name, @"direct.example.com", @"Record should have name.");
 }
 
 - (void)testRecordHasDisplayName
 {
-    XCTAssertEqualObjects(self.record.displayName, @"displayName", @"Record should have displayName.");
+    XCTAssertEqualObjects(self.record.displayName, @"direct", @"Record should have displayName.");
 }
 
 - (void)testRecordHasType
 {
-    XCTAssertEqualObjects(self.record.type, @"type", @"Record should have type.");
+    XCTAssertEqualObjects(self.record.type, @"A", @"Record should have type.");
 }
 
 - (void)testRecordHasPrio
 {
-    XCTAssertEqualObjects(self.record.prio, @"prio", @"Record should have prio.");
+    XCTAssertEqualObjects(self.record.priority, @"priority", @"Record should have prio.");
 }
 
 - (void)testRecordHasContent
 {
-    XCTAssertEqualObjects(self.record.content, @"content", @"Record should have content.");
+    XCTAssertEqualObjects(self.record.content, @"[server IP]", @"Record should have content.");
 }
 
 - (void)testRecordHasDisplayContent
 {
-    XCTAssertEqualObjects(self.record.displayContent, @"displayContent", @"Record should have displayContent.");
+    XCTAssertEqualObjects(self.record.displayContent, @"[server IP]", @"Record should have displayContent.");
 }
 
 - (void)testRecordHasTTL
 {
-    XCTAssertEqualObjects(self.record.ttl, @"ttl", @"Record should have ttl.");
+    XCTAssertEqualObjects(self.record.TTL, @"1", @"Record should have ttl.");
 }
 
 - (void)testRecordHasTTLCeiling
 {
-    XCTAssertEqualObjects(self.record.ttlCeiling, @(100), @"Record should have ttlCeiling.");
+    XCTAssertEqualObjects(self.record.TTLCeiling, @86400, @"Record should have ttlCeiling.");
 }
 
 - (void)testRecordHasSSLID
 {
-    XCTAssertEqualObjects(self.record.sslID, @"sslID", @"Record should have sslID.");
+    XCTAssertEqualObjects(self.record.SSLID, @"SSLID", @"Record should have sslID.");
 }
 
 - (void)testRecordHasSSLStatus
 {
-    XCTAssertEqualObjects(self.record.sslStatus, @"sslStatus", @"Record should have sslStatus.");
+    XCTAssertEqualObjects(self.record.SSLStatus, @"SSLStatus", @"Record should have sslStatus.");
 }
 
 - (void)testRecordHasSSLExpiresOn
 {
-    XCTAssertEqualObjects(self.record.sslExpiresOn, @"sslExpiresOn", @"Record should have sslExpiresOn.");
+    XCTAssertEqualObjects(self.record.SSLExpiresOn, @"SSLExpiresOn", @"Record should have sslExpiresOn.");
 }
 
 - (void)testHasAutoTTL
 {
-    XCTAssertEqualObjects(self.record.autoTTL, @(100), @"Record should have autoTTL.");
+    XCTAssertEqualObjects(self.record.autoTTL, @1, @"Record should have autoTTL.");
 }
 
 - (void)testRecordHasServiceMode
 {
-    XCTAssertEqualObjects(self.record.serviceMode, @"serviceMode", @"Record should have service mode.");
+    XCTAssertEqualObjects(self.record.serviceMode, @"0", @"Record should have service mode.");
 }
 
 - (void)testRecordHasProps
 {
-    XCTAssertEqualObjects(self.record.props, (@{@"key1": @"object1", @"key2": @"object2"}), @"Record should have props.");
+    XCTAssertEqualObjects(self.record.properties, (@{@"proxiable": @1,
+                                                     @"cloud_on": @0,
+                                                     @"cf_open": @1,
+                                                     @"ssl": @0,
+                                                     @"expired_ssl": @0,
+                                                     @"expiring_ssl": @0,
+                                                     @"pending_ssl": @0}), @"Record should have props.");
 }
 
 @end
