@@ -162,7 +162,6 @@ describe(@"HLTCommunicator", ^{
                 }];
                 [communicator fetchDomainsForUser:[[HLTUser alloc] initWithEmail:@"test" apiKey:@"test"] success:^(NSURLSessionDataTask *task, NSArray *domains) {
                     testTask = task;
-                    NSLog(@"Domains: %@", domains);
                     testDomains = domains;
                 } failure:nil];
             });

@@ -1,22 +1,18 @@
-platform :ios, "7.1"
+source 'https://github.com/CocoaPods/Specs.git'
+
+platform :ios, "8.1"
 inhibit_all_warnings!
 
 target "HazeLight" do
 
 end
 
-target :HazeLightLogicTests, :exclusive => true do
-	pod 'Kiwi/XCTest'
+target :HazeLightTests, :exclusive => true do
+	pod 'Kiwi'
 	pod 'OHHTTPStubs'
 end
 
-target :HazeLightAPITests, :exclusive => true do
-	pod 'Kiwi/XCTest'
-end
-
 target :HazeLightUITests, :exclusive => true do
-	pod 'KIF'
-	pod 'Kiwi/XCTest'
-	pod 'Kiwi-KIF/XCTest'
+	pod 'KIF-Kiwi'
 end
 

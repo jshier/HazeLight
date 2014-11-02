@@ -1,15 +1,16 @@
 //
-//  HLTAppDelegate.h
+//  AppDelegate.h
 //  HazeLight
 //
-//  Created by Jon Shier on 2/27/13.
-//  Copyright (c) 2013 Jon Shier. All rights reserved.
+//  Created by Jon Shier on 11/2/14.
+//  Copyright (c) 2014 Jon Shier. All rights reserved.
 //
 
-@import UIKit;
+#import <UIKit/UIKit.h>
 
 @interface HLTAppDelegate : UIResponder <UIApplicationDelegate>
 
-@property (strong, nonatomic) UIWindow *window;
+@property (nonatomic) UIWindow *window;
 
 @end
+

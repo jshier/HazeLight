@@ -2,98 +2,104 @@
 //  HLTMasterViewController.m
 //  HazeLight
 //
-//  Created by Jon Shier on 2/27/13.
-//  Copyright (c) 2013 Jon Shier. All rights reserved.
+//  Created by Jon Shier on 11/2/14.
+//  Copyright (c) 2014 Jon Shier. All rights reserved.
 //
 
 #import "HLTMasterViewController.h"
 #import "HLTDetailViewController.h"
-#import "HLTUser.h"
-#import "HLTAddUserViewController.h"
 
 @interface HLTMasterViewController ()
 
-@property (strong, nonatomic) NSMutableArray *users;
+@property NSMutableArray *objects;
 
 @end
 
 @implementation HLTMasterViewController
 
-- (void)awakeFromNib
+- (void)awakeFromNib 
 {
     [super awakeFromNib];
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
+        self.clearsSelectionOnViewWillAppear = NO;
+        self.preferredContentSize = CGSizeMake(320.0, 600.0);
+    }
 }
 
-- (void)viewDidLoad
+- (void)viewDidLoad 
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    // Do any additional setup after loading the view, typically from a nib.
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
+
+    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
+    self.navigationItem.rightBarButtonItem = addButton;
+    self.detailViewController = (HLTDetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
 }
 
-- (void)didReceiveMemoryWarning
+- (void)didReceiveMemoryWarning 
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)addNewUser:(UIStoryboardSegue *)segue
+- (void)insertNewObject:(id)sender 
 {
-    if (!self.users) {
-        self.users = [[NSMutableArray alloc] init];
+    if (!self.objects) {
+        self.objects = [[NSMutableArray alloc] init];
     }
-    HLTAddUserViewController *addUserController = [segue sourceViewController];
-    [self.users insertObject:[[HLTUser alloc] initWithEmail:addUserController.email.text apiKey:addUserController.apiKey.text] atIndex:0];
+    [self.objects insertObject:[NSDate date] atIndex:0];
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
     [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
-- (IBAction)cancelAddNewUser:(UIStoryboardSegue *)segue
-{
-    
+
+#pragma mark - Segues
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([[segue identifier] isEqualToString:@"showDetail"]) {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        NSDate *object = self.objects[indexPath.row];
+        HLTDetailViewController *controller = (HLTDetailViewController *)[[segue destinationViewController] topViewController];
+        [controller setDetailItem:object];
+        controller.navigationItem.leftBarButtonItem = self.splitViewController.displayModeButtonItem;
+        controller.navigationItem.leftItemsSupplementBackButton = YES;
+    }
 }
 
 #pragma mark - Table View
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView 
 {
     return 1;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section 
 {
-    return self.users.count;
+    return self.objects.count;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath 
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
 
-    cell.textLabel.text = ((HLTUser *)self.users[indexPath.row]).email;
+    NSDate *object = self.objects[indexPath.row];
+    cell.textLabel.text = [object description];
     return cell;
 }
 
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath 
 {
     // Return NO if you do not want the specified item to be editable.
     return YES;
 }
 
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath 
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        [self.users removeObjectAtIndex:indexPath.row];
+        [self.objects removeObjectAtIndex:indexPath.row];
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
-    }
-}
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    if ([[segue identifier] isEqualToString:@"showDetail"]) {
-        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        NSDate *object = self.users[indexPath.row];
-        [[segue destinationViewController] setDetailItem:object];
     }
 }
 

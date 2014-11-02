@@ -2,15 +2,17 @@
 //  HLTMasterViewController.h
 //  HazeLight
 //
-//  Created by Jon Shier on 2/27/13.
-//  Copyright (c) 2013 Jon Shier. All rights reserved.
+//  Created by Jon Shier on 11/2/14.
+//  Copyright (c) 2014 Jon Shier. All rights reserved.
 //
 
-@import UIKit;
+#import <UIKit/UIKit.h>
+
+@class HLTDetailViewController;
 
 @interface HLTMasterViewController : UITableViewController
 
-- (IBAction)addNewUser:(UIStoryboardSegue *)segue;
-- (IBAction)cancelAddNewUser:(UIStoryboardSegue *)segue;
+@property (nonatomic) HLTDetailViewController *detailViewController;
 
 @end
+

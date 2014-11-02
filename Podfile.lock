@@ -1,27 +1,24 @@
 PODS:
-  - KIF (3.0.3):
-    - KIF/XCTest
-  - KIF/XCTest (3.0.3)
-  - Kiwi-KIF/XCTest (1.0.1):
-    - KIF (~> 2.0.0)
-    - Kiwi/XCTest (~> 2.2.3)
-  - Kiwi/ARC (2.2.4)
-  - Kiwi/NonARC (2.2.4)
-  - Kiwi/XCTest (2.2.4):
-    - Kiwi/ARC
-    - Kiwi/NonARC
-  - OHHTTPStubs (3.1.0)
+  - KIF (3.0.8):
+    - KIF/XCTest (= 3.0.8)
+  - KIF-Kiwi (0.2.2):
+    - KIF (~> 3.0.7)
+    - Kiwi (~> 2.3.0)
+  - KIF/XCTest (3.0.8)
+  - Kiwi (2.3.0)
+  - OHHTTPStubs (3.1.6):
+    - OHHTTPStubs/Core (= 3.1.6)
+  - OHHTTPStubs/Core (3.1.6)
 
 DEPENDENCIES:
-  - KIF
-  - Kiwi-KIF/XCTest
-  - Kiwi/XCTest
+  - KIF-Kiwi
+  - Kiwi
   - OHHTTPStubs
 
 SPEC CHECKSUMS:
-  KIF: 908d9a64faa939ad96581c90f9cc256649a2014a
-  Kiwi: d60d7498b640a16f58b01925fc3c8d7c4d809f66
-  Kiwi-KIF: b5391f7f57e91f43fdb2d4227d64277a67cf9e09
-  OHHTTPStubs: d67c42c0212f0883ddb8592375aa0dc00dc50a36
+  KIF: 2db5e8cf59136dd1267d49cca0d55883389b09d3
+  KIF-Kiwi: 5e2a024188f5bb2103421a4935923d25d78eba66
+  Kiwi: 54bece5b35564d9b8e03c608d926f1a22fcfc589
+  OHHTTPStubs: 6781373b69e0a67b27239799f11764d0fbefac55
 
-COCOAPODS: 0.32.1
+COCOAPODS: 0.35.0.rc1
