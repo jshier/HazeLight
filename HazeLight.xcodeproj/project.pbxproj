@@ -7,309 +7,137 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		316936D91A0614A400D05FBA /* dummy-domain-response.json in Resources */ = {isa = PBXBuildFile; fileRef = 316936D31A0614A400D05FBA /* dummy-domain-response.json */; };
-		316936DA1A0614A400D05FBA /* dummy-stats-response.json in Resources */ = {isa = PBXBuildFile; fileRef = 316936D41A0614A400D05FBA /* dummy-stats-response.json */; };
-		316936DB1A0614A400D05FBA /* HLTCommunicatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 316936D51A0614A400D05FBA /* HLTCommunicatorTests.m */; };
-		316936DC1A0614A400D05FBA /* HLTDomainTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 316936D61A0614A400D05FBA /* HLTDomainTests.m */; };
-		316936DD1A0614A400D05FBA /* HLTRecordTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 316936D71A0614A400D05FBA /* HLTRecordTests.m */; };
-		316936DE1A0614A400D05FBA /* HLTUserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 316936D81A0614A400D05FBA /* HLTUserTests.m */; };
-		316936E81A06150300D05FBA /* HLTDomain.m in Sources */ = {isa = PBXBuildFile; fileRef = 316936E11A06150300D05FBA /* HLTDomain.m */; };
-		316936E91A06150300D05FBA /* HLTRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 316936E31A06150300D05FBA /* HLTRecord.m */; };
-		316936EA1A06150300D05FBA /* HLTStatsResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 316936E51A06150300D05FBA /* HLTStatsResponse.m */; };
-		316936EB1A06150300D05FBA /* HLTUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 316936E71A06150300D05FBA /* HLTUser.m */; };
-		316936F01A06151E00D05FBA /* HLTCommunicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 316936EE1A06151E00D05FBA /* HLTCommunicator.m */; };
-		316936F41A0617EA00D05FBA /* HLTUtilityFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 316936F31A0617EA00D05FBA /* HLTUtilityFunctions.m */; };
-		3169370F1A0618BC00D05FBA /* HazeLightUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3169370E1A0618BC00D05FBA /* HazeLightUITests.m */; };
-		31AE884E1A060DC800657D20 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 31AE884D1A060DC800657D20 /* main.m */; };
-		31AE88511A060DC800657D20 /* HLTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 31AE88501A060DC800657D20 /* HLTAppDelegate.m */; };
-		31AE88541A060DC800657D20 /* HLTMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31AE88531A060DC800657D20 /* HLTMasterViewController.m */; };
-		31AE88571A060DC800657D20 /* HLTDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31AE88561A060DC800657D20 /* HLTDetailViewController.m */; };
-		31AE885A1A060DC800657D20 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31AE88581A060DC800657D20 /* Main.storyboard */; };
-		31AE885C1A060DC800657D20 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31AE885B1A060DC800657D20 /* Images.xcassets */; };
-		31AE885F1A060DC800657D20 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31AE885D1A060DC800657D20 /* LaunchScreen.xib */; };
-		B2C6DB0A7618851ADBC51D03 /* libPods-HazeLightUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F1CA8CEE6CF3DAA54501BF12 /* libPods-HazeLightUITests.a */; };
-		CFE2B96E8087E8440A2C3B7B /* libPods-HazeLightTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 13D26C0D54163D9492537CC0 /* libPods-HazeLightTests.a */; };
+		312385351B3618AD000576CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312385341B3618AD000576CE /* AppDelegate.swift */; };
+		312385371B3618AD000576CE /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312385361B3618AD000576CE /* MasterViewController.swift */; };
+		312385391B3618AD000576CE /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312385381B3618AD000576CE /* DetailViewController.swift */; };
+		3123853C1B3618AD000576CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3123853A1B3618AD000576CE /* Main.storyboard */; };
+		3123853E1B3618AD000576CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3123853D1B3618AD000576CE /* Assets.xcassets */; };
+		312385411B3618AD000576CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3123853F1B3618AD000576CE /* LaunchScreen.storyboard */; };
+		3123854C1B3618AD000576CE /* HazeLightTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3123854B1B3618AD000576CE /* HazeLightTests.swift */; };
+		312385571B3618AD000576CE /* HazeLightUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312385561B3618AD000576CE /* HazeLightUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		316937101A0618BC00D05FBA /* PBXContainerItemProxy */ = {
+		312385481B3618AD000576CE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 31AE88401A060DC800657D20 /* Project object */;
+			containerPortal = 312385291B3618AD000576CE /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 31AE88471A060DC800657D20;
+			remoteGlobalIDString = 312385301B3618AD000576CE;
 			remoteInfo = HazeLight;
 		};
-		31AE88651A060DC800657D20 /* PBXContainerItemProxy */ = {
+		312385531B3618AD000576CE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 31AE88401A060DC800657D20 /* Project object */;
+			containerPortal = 312385291B3618AD000576CE /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 31AE88471A060DC800657D20;
+			remoteGlobalIDString = 312385301B3618AD000576CE;
 			remoteInfo = HazeLight;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		13D26C0D54163D9492537CC0 /* libPods-HazeLightTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HazeLightTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		316936D31A0614A400D05FBA /* dummy-domain-response.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "dummy-domain-response.json"; sourceTree = "<group>"; };
-		316936D41A0614A400D05FBA /* dummy-stats-response.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "dummy-stats-response.json"; sourceTree = "<group>"; };
-		316936D51A0614A400D05FBA /* HLTCommunicatorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLTCommunicatorTests.m; sourceTree = "<group>"; };
-		316936D61A0614A400D05FBA /* HLTDomainTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLTDomainTests.m; sourceTree = "<group>"; };
-		316936D71A0614A400D05FBA /* HLTRecordTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLTRecordTests.m; sourceTree = "<group>"; };
-		316936D81A0614A400D05FBA /* HLTUserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLTUserTests.m; sourceTree = "<group>"; };
-		316936E01A06150300D05FBA /* HLTDomain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLTDomain.h; sourceTree = "<group>"; };
-		316936E11A06150300D05FBA /* HLTDomain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLTDomain.m; sourceTree = "<group>"; };
-		316936E21A06150300D05FBA /* HLTRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLTRecord.h; sourceTree = "<group>"; };
-		316936E31A06150300D05FBA /* HLTRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLTRecord.m; sourceTree = "<group>"; };
-		316936E41A06150300D05FBA /* HLTStatsResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLTStatsResponse.h; sourceTree = "<group>"; };
-		316936E51A06150300D05FBA /* HLTStatsResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLTStatsResponse.m; sourceTree = "<group>"; };
-		316936E61A06150300D05FBA /* HLTUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLTUser.h; sourceTree = "<group>"; };
-		316936E71A06150300D05FBA /* HLTUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLTUser.m; sourceTree = "<group>"; };
-		316936ED1A06151E00D05FBA /* HLTCommunicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLTCommunicator.h; sourceTree = "<group>"; };
-		316936EE1A06151E00D05FBA /* HLTCommunicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLTCommunicator.m; sourceTree = "<group>"; };
-		316936EF1A06151E00D05FBA /* HLTStatRefreshInterval.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLTStatRefreshInterval.h; sourceTree = "<group>"; };
-		316936F21A0617EA00D05FBA /* HLTUtilityFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLTUtilityFunctions.h; sourceTree = "<group>"; };
-		316936F31A0617EA00D05FBA /* HLTUtilityFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLTUtilityFunctions.m; sourceTree = "<group>"; };
-		3169370A1A0618BC00D05FBA /* HazeLightUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HazeLightUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3169370D1A0618BC00D05FBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3169370E1A0618BC00D05FBA /* HazeLightUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HazeLightUITests.m; sourceTree = "<group>"; };
-		31AE88481A060DC800657D20 /* HazeLight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HazeLight.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		31AE884C1A060DC800657D20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		31AE884D1A060DC800657D20 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		31AE884F1A060DC800657D20 /* HLTAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HLTAppDelegate.h; sourceTree = "<group>"; };
-		31AE88501A060DC800657D20 /* HLTAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HLTAppDelegate.m; sourceTree = "<group>"; };
-		31AE88521A060DC800657D20 /* HLTMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HLTMasterViewController.h; sourceTree = "<group>"; };
-		31AE88531A060DC800657D20 /* HLTMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HLTMasterViewController.m; sourceTree = "<group>"; };
-		31AE88551A060DC800657D20 /* HLTDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HLTDetailViewController.h; sourceTree = "<group>"; };
-		31AE88561A060DC800657D20 /* HLTDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HLTDetailViewController.m; sourceTree = "<group>"; };
-		31AE88591A060DC800657D20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		31AE885B1A060DC800657D20 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		31AE885E1A060DC800657D20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		31AE88641A060DC800657D20 /* HazeLightTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HazeLightTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		31AE88691A060DC800657D20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6EB2B25B3D61A16386BF5E1D /* Pods-HazeLightUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HazeLightUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HazeLightUITests/Pods-HazeLightUITests.release.xcconfig"; sourceTree = "<group>"; };
-		9207D31487B5F21F2B96F675 /* Pods-HazeLightUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HazeLightUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HazeLightUITests/Pods-HazeLightUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		9BD6DEB3139AADC26AE85076 /* Pods-HazeLightTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HazeLightTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HazeLightTests/Pods-HazeLightTests.debug.xcconfig"; sourceTree = "<group>"; };
-		F1CA8CEE6CF3DAA54501BF12 /* libPods-HazeLightUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HazeLightUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F44D1D45E381341DAB0CE502 /* Pods-HazeLightTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HazeLightTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HazeLightTests/Pods-HazeLightTests.release.xcconfig"; sourceTree = "<group>"; };
+		312385311B3618AD000576CE /* HazeLight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HazeLight.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		312385341B3618AD000576CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		312385361B3618AD000576CE /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		312385381B3618AD000576CE /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		3123853B1B3618AD000576CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3123853D1B3618AD000576CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		312385401B3618AD000576CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		312385421B3618AD000576CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		312385471B3618AD000576CE /* HazeLightTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HazeLightTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3123854B1B3618AD000576CE /* HazeLightTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HazeLightTests.swift; sourceTree = "<group>"; };
+		3123854D1B3618AD000576CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		312385521B3618AD000576CE /* HazeLightUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HazeLightUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		312385561B3618AD000576CE /* HazeLightUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HazeLightUITests.swift; sourceTree = "<group>"; };
+		312385581B3618AD000576CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		316937071A0618BC00D05FBA /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B2C6DB0A7618851ADBC51D03 /* libPods-HazeLightUITests.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		31AE88451A060DC800657D20 /* Frameworks */ = {
+		3123852E1B3618AD000576CE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		31AE88611A060DC800657D20 /* Frameworks */ = {
+		312385441B3618AD000576CE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CFE2B96E8087E8440A2C3B7B /* libPods-HazeLightTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3123854F1B3618AD000576CE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		316936D21A0614A400D05FBA /* Dummy Responses */ = {
+		312385281B3618AD000576CE = {
 			isa = PBXGroup;
 			children = (
-				316936D31A0614A400D05FBA /* dummy-domain-response.json */,
-				316936D41A0614A400D05FBA /* dummy-stats-response.json */,
-			);
-			path = "Dummy Responses";
-			sourceTree = "<group>";
-		};
-		316936DF1A0614BE00D05FBA /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				316936E01A06150300D05FBA /* HLTDomain.h */,
-				316936E11A06150300D05FBA /* HLTDomain.m */,
-				316936E21A06150300D05FBA /* HLTRecord.h */,
-				316936E31A06150300D05FBA /* HLTRecord.m */,
-				316936E41A06150300D05FBA /* HLTStatsResponse.h */,
-				316936E51A06150300D05FBA /* HLTStatsResponse.m */,
-				316936E61A06150300D05FBA /* HLTUser.h */,
-				316936E71A06150300D05FBA /* HLTUser.m */,
-			);
-			name = Models;
-			sourceTree = "<group>";
-		};
-		316936EC1A06150E00D05FBA /* Communicator */ = {
-			isa = PBXGroup;
-			children = (
-				316936ED1A06151E00D05FBA /* HLTCommunicator.h */,
-				316936EE1A06151E00D05FBA /* HLTCommunicator.m */,
-				316936EF1A06151E00D05FBA /* HLTStatRefreshInterval.h */,
-			);
-			name = Communicator;
-			sourceTree = "<group>";
-		};
-		316936F11A0617BA00D05FBA /* Utilities */ = {
-			isa = PBXGroup;
-			children = (
-				316936F21A0617EA00D05FBA /* HLTUtilityFunctions.h */,
-				316936F31A0617EA00D05FBA /* HLTUtilityFunctions.m */,
-			);
-			name = Utilities;
-			sourceTree = "<group>";
-		};
-		3169370B1A0618BC00D05FBA /* HazeLightUITests */ = {
-			isa = PBXGroup;
-			children = (
-				3169370E1A0618BC00D05FBA /* HazeLightUITests.m */,
-				3169370C1A0618BC00D05FBA /* Supporting Files */,
-			);
-			path = HazeLightUITests;
-			sourceTree = "<group>";
-		};
-		3169370C1A0618BC00D05FBA /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				3169370D1A0618BC00D05FBA /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		31AE883F1A060DC800657D20 = {
-			isa = PBXGroup;
-			children = (
-				31AE884A1A060DC800657D20 /* HazeLight */,
-				31AE88671A060DC800657D20 /* HazeLightTests */,
-				3169370B1A0618BC00D05FBA /* HazeLightUITests */,
-				31AE88491A060DC800657D20 /* Products */,
-				570ACEFF96A52C4AF56BF539 /* Pods */,
-				9E80650C62B7E87504739E9A /* Frameworks */,
+				312385331B3618AD000576CE /* HazeLight */,
+				3123854A1B3618AD000576CE /* HazeLightTests */,
+				312385551B3618AD000576CE /* HazeLightUITests */,
+				312385321B3618AD000576CE /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		31AE88491A060DC800657D20 /* Products */ = {
+		312385321B3618AD000576CE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				31AE88481A060DC800657D20 /* HazeLight.app */,
-				31AE88641A060DC800657D20 /* HazeLightTests.xctest */,
-				3169370A1A0618BC00D05FBA /* HazeLightUITests.xctest */,
+				312385311B3618AD000576CE /* HazeLight.app */,
+				312385471B3618AD000576CE /* HazeLightTests.xctest */,
+				312385521B3618AD000576CE /* HazeLightUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		31AE884A1A060DC800657D20 /* HazeLight */ = {
+		312385331B3618AD000576CE /* HazeLight */ = {
 			isa = PBXGroup;
 			children = (
-				31AE884F1A060DC800657D20 /* HLTAppDelegate.h */,
-				31AE88501A060DC800657D20 /* HLTAppDelegate.m */,
-				31AE88581A060DC800657D20 /* Main.storyboard */,
-				31AE88751A06127D00657D20 /* Controllers */,
-				316936EC1A06150E00D05FBA /* Communicator */,
-				316936DF1A0614BE00D05FBA /* Models */,
-				316936F11A0617BA00D05FBA /* Utilities */,
-				31AE884B1A060DC800657D20 /* Supporting Files */,
+				312385341B3618AD000576CE /* AppDelegate.swift */,
+				312385361B3618AD000576CE /* MasterViewController.swift */,
+				312385381B3618AD000576CE /* DetailViewController.swift */,
+				3123853A1B3618AD000576CE /* Main.storyboard */,
+				3123853D1B3618AD000576CE /* Assets.xcassets */,
+				3123853F1B3618AD000576CE /* LaunchScreen.storyboard */,
+				312385421B3618AD000576CE /* Info.plist */,
 			);
 			path = HazeLight;
 			sourceTree = "<group>";
 		};
-		31AE884B1A060DC800657D20 /* Supporting Files */ = {
+		3123854A1B3618AD000576CE /* HazeLightTests */ = {
 			isa = PBXGroup;
 			children = (
-				31AE885B1A060DC800657D20 /* Images.xcassets */,
-				31AE885D1A060DC800657D20 /* LaunchScreen.xib */,
-				31AE884C1A060DC800657D20 /* Info.plist */,
-				31AE884D1A060DC800657D20 /* main.m */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		31AE88671A060DC800657D20 /* HazeLightTests */ = {
-			isa = PBXGroup;
-			children = (
-				316936D51A0614A400D05FBA /* HLTCommunicatorTests.m */,
-				316936D61A0614A400D05FBA /* HLTDomainTests.m */,
-				316936D71A0614A400D05FBA /* HLTRecordTests.m */,
-				316936D81A0614A400D05FBA /* HLTUserTests.m */,
-				316936D21A0614A400D05FBA /* Dummy Responses */,
-				31AE88681A060DC800657D20 /* Supporting Files */,
+				3123854B1B3618AD000576CE /* HazeLightTests.swift */,
+				3123854D1B3618AD000576CE /* Info.plist */,
 			);
 			path = HazeLightTests;
 			sourceTree = "<group>";
 		};
-		31AE88681A060DC800657D20 /* Supporting Files */ = {
+		312385551B3618AD000576CE /* HazeLightUITests */ = {
 			isa = PBXGroup;
 			children = (
-				31AE88691A060DC800657D20 /* Info.plist */,
+				312385561B3618AD000576CE /* HazeLightUITests.swift */,
+				312385581B3618AD000576CE /* Info.plist */,
 			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		31AE88751A06127D00657D20 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				31AE88521A060DC800657D20 /* HLTMasterViewController.h */,
-				31AE88531A060DC800657D20 /* HLTMasterViewController.m */,
-				31AE88551A060DC800657D20 /* HLTDetailViewController.h */,
-				31AE88561A060DC800657D20 /* HLTDetailViewController.m */,
-			);
-			name = Controllers;
-			sourceTree = "<group>";
-		};
-		570ACEFF96A52C4AF56BF539 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				9BD6DEB3139AADC26AE85076 /* Pods-HazeLightTests.debug.xcconfig */,
-				F44D1D45E381341DAB0CE502 /* Pods-HazeLightTests.release.xcconfig */,
-				9207D31487B5F21F2B96F675 /* Pods-HazeLightUITests.debug.xcconfig */,
-				6EB2B25B3D61A16386BF5E1D /* Pods-HazeLightUITests.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		9E80650C62B7E87504739E9A /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				13D26C0D54163D9492537CC0 /* libPods-HazeLightTests.a */,
-				F1CA8CEE6CF3DAA54501BF12 /* libPods-HazeLightUITests.a */,
-			);
-			name = Frameworks;
+			path = HazeLightUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		316937091A0618BC00D05FBA /* HazeLightUITests */ = {
+		312385301B3618AD000576CE /* HazeLight */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 316937121A0618BC00D05FBA /* Build configuration list for PBXNativeTarget "HazeLightUITests" */;
+			buildConfigurationList = 3123855B1B3618AD000576CE /* Build configuration list for PBXNativeTarget "HazeLight" */;
 			buildPhases = (
-				C474F19FD947BF7FE41EF765 /* Check Pods Manifest.lock */,
-				316937061A0618BC00D05FBA /* Sources */,
-				316937071A0618BC00D05FBA /* Frameworks */,
-				316937081A0618BC00D05FBA /* Resources */,
-				AEEB4650ECB4003B3DE33E47 /* Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				316937111A0618BC00D05FBA /* PBXTargetDependency */,
-			);
-			name = HazeLightUITests;
-			productName = HazeLightUITests;
-			productReference = 3169370A1A0618BC00D05FBA /* HazeLightUITests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		31AE88471A060DC800657D20 /* HazeLight */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 31AE886E1A060DC800657D20 /* Build configuration list for PBXNativeTarget "HazeLight" */;
-			buildPhases = (
-				31AE88441A060DC800657D20 /* Sources */,
-				31AE88451A060DC800657D20 /* Frameworks */,
-				31AE88461A060DC800657D20 /* Resources */,
+				3123852D1B3618AD000576CE /* Sources */,
+				3123852E1B3618AD000576CE /* Frameworks */,
+				3123852F1B3618AD000576CE /* Resources */,
 			);
 			buildRules = (
 			);
@@ -317,53 +145,68 @@
 			);
 			name = HazeLight;
 			productName = HazeLight;
-			productReference = 31AE88481A060DC800657D20 /* HazeLight.app */;
+			productReference = 312385311B3618AD000576CE /* HazeLight.app */;
 			productType = "com.apple.product-type.application";
 		};
-		31AE88631A060DC800657D20 /* HazeLightTests */ = {
+		312385461B3618AD000576CE /* HazeLightTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 31AE88711A060DC800657D20 /* Build configuration list for PBXNativeTarget "HazeLightTests" */;
+			buildConfigurationList = 3123855E1B3618AD000576CE /* Build configuration list for PBXNativeTarget "HazeLightTests" */;
 			buildPhases = (
-				8544D4B0AF847FA6F27588F9 /* Check Pods Manifest.lock */,
-				31AE88601A060DC800657D20 /* Sources */,
-				31AE88611A060DC800657D20 /* Frameworks */,
-				31AE88621A060DC800657D20 /* Resources */,
-				8AEAA234046FF8AE7687B062 /* Copy Pods Resources */,
+				312385431B3618AD000576CE /* Sources */,
+				312385441B3618AD000576CE /* Frameworks */,
+				312385451B3618AD000576CE /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				31AE88661A060DC800657D20 /* PBXTargetDependency */,
+				312385491B3618AD000576CE /* PBXTargetDependency */,
 			);
 			name = HazeLightTests;
 			productName = HazeLightTests;
-			productReference = 31AE88641A060DC800657D20 /* HazeLightTests.xctest */;
+			productReference = 312385471B3618AD000576CE /* HazeLightTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		312385511B3618AD000576CE /* HazeLightUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 312385611B3618AD000576CE /* Build configuration list for PBXNativeTarget "HazeLightUITests" */;
+			buildPhases = (
+				3123854E1B3618AD000576CE /* Sources */,
+				3123854F1B3618AD000576CE /* Frameworks */,
+				312385501B3618AD000576CE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				312385541B3618AD000576CE /* PBXTargetDependency */,
+			);
+			name = HazeLightUITests;
+			productName = HazeLightUITests;
+			productReference = 312385521B3618AD000576CE /* HazeLightUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		31AE88401A060DC800657D20 /* Project object */ = {
+		312385291B3618AD000576CE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				CLASSPREFIX = HZL;
-				LastUpgradeCheck = 0610;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Jon Shier";
 				TargetAttributes = {
-					316937091A0618BC00D05FBA = {
-						CreatedOnToolsVersion = 6.1;
-						TestTargetID = 31AE88471A060DC800657D20;
+					312385301B3618AD000576CE = {
+						CreatedOnToolsVersion = 7.0;
 					};
-					31AE88471A060DC800657D20 = {
-						CreatedOnToolsVersion = 6.1;
+					312385461B3618AD000576CE = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = 312385301B3618AD000576CE;
 					};
-					31AE88631A060DC800657D20 = {
-						CreatedOnToolsVersion = 6.1;
-						TestTargetID = 31AE88471A060DC800657D20;
+					312385511B3618AD000576CE = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = 312385301B3618AD000576CE;
 					};
 				};
 			};
-			buildConfigurationList = 31AE88431A060DC800657D20 /* Build configuration list for PBXProject "HazeLight" */;
+			buildConfigurationList = 3123852C1B3618AD000576CE /* Build configuration list for PBXProject "HazeLight" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -371,219 +214,108 @@
 				en,
 				Base,
 			);
-			mainGroup = 31AE883F1A060DC800657D20;
-			productRefGroup = 31AE88491A060DC800657D20 /* Products */;
+			mainGroup = 312385281B3618AD000576CE;
+			productRefGroup = 312385321B3618AD000576CE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				31AE88471A060DC800657D20 /* HazeLight */,
-				31AE88631A060DC800657D20 /* HazeLightTests */,
-				316937091A0618BC00D05FBA /* HazeLightUITests */,
+				312385301B3618AD000576CE /* HazeLight */,
+				312385461B3618AD000576CE /* HazeLightTests */,
+				312385511B3618AD000576CE /* HazeLightUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		316937081A0618BC00D05FBA /* Resources */ = {
+		3123852F1B3618AD000576CE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				312385411B3618AD000576CE /* LaunchScreen.storyboard in Resources */,
+				3123853E1B3618AD000576CE /* Assets.xcassets in Resources */,
+				3123853C1B3618AD000576CE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		312385451B3618AD000576CE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		31AE88461A060DC800657D20 /* Resources */ = {
+		312385501B3618AD000576CE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				31AE885A1A060DC800657D20 /* Main.storyboard in Resources */,
-				31AE885F1A060DC800657D20 /* LaunchScreen.xib in Resources */,
-				31AE885C1A060DC800657D20 /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		31AE88621A060DC800657D20 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				316936D91A0614A400D05FBA /* dummy-domain-response.json in Resources */,
-				316936DA1A0614A400D05FBA /* dummy-stats-response.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		8544D4B0AF847FA6F27588F9 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		8AEAA234046FF8AE7687B062 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HazeLightTests/Pods-HazeLightTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		AEEB4650ECB4003B3DE33E47 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HazeLightUITests/Pods-HazeLightUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C474F19FD947BF7FE41EF765 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		316937061A0618BC00D05FBA /* Sources */ = {
+		3123852D1B3618AD000576CE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3169370F1A0618BC00D05FBA /* HazeLightUITests.m in Sources */,
+				312385391B3618AD000576CE /* DetailViewController.swift in Sources */,
+				312385371B3618AD000576CE /* MasterViewController.swift in Sources */,
+				312385351B3618AD000576CE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		31AE88441A060DC800657D20 /* Sources */ = {
+		312385431B3618AD000576CE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				316936F01A06151E00D05FBA /* HLTCommunicator.m in Sources */,
-				31AE88511A060DC800657D20 /* HLTAppDelegate.m in Sources */,
-				316936E81A06150300D05FBA /* HLTDomain.m in Sources */,
-				316936F41A0617EA00D05FBA /* HLTUtilityFunctions.m in Sources */,
-				316936EA1A06150300D05FBA /* HLTStatsResponse.m in Sources */,
-				316936EB1A06150300D05FBA /* HLTUser.m in Sources */,
-				31AE88541A060DC800657D20 /* HLTMasterViewController.m in Sources */,
-				31AE884E1A060DC800657D20 /* main.m in Sources */,
-				31AE88571A060DC800657D20 /* HLTDetailViewController.m in Sources */,
-				316936E91A06150300D05FBA /* HLTRecord.m in Sources */,
+				3123854C1B3618AD000576CE /* HazeLightTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		31AE88601A060DC800657D20 /* Sources */ = {
+		3123854E1B3618AD000576CE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				316936DC1A0614A400D05FBA /* HLTDomainTests.m in Sources */,
-				316936DB1A0614A400D05FBA /* HLTCommunicatorTests.m in Sources */,
-				316936DD1A0614A400D05FBA /* HLTRecordTests.m in Sources */,
-				316936DE1A0614A400D05FBA /* HLTUserTests.m in Sources */,
+				312385571B3618AD000576CE /* HazeLightUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		316937111A0618BC00D05FBA /* PBXTargetDependency */ = {
+		312385491B3618AD000576CE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 31AE88471A060DC800657D20 /* HazeLight */;
-			targetProxy = 316937101A0618BC00D05FBA /* PBXContainerItemProxy */;
+			target = 312385301B3618AD000576CE /* HazeLight */;
+			targetProxy = 312385481B3618AD000576CE /* PBXContainerItemProxy */;
 		};
-		31AE88661A060DC800657D20 /* PBXTargetDependency */ = {
+		312385541B3618AD000576CE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 31AE88471A060DC800657D20 /* HazeLight */;
-			targetProxy = 31AE88651A060DC800657D20 /* PBXContainerItemProxy */;
+			target = 312385301B3618AD000576CE /* HazeLight */;
+			targetProxy = 312385531B3618AD000576CE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		31AE88581A060DC800657D20 /* Main.storyboard */ = {
+		3123853A1B3618AD000576CE /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				31AE88591A060DC800657D20 /* Base */,
+				3123853B1B3618AD000576CE /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		31AE885D1A060DC800657D20 /* LaunchScreen.xib */ = {
+		3123853F1B3618AD000576CE /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				31AE885E1A060DC800657D20 /* Base */,
+				312385401B3618AD000576CE /* Base */,
 			);
-			name = LaunchScreen.xib;
+			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		316937131A0618BC00D05FBA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9207D31487B5F21F2B96F675 /* Pods-HazeLightUITests.debug.xcconfig */;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = HazeLightUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HazeLight.app/HazeLight";
-			};
-			name = Debug;
-		};
-		316937141A0618BC00D05FBA /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6EB2B25B3D61A16386BF5E1D /* Pods-HazeLightUITests.release.xcconfig */;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = HazeLightUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HazeLight.app/HazeLight";
-			};
-			name = Release;
-		};
-		31AE886C1A060DC800657D20 /* Debug */ = {
+		312385591B3618AD000576CE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -602,30 +334,33 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		31AE886D1A060DC800657D20 /* Release */ = {
+		3123855A1B3618AD000576CE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -643,17 +378,19 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -661,102 +398,113 @@
 			};
 			name = Release;
 		};
-		31AE886F1A060DC800657D20 /* Debug */ = {
+		3123855C1B3618AD000576CE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = HazeLight/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jonshier.HazeLight;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		31AE88701A060DC800657D20 /* Release */ = {
+		3123855D1B3618AD000576CE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = HazeLight/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jonshier.HazeLight;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
-		31AE88721A060DC800657D20 /* Debug */ = {
+		3123855F1B3618AD000576CE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9BD6DEB3139AADC26AE85076 /* Pods-HazeLightTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
 				INFOPLIST_FILE = HazeLightTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jonshier.HazeLightTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HazeLight.app/HazeLight";
 			};
 			name = Debug;
 		};
-		31AE88731A060DC800657D20 /* Release */ = {
+		312385601B3618AD000576CE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F44D1D45E381341DAB0CE502 /* Pods-HazeLightTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
 				INFOPLIST_FILE = HazeLightTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jonshier.HazeLightTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HazeLight.app/HazeLight";
+			};
+			name = Release;
+		};
+		312385621B3618AD000576CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = HazeLightUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jonshier.HazeLightUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = HazeLight;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		312385631B3618AD000576CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = HazeLightUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jonshier.HazeLightUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = HazeLight;
+				USES_XCTRUNNER = YES;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		316937121A0618BC00D05FBA /* Build configuration list for PBXNativeTarget "HazeLightUITests" */ = {
+		3123852C1B3618AD000576CE /* Build configuration list for PBXProject "HazeLight" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				316937131A0618BC00D05FBA /* Debug */,
-				316937141A0618BC00D05FBA /* Release */,
+				312385591B3618AD000576CE /* Debug */,
+				3123855A1B3618AD000576CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		31AE88431A060DC800657D20 /* Build configuration list for PBXProject "HazeLight" */ = {
+		3123855B1B3618AD000576CE /* Build configuration list for PBXNativeTarget "HazeLight" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				31AE886C1A060DC800657D20 /* Debug */,
-				31AE886D1A060DC800657D20 /* Release */,
+				3123855C1B3618AD000576CE /* Debug */,
+				3123855D1B3618AD000576CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
-		31AE886E1A060DC800657D20 /* Build configuration list for PBXNativeTarget "HazeLight" */ = {
+		3123855E1B3618AD000576CE /* Build configuration list for PBXNativeTarget "HazeLightTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				31AE886F1A060DC800657D20 /* Debug */,
-				31AE88701A060DC800657D20 /* Release */,
+				3123855F1B3618AD000576CE /* Debug */,
+				312385601B3618AD000576CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
-		31AE88711A060DC800657D20 /* Build configuration list for PBXNativeTarget "HazeLightTests" */ = {
+		312385611B3618AD000576CE /* Build configuration list for PBXNativeTarget "HazeLightUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				31AE88721A060DC800657D20 /* Debug */,
-				31AE88731A060DC800657D20 /* Release */,
+				312385621B3618AD000576CE /* Debug */,
+				312385631B3618AD000576CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 31AE88401A060DC800657D20 /* Project object */;
+	rootObject = 312385291B3618AD000576CE /* Project object */;
 }
