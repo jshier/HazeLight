@@ -1,0 +1,63 @@
+PODS:
+  - Alamofire (2.0.0-beta.1)
+  - Argo (1.0.3)
+  - Curry (1.1.0)
+  - Keys (1.0.0)
+  - OHHTTPStubs (4.2.0):
+    - OHHTTPStubs/Default (= 4.2.0)
+  - OHHTTPStubs/Core (4.2.0)
+  - OHHTTPStubs/Default (4.2.0):
+    - OHHTTPStubs/Core
+    - OHHTTPStubs/JSON
+    - OHHTTPStubs/NSURLSession
+    - OHHTTPStubs/OHPathHelpers
+  - OHHTTPStubs/JSON (4.2.0):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/NSURLSession (4.2.0):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/OHPathHelpers (4.2.0)
+  - Operations (0.10.1):
+    - Operations/Base (= 0.10.1)
+  - Operations/Base (0.10.1)
+
+DEPENDENCIES:
+  - Alamofire (from `https://github.com/Alamofire/Alamofire.git`, branch `swift-2.0`)
+  - Argo (from `https://github.com/jshier/Argo.git`, branch `td-swift-2`)
+  - Curry
+  - Keys (from `Pods/CocoaPodsKeys`)
+  - OHHTTPStubs
+  - Operations (from `https://github.com/danthorpe/Operations.git`, branch `swift_2/OPR-53_update_swift_2`)
+
+EXTERNAL SOURCES:
+  Alamofire:
+    :branch: swift-2.0
+    :git: https://github.com/Alamofire/Alamofire.git
+  Argo:
+    :branch: td-swift-2
+    :git: https://github.com/jshier/Argo.git
+  Keys:
+    :path: Pods/CocoaPodsKeys
+  Operations:
+    :branch: swift_2/OPR-53_update_swift_2
+    :git: https://github.com/danthorpe/Operations.git
+
+CHECKOUT OPTIONS:
+  Alamofire:
+    :commit: f8f881c03f4d9515f09b8bb50fcc932df8c1960d
+    :git: https://github.com/Alamofire/Alamofire.git
+  Argo:
+    :commit: 9cee028bd8f3de5fcd72adb12eaafd82402ff7ac
+    :git: https://github.com/jshier/Argo.git
+  Operations:
+    :commit: 101d68a44a8741024e50a2ca92d37fc5ce2c66bc
+    :git: https://github.com/danthorpe/Operations.git
+
+SPEC CHECKSUMS:
+  Alamofire: 96feccc1e48a735edb92395cf023ba4ed52bdb45
+  Argo: 6de7f5d051d416a8fcda9b397086ea3d5b61d5d5
+  Curry: 204d042df73c081bf2f1b6bdb4c0428e3e72ab10
+  Keys: 7d2ff6ff42f6903358267ce56e9392f83c31acfe
+  OHHTTPStubs: f639130b83fb5f4f022d38f841141b0a6fa77249
+  Operations: dc6de0e20c343082744f6c98233fe2b64beed634
+
+COCOAPODS: 0.38.2
