@@ -15,6 +15,16 @@
 		312385411B3618AD000576CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3123853F1B3618AD000576CE /* LaunchScreen.storyboard */; };
 		3123854C1B3618AD000576CE /* HazeLightTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3123854B1B3618AD000576CE /* HazeLightTests.swift */; };
 		312385571B3618AD000576CE /* HazeLightUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312385561B3618AD000576CE /* HazeLightUITests.swift */; };
+		316269431B37B6F90032E71D /* CloudFlareCommunicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316269421B37B6F90032E71D /* CloudFlareCommunicator.swift */; };
+		3170D8321B8992D6009B0613 /* CloudFlareResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3170D8311B8992D6009B0613 /* CloudFlareResponse.swift */; };
+		3170D8341B8994EB009B0613 /* CloudFlareError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3170D8331B8994EB009B0613 /* CloudFlareError.swift */; };
+		3170D8361B899512009B0613 /* CloudFlareResponseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3170D8351B899512009B0613 /* CloudFlareResponseError.swift */; };
+		31A4BFC91B3630BE00B0BA22 /* CloudFlareRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A4BFC81B3630BE00B0BA22 /* CloudFlareRouter.swift */; };
+		5083AD28EF56BA408FF11B41 /* Pods_HazeLightTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2DB25F9415ACB3AEC22001D /* Pods_HazeLightTests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		528C69A64A1589B1510D9EA6 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 951B321582E8FF626BA969EA /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		A8632621FFDE3D4F0E29F09D /* Pods_HazeLightUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D41BB2E3E05549A5D1965F36 /* Pods_HazeLightUITests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		E04750B904442F5100273FD1 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 951B321582E8FF626BA969EA /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		FE941F99C38029AB468880E9 /* Pods_HazeLight.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86B7A5D05AE02C049076AD43 /* Pods_HazeLight.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +45,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A724A024CC27FEF8F6C37BB /* Pods-HazeLight.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HazeLight.release.xcconfig"; path = "Pods/Target Support Files/Pods-HazeLight/Pods-HazeLight.release.xcconfig"; sourceTree = "<group>"; };
+		229A24BCB9FA3E6C4770326C /* Pods-HazeLight.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HazeLight.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HazeLight/Pods-HazeLight.debug.xcconfig"; sourceTree = "<group>"; };
 		312385311B3618AD000576CE /* HazeLight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HazeLight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		312385341B3618AD000576CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		312385361B3618AD000576CE /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +61,19 @@
 		312385521B3618AD000576CE /* HazeLightUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HazeLightUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		312385561B3618AD000576CE /* HazeLightUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HazeLightUITests.swift; sourceTree = "<group>"; };
 		312385581B3618AD000576CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		316269421B37B6F90032E71D /* CloudFlareCommunicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudFlareCommunicator.swift; sourceTree = "<group>"; };
+		3170D8311B8992D6009B0613 /* CloudFlareResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CloudFlareResponse.swift; path = CloudFlareAPI/Models/CloudFlareResponse.swift; sourceTree = "<group>"; };
+		3170D8331B8994EB009B0613 /* CloudFlareError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CloudFlareError.swift; path = CloudFlareAPI/Models/CloudFlareError.swift; sourceTree = "<group>"; };
+		3170D8351B899512009B0613 /* CloudFlareResponseError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CloudFlareResponseError.swift; path = CloudFlareAPI/Models/CloudFlareResponseError.swift; sourceTree = "<group>"; };
+		31A4BFC81B3630BE00B0BA22 /* CloudFlareRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudFlareRouter.swift; sourceTree = "<group>"; };
+		3218C977EE400161FAD112A9 /* Pods-HazeLightUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HazeLightUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HazeLightUITests/Pods-HazeLightUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		80DA011D4910B753BCB5C109 /* Pods-HazeLightUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HazeLightUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HazeLightUITests/Pods-HazeLightUITests.release.xcconfig"; sourceTree = "<group>"; };
+		86B7A5D05AE02C049076AD43 /* Pods_HazeLight.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HazeLight.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		951B321582E8FF626BA969EA /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2DB25F9415ACB3AEC22001D /* Pods_HazeLightTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HazeLightTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D41BB2E3E05549A5D1965F36 /* Pods_HazeLightUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HazeLightUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D827F24521A9ED93A057E7D8 /* Pods-HazeLightTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HazeLightTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HazeLightTests/Pods-HazeLightTests.debug.xcconfig"; sourceTree = "<group>"; };
+		DD7DB862E32300B524DDCDAF /* Pods-HazeLightTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HazeLightTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HazeLightTests/Pods-HazeLightTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE941F99C38029AB468880E9 /* Pods_HazeLight.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +89,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E04750B904442F5100273FD1 /* Pods.framework in Frameworks */,
+				5083AD28EF56BA408FF11B41 /* Pods_HazeLightTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +98,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				528C69A64A1589B1510D9EA6 /* Pods.framework in Frameworks */,
+				A8632621FFDE3D4F0E29F09D /* Pods_HazeLightUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +113,8 @@
 				3123854A1B3618AD000576CE /* HazeLightTests */,
 				312385551B3618AD000576CE /* HazeLightUITests */,
 				312385321B3618AD000576CE /* Products */,
+				4B9AF1BF78CD67DA798B8759 /* Pods */,
+				A32462110D2398496AC78E57 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +131,7 @@
 		312385331B3618AD000576CE /* HazeLight */ = {
 			isa = PBXGroup;
 			children = (
+				31A4BFC71B3630A100B0BA22 /* CloudFlare API */,
 				312385341B3618AD000576CE /* AppDelegate.swift */,
 				312385361B3618AD000576CE /* MasterViewController.swift */,
 				312385381B3618AD000576CE /* DetailViewController.swift */,
@@ -128,6 +161,50 @@
 			path = HazeLightUITests;
 			sourceTree = "<group>";
 		};
+		3170D8301B8992B6009B0613 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3170D8311B8992D6009B0613 /* CloudFlareResponse.swift */,
+				3170D8331B8994EB009B0613 /* CloudFlareError.swift */,
+				3170D8351B899512009B0613 /* CloudFlareResponseError.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		31A4BFC71B3630A100B0BA22 /* CloudFlare API */ = {
+			isa = PBXGroup;
+			children = (
+				3170D8301B8992B6009B0613 /* Models */,
+				31A4BFC81B3630BE00B0BA22 /* CloudFlareRouter.swift */,
+				316269421B37B6F90032E71D /* CloudFlareCommunicator.swift */,
+			);
+			name = "CloudFlare API";
+			sourceTree = "<group>";
+		};
+		4B9AF1BF78CD67DA798B8759 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				229A24BCB9FA3E6C4770326C /* Pods-HazeLight.debug.xcconfig */,
+				0A724A024CC27FEF8F6C37BB /* Pods-HazeLight.release.xcconfig */,
+				D827F24521A9ED93A057E7D8 /* Pods-HazeLightTests.debug.xcconfig */,
+				DD7DB862E32300B524DDCDAF /* Pods-HazeLightTests.release.xcconfig */,
+				3218C977EE400161FAD112A9 /* Pods-HazeLightUITests.debug.xcconfig */,
+				80DA011D4910B753BCB5C109 /* Pods-HazeLightUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A32462110D2398496AC78E57 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				951B321582E8FF626BA969EA /* Pods.framework */,
+				86B7A5D05AE02C049076AD43 /* Pods_HazeLight.framework */,
+				D2DB25F9415ACB3AEC22001D /* Pods_HazeLightTests.framework */,
+				D41BB2E3E05549A5D1965F36 /* Pods_HazeLightUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +212,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3123855B1B3618AD000576CE /* Build configuration list for PBXNativeTarget "HazeLight" */;
 			buildPhases = (
+				6E8ABDD9E18848362CAF48BF /* Check Pods Manifest.lock */,
 				3123852D1B3618AD000576CE /* Sources */,
 				3123852E1B3618AD000576CE /* Frameworks */,
 				3123852F1B3618AD000576CE /* Resources */,
+				153873C7EAFE6E652841A3FD /* Embed Pods Frameworks */,
+				4C39BFDDED81917F42B94921 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -152,9 +232,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3123855E1B3618AD000576CE /* Build configuration list for PBXNativeTarget "HazeLightTests" */;
 			buildPhases = (
+				7318B43EEB4C672FCD50A960 /* Check Pods Manifest.lock */,
 				312385431B3618AD000576CE /* Sources */,
 				312385441B3618AD000576CE /* Frameworks */,
 				312385451B3618AD000576CE /* Resources */,
+				A65F4FA2DCD5C9B9A09AE953 /* Embed Pods Frameworks */,
+				0191FFCCF641274F87591CFB /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -170,9 +253,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 312385611B3618AD000576CE /* Build configuration list for PBXNativeTarget "HazeLightUITests" */;
 			buildPhases = (
+				02305CAF90537AB4EE177FBA /* Check Pods Manifest.lock */,
 				3123854E1B3618AD000576CE /* Sources */,
 				3123854F1B3618AD000576CE /* Frameworks */,
 				312385501B3618AD000576CE /* Resources */,
+				4477F6F5BBF692E2E57DC11C /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -190,6 +275,7 @@
 		312385291B3618AD000576CE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Jon Shier";
 				TargetAttributes = {
@@ -253,14 +339,142 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0191FFCCF641274F87591CFB /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HazeLightTests/Pods-HazeLightTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		02305CAF90537AB4EE177FBA /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		153873C7EAFE6E652841A3FD /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HazeLight/Pods-HazeLight-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4477F6F5BBF692E2E57DC11C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HazeLightUITests/Pods-HazeLightUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4C39BFDDED81917F42B94921 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HazeLight/Pods-HazeLight-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6E8ABDD9E18848362CAF48BF /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7318B43EEB4C672FCD50A960 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A65F4FA2DCD5C9B9A09AE953 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HazeLightTests/Pods-HazeLightTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3123852D1B3618AD000576CE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				316269431B37B6F90032E71D /* CloudFlareCommunicator.swift in Sources */,
+				3170D8321B8992D6009B0613 /* CloudFlareResponse.swift in Sources */,
 				312385391B3618AD000576CE /* DetailViewController.swift in Sources */,
 				312385371B3618AD000576CE /* MasterViewController.swift in Sources */,
+				3170D8341B8994EB009B0613 /* CloudFlareError.swift in Sources */,
+				3170D8361B899512009B0613 /* CloudFlareResponseError.swift in Sources */,
 				312385351B3618AD000576CE /* AppDelegate.swift in Sources */,
+				31A4BFC91B3630BE00B0BA22 /* CloudFlareRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,28 +614,36 @@
 		};
 		3123855C1B3618AD000576CE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 229A24BCB9FA3E6C4770326C /* Pods-HazeLight.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = HazeLight/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jonshier.HazeLight;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "HazeLight/HazeLight-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		3123855D1B3618AD000576CE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A724A024CC27FEF8F6C37BB /* Pods-HazeLight.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = HazeLight/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jonshier.HazeLight;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "HazeLight/HazeLight-Bridging-Header.h";
 			};
 			name = Release;
 		};
 		3123855F1B3618AD000576CE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D827F24521A9ED93A057E7D8 /* Pods-HazeLightTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = HazeLightTests/Info.plist;
@@ -434,6 +656,7 @@
 		};
 		312385601B3618AD000576CE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD7DB862E32300B524DDCDAF /* Pods-HazeLightTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = HazeLightTests/Info.plist;
@@ -446,6 +669,7 @@
 		};
 		312385621B3618AD000576CE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3218C977EE400161FAD112A9 /* Pods-HazeLightUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = HazeLightUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -458,6 +682,7 @@
 		};
 		312385631B3618AD000576CE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 80DA011D4910B753BCB5C109 /* Pods-HazeLightUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = HazeLightUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -487,6 +712,7 @@
 				3123855D1B3618AD000576CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3123855E1B3618AD000576CE /* Build configuration list for PBXNativeTarget "HazeLightTests" */ = {
 			isa = XCConfigurationList;
@@ -495,6 +721,7 @@
 				312385601B3618AD000576CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		312385611B3618AD000576CE /* Build configuration list for PBXNativeTarget "HazeLightUITests" */ = {
 			isa = XCConfigurationList;
@@ -503,6 +730,7 @@
 				312385631B3618AD000576CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
