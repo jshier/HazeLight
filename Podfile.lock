@@ -43,7 +43,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   Alamofire:
-    :commit: f8f881c03f4d9515f09b8bb50fcc932df8c1960d
+    :commit: e489c5fece971352b05b6ef185eca53f68bee1bc
     :git: https://github.com/Alamofire/Alamofire.git
   Argo:
     :commit: 9cee028bd8f3de5fcd72adb12eaafd82402ff7ac
