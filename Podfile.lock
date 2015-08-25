@@ -1,5 +1,5 @@
 PODS:
-  - Alamofire (2.0.0-beta.1)
+  - Alamofire (2.0.0-beta.2)
   - Argo (1.0.3)
   - Curry (1.1.0)
   - Keys (1.0.0)
@@ -43,7 +43,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   Alamofire:
-    :commit: e489c5fece971352b05b6ef185eca53f68bee1bc
+    :commit: 2f94c11bb039bd7e3e43b925e20c8e536c9be757
     :git: https://github.com/Alamofire/Alamofire.git
   Argo:
     :commit: 9cee028bd8f3de5fcd72adb12eaafd82402ff7ac
@@ -53,7 +53,7 @@ CHECKOUT OPTIONS:
     :git: https://github.com/danthorpe/Operations.git
 
 SPEC CHECKSUMS:
-  Alamofire: 96feccc1e48a735edb92395cf023ba4ed52bdb45
+  Alamofire: 4dab60b015e8b4c9e09b0c9ff514fb15b96c0bd5
   Argo: 6de7f5d051d416a8fcda9b397086ea3d5b61d5d5
   Curry: 204d042df73c081bf2f1b6bdb4c0428e3e72ab10
   Keys: 7d2ff6ff42f6903358267ce56e9392f83c31acfe
