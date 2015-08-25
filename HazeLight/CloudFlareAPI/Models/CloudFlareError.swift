@@ -25,7 +25,7 @@ enum CloudFlareError : ErrorType {
             return decodedString
         case let .ResponseError(response):
             let messages = response.errors.map { "\($0.message) [\($0.code)]" }
-            return "\n\n".join(messages)
+            return messages.joinWithSeparator("\n\n")
         }
     }
     

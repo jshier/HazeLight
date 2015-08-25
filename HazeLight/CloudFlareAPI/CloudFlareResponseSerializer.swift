@@ -28,6 +28,7 @@ extension Request {
                 }
             }
         }
+        
         return response(responseSerializer: Request.CloudFlareResponseSerializer(), completionHandler: fullCompletionHandler)
     }
     
