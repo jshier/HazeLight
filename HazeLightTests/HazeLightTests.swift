@@ -2,7 +2,7 @@
 //  HazeLightTests.swift
 //  HazeLightTests
 //
-//  Created by Jon Shier on 6/20/15.
+//  Created by Jon Shier on 8/27/15.
 //  Copyright © 2015 Jon Shier. All rights reserved.
 //
 
@@ -27,7 +27,7 @@ class HazeLightTests: XCTestCase {
     
     func testPerformanceExample() {
         // This is an example of a performance test case.
-        self.measureBlock() {
+        self.measureBlock {
             // Put the code you want to measure the time of here.
         }
     }
