@@ -52,6 +52,6 @@ enum CloudFlareRouter : URLRequestConvertible {
             request.setValue(value, forHTTPHeaderField: key)
         }
         
-        return Alamofire.ParameterEncoding.URL.encode(request, parameters: parameters).0
+        return ParameterEncoding.URL.encode(request, parameters: parameters).0
     }
 }
