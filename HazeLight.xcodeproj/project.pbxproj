@@ -14,11 +14,12 @@
 		3123853E1B3618AD000576CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3123853D1B3618AD000576CE /* Assets.xcassets */; };
 		312385411B3618AD000576CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3123853F1B3618AD000576CE /* LaunchScreen.storyboard */; };
 		316269431B37B6F90032E71D /* CloudFlareCommunicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316269421B37B6F90032E71D /* CloudFlareCommunicator.swift */; };
-		316C5BED1B900B8C00FD7C8F /* HazeLightTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316C5BEC1B900B8C00FD7C8F /* HazeLightTests.swift */; };
 		316C5BFB1B900B9500FD7C8F /* HazeLightUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316C5BFA1B900B9500FD7C8F /* HazeLightUITests.swift */; };
 		3170D8321B8992D6009B0613 /* CloudFlareResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3170D8311B8992D6009B0613 /* CloudFlareResponse.swift */; };
 		3170D8341B8994EB009B0613 /* CloudFlareError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3170D8331B8994EB009B0613 /* CloudFlareError.swift */; };
 		3170D8361B899512009B0613 /* CloudFlareResponseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3170D8351B899512009B0613 /* CloudFlareResponseError.swift */; };
+		3187D1C01B93E51B0029361D /* CloudFlareDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3187D1BF1B93E51B0029361D /* CloudFlareDateFormatter.swift */; settings = {ASSET_TAGS = (); }; };
+		3187D1C21B93E61E0029361D /* ISO8601DateFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3187D1C11B93E61E0029361D /* ISO8601DateFormatterTests.swift */; settings = {ASSET_TAGS = (); }; };
 		31A4BFC91B3630BE00B0BA22 /* CloudFlareRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A4BFC81B3630BE00B0BA22 /* CloudFlareRouter.swift */; };
 		31C00F561B8AA091005E49ED /* CloudFlareUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C00F551B8AA091005E49ED /* CloudFlareUser.swift */; };
 		31C00F581B8AA5E7005E49ED /* CloudFlareResponseSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C00F571B8AA5E7005E49ED /* CloudFlareResponseSerializer.swift */; };
@@ -55,7 +56,6 @@
 		3123853D1B3618AD000576CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		312385401B3618AD000576CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		312385421B3618AD000576CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3123854B1B3618AD000576CE /* HazeLightTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HazeLightTests.swift; sourceTree = "<group>"; };
 		3123854D1B3618AD000576CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		312385561B3618AD000576CE /* HazeLightUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HazeLightUITests.swift; sourceTree = "<group>"; };
 		312385581B3618AD000576CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -69,6 +69,8 @@
 		3170D8311B8992D6009B0613 /* CloudFlareResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CloudFlareResponse.swift; path = CloudFlareAPI/Models/CloudFlareResponse.swift; sourceTree = "<group>"; };
 		3170D8331B8994EB009B0613 /* CloudFlareError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CloudFlareError.swift; path = CloudFlareAPI/Models/CloudFlareError.swift; sourceTree = "<group>"; };
 		3170D8351B899512009B0613 /* CloudFlareResponseError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CloudFlareResponseError.swift; path = CloudFlareAPI/Models/CloudFlareResponseError.swift; sourceTree = "<group>"; };
+		3187D1BF1B93E51B0029361D /* CloudFlareDateFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CloudFlareDateFormatter.swift; path = CloudFlareAPI/CloudFlareDateFormatter.swift; sourceTree = "<group>"; };
+		3187D1C11B93E61E0029361D /* ISO8601DateFormatterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISO8601DateFormatterTests.swift; sourceTree = "<group>"; };
 		31A4BFC81B3630BE00B0BA22 /* CloudFlareRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudFlareRouter.swift; sourceTree = "<group>"; };
 		31C00F551B8AA091005E49ED /* CloudFlareUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CloudFlareUser.swift; path = CloudFlareAPI/Models/CloudFlareUser.swift; sourceTree = "<group>"; };
 		31C00F571B8AA5E7005E49ED /* CloudFlareResponseSerializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CloudFlareResponseSerializer.swift; path = CloudFlareAPI/CloudFlareResponseSerializer.swift; sourceTree = "<group>"; };
@@ -152,7 +154,7 @@
 		3123854A1B3618AD000576CE /* HazeLightTests */ = {
 			isa = PBXGroup;
 			children = (
-				3123854B1B3618AD000576CE /* HazeLightTests.swift */,
+				3187D1C11B93E61E0029361D /* ISO8601DateFormatterTests.swift */,
 				3123854D1B3618AD000576CE /* Info.plist */,
 			);
 			path = HazeLightTests;
@@ -203,6 +205,7 @@
 				31A4BFC81B3630BE00B0BA22 /* CloudFlareRouter.swift */,
 				316269421B37B6F90032E71D /* CloudFlareCommunicator.swift */,
 				31C00F571B8AA5E7005E49ED /* CloudFlareResponseSerializer.swift */,
+				3187D1BF1B93E51B0029361D /* CloudFlareDateFormatter.swift */,
 			);
 			name = "CloudFlare API";
 			sourceTree = "<group>";
@@ -497,6 +500,7 @@
 				3170D8321B8992D6009B0613 /* CloudFlareResponse.swift in Sources */,
 				312385391B3618AD000576CE /* DetailViewController.swift in Sources */,
 				312385371B3618AD000576CE /* MasterViewController.swift in Sources */,
+				3187D1C01B93E51B0029361D /* CloudFlareDateFormatter.swift in Sources */,
 				31C00F561B8AA091005E49ED /* CloudFlareUser.swift in Sources */,
 				3170D8341B8994EB009B0613 /* CloudFlareError.swift in Sources */,
 				3170D8361B899512009B0613 /* CloudFlareResponseError.swift in Sources */,
@@ -510,7 +514,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				316C5BED1B900B8C00FD7C8F /* HazeLightTests.swift in Sources */,
+				3187D1C21B93E61E0029361D /* ISO8601DateFormatterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
