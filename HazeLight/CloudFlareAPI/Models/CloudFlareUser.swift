@@ -18,8 +18,8 @@ struct CloudFlareUser {
     let phoneNumber: String?
     let country: String?
     let zipCode: String?
-    let creationDate: String
-    let lastModifiedDate: String
+    let creationDate: NSDate
+    let lastModifiedDate: NSDate
     let isTwoFactorAuthenticationEnabled: Bool
     let isTwoFactorAuthenticationLocked: Bool
     let hasProZones: Bool
@@ -28,24 +28,26 @@ struct CloudFlareUser {
 }
 
 extension CloudFlareUser : Decodable {
-    static func decode(json: JSON) -> Decoded<CloudFlareUser> {
+    static func decode(j: JSON) -> Decoded<CloudFlareUser> {
         let part1 = curry(self.init)
-            <^> json <| "id"
-            <*> json <| "email"
-            <*> json <|? "first_name"
-            <*> json <|? "last_name"
-            <*> json <| "username"
-            <*> json <|? "telephone"
-            <*> json <|? "country"
+            <^> j <| "id"
+            <*> j <| "email"
+            <*> j <|? "first_name"
+            <*> j <|? "last_name"
+            <*> j <| "username"
+            <*> j <|? "telephone"
+            <*> j <|? "country"
             
-        return part1
-            <*> json <|? "zipcode"
-            <*> json <| "created_on"
-            <*> json <| "modified_on"
-            <*> json <| "two_factor_authentication_enabled"
-            <*> json <| "two_factor_authentication_locked"
-            <*> json <| "has_pro_zones"
-            <*> json <| "has_business_zones"
-            <*> json <| "has_enterprise_zones"
+        let part2 = part1
+            <*> j <|? "zipcode"
+            <*> (j <| "created_on" >>- toISO8601Date)
+            <*> (j <| "modified_on" >>- toISO8601Date)
+            <*> j <| "two_factor_authentication_enabled"
+            <*> j <| "two_factor_authentication_locked"
+            <*> j <| "has_pro_zones"
+            <*> j <| "has_business_zones"
+        
+        return part2
+            <*> j <| "has_enterprise_zones"
     }
 }
