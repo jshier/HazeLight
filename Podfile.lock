@@ -16,9 +16,9 @@ PODS:
   - OHHTTPStubs/NSURLSession (4.2.0):
     - OHHTTPStubs/Core
   - OHHTTPStubs/OHPathHelpers (4.2.0)
-  - Operations (0.10.1):
-    - Operations/Base (= 0.10.1)
-  - Operations/Base (0.10.1)
+  - Operations (0.11.1):
+    - Operations/Base (= 0.11.1)
+  - Operations/Base (0.11.1)
 
 DEPENDENCIES:
   - Alamofire (~> 2.0.0-beta.3)
@@ -26,7 +26,7 @@ DEPENDENCIES:
   - Curry
   - Keys (from `Pods/CocoaPodsKeys`)
   - OHHTTPStubs
-  - Operations (from `https://github.com/danthorpe/Operations.git`, branch `swift_2/OPR-53_update_swift_2`)
+  - Operations (from `https://github.com/danthorpe/Operations.git`, branch `swift_2.0`)
 
 EXTERNAL SOURCES:
   Argo:
@@ -35,7 +35,7 @@ EXTERNAL SOURCES:
   Keys:
     :path: Pods/CocoaPodsKeys
   Operations:
-    :branch: swift_2/OPR-53_update_swift_2
+    :branch: swift_2.0
     :git: https://github.com/danthorpe/Operations.git
 
 CHECKOUT OPTIONS:
@@ -43,7 +43,7 @@ CHECKOUT OPTIONS:
     :commit: bd30344e4e53d3e1361f2e9ae0e8dfd2be666914
     :git: https://github.com/jshier/Argo.git
   Operations:
-    :commit: 101d68a44a8741024e50a2ca92d37fc5ce2c66bc
+    :commit: 22bdb8e439d0d98a73cdb3155a6eaf101cc82e20
     :git: https://github.com/danthorpe/Operations.git
 
 SPEC CHECKSUMS:
@@ -52,6 +52,6 @@ SPEC CHECKSUMS:
   Curry: 204d042df73c081bf2f1b6bdb4c0428e3e72ab10
   Keys: 7d2ff6ff42f6903358267ce56e9392f83c31acfe
   OHHTTPStubs: f639130b83fb5f4f022d38f841141b0a6fa77249
-  Operations: dc6de0e20c343082744f6c98233fe2b64beed634
+  Operations: 0bdabfba4e38d4a466b81641d8f38f8af9b2ee3e
 
 COCOAPODS: 0.39.0.beta.3

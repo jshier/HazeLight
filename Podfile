@@ -7,7 +7,7 @@ use_frameworks!
 target :'HazeLight', :exclusive => true do
   pod 'Alamofire', '~> 2.0.0-beta.3'
   pod 'Argo', :git => 'https://github.com/jshier/Argo.git', :branch => 'td-swift-2'
-  pod 'Operations', :git => 'https://github.com/danthorpe/Operations.git', :branch => 'swift_2/OPR-53_update_swift_2'
+  pod 'Operations', :git => 'https://github.com/danthorpe/Operations.git', :branch => 'swift_2.0'
   pod 'Curry'
 end
 
