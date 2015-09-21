@@ -13,12 +13,13 @@ import Argo
 class CloudFlareCommunicator {
     static func fetchCurrentUser() -> Request {
         return Alamofire.request(CloudFlareRouter.User).responseObject { (responseObject: CloudFlareUser?, error) in
-            if let responseObject = responseObject {
-                print(responseObject)
-            }
-            
-            if let error = error {
-                print(error)
+            switch (responseObject, error) {
+            case (.Some, .None):
+                print("Successful.")
+            case (.None, .Some):
+                print("Failed.")
+            default:
+                print("Unknown.")
             }
         }
     }
