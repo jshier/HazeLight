@@ -1,22 +1,29 @@
 platform :ios, '9.0'
 
+use_frameworks!
 inhibit_all_warnings!
 
-use_frameworks!
-
 target :'HazeLight', :exclusive => true do
-  pod 'Alamofire', '~> 2.0.0-beta.3'
-  pod 'Argo', :git => 'https://github.com/jshier/Argo.git', :branch => 'td-swift-2'
-  pod 'Operations', :git => 'https://github.com/danthorpe/Operations.git', :branch => 'swift_2.0'
+  pod 'Alamofire', :git => 'https://github.com/Alamofire/Alamofire.git', :branch => 'feature/double_generic_results'
+  pod 'Argo'
+  pod 'Operations'
   pod 'Curry'
 end
 
 target :'HazeLightTests', :exclusive => true do
-  pod 'OHHTTPStubs'
+  pod 'OHHTTPStubs/Core'
+  pod 'OHHTTPStubs/NSURLSession'
+  pod 'OHHTTPStubs/JSON'
+  pod 'OHHTTPStubs/OHPathHelpers'
+  pod 'OHHTTPStubs/Swift'
 end
 
 target :'HazeLightUITests', :exclusive => true do
-  pod 'OHHTTPStubs'
+  pod 'OHHTTPStubs/Core'
+  pod 'OHHTTPStubs/NSURLSession'
+  pod 'OHHTTPStubs/JSON'
+  pod 'OHHTTPStubs/OHPathHelpers'
+  pod 'OHHTTPStubs/Swift'
 end
 
 plugin 'cocoapods-keys', {
