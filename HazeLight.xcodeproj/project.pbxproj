@@ -15,6 +15,7 @@
 		312385411B3618AD000576CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3123853F1B3618AD000576CE /* LaunchScreen.storyboard */; };
 		316269431B37B6F90032E71D /* CloudFlareCommunicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316269421B37B6F90032E71D /* CloudFlareCommunicator.swift */; };
 		316C5BFB1B900B9500FD7C8F /* HazeLightUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316C5BFA1B900B9500FD7C8F /* HazeLightUITests.swift */; };
+		316CD0511BAF7F9E002A060A /* ConvenienceFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316CD0501BAF7F9E002A060A /* ConvenienceFunctions.swift */; settings = {ASSET_TAGS = (); }; };
 		3170D8321B8992D6009B0613 /* CloudFlareResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3170D8311B8992D6009B0613 /* CloudFlareResponse.swift */; };
 		3170D8341B8994EB009B0613 /* CloudFlareError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3170D8331B8994EB009B0613 /* CloudFlareError.swift */; };
 		3170D8361B899512009B0613 /* CloudFlareResponseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3170D8351B899512009B0613 /* CloudFlareResponseError.swift */; };
@@ -66,6 +67,7 @@
 		316C5BF81B900B9400FD7C8F /* HazeLightUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HazeLightUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		316C5BFA1B900B9500FD7C8F /* HazeLightUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HazeLightUITests.swift; sourceTree = "<group>"; };
 		316C5BFC1B900B9500FD7C8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		316CD0501BAF7F9E002A060A /* ConvenienceFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConvenienceFunctions.swift; sourceTree = "<group>"; };
 		3170D8311B8992D6009B0613 /* CloudFlareResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CloudFlareResponse.swift; path = CloudFlareAPI/Models/CloudFlareResponse.swift; sourceTree = "<group>"; };
 		3170D8331B8994EB009B0613 /* CloudFlareError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CloudFlareError.swift; path = CloudFlareAPI/Models/CloudFlareError.swift; sourceTree = "<group>"; };
 		3170D8351B899512009B0613 /* CloudFlareResponseError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CloudFlareResponseError.swift; path = CloudFlareAPI/Models/CloudFlareResponseError.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 				3123853D1B3618AD000576CE /* Assets.xcassets */,
 				3123853F1B3618AD000576CE /* LaunchScreen.storyboard */,
 				312385421B3618AD000576CE /* Info.plist */,
+				316CD0501BAF7F9E002A060A /* ConvenienceFunctions.swift */,
 			);
 			path = HazeLight;
 			sourceTree = "<group>";
@@ -202,10 +205,10 @@
 			isa = PBXGroup;
 			children = (
 				3170D8301B8992B6009B0613 /* Models */,
-				31A4BFC81B3630BE00B0BA22 /* CloudFlareRouter.swift */,
 				316269421B37B6F90032E71D /* CloudFlareCommunicator.swift */,
-				31C00F571B8AA5E7005E49ED /* CloudFlareResponseSerializer.swift */,
 				3187D1BF1B93E51B0029361D /* CloudFlareDateFormatter.swift */,
+				31C00F571B8AA5E7005E49ED /* CloudFlareResponseSerializer.swift */,
+				31A4BFC81B3630BE00B0BA22 /* CloudFlareRouter.swift */,
 			);
 			name = "CloudFlare API";
 			sourceTree = "<group>";
@@ -499,6 +502,7 @@
 				316269431B37B6F90032E71D /* CloudFlareCommunicator.swift in Sources */,
 				3170D8321B8992D6009B0613 /* CloudFlareResponse.swift in Sources */,
 				312385391B3618AD000576CE /* DetailViewController.swift in Sources */,
+				316CD0511BAF7F9E002A060A /* ConvenienceFunctions.swift in Sources */,
 				312385371B3618AD000576CE /* MasterViewController.swift in Sources */,
 				3187D1C01B93E51B0029361D /* CloudFlareDateFormatter.swift in Sources */,
 				31C00F561B8AA091005E49ED /* CloudFlareUser.swift in Sources */,
