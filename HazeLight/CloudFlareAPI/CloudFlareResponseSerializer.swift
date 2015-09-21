@@ -10,77 +10,146 @@ import Alamofire
 import Argo
 
 extension Request {
+    static let responseQueue = dispatch_queue_create("com.jonshier.hazelight.responseQueue", DISPATCH_QUEUE_CONCURRENT)
+    
     func responseObject<T: Decodable where T == T.DecodedType>(completionHandler: (responseObject: T?, error: CloudFlareError?) -> Void) -> Self {
-        let fullCompletionHandler = { (request: NSURLRequest?, response: NSURLResponse?, result: Result<T>) in
-            switch result {
-            case let .Success(value):
-                completionHandler(responseObject: value, error: .None)
-            case let .Failure(_, error):
-                if let error = error as? CloudFlareError {
-                    completionHandler(responseObject: .None, error: error)
-                }
-                else if let error = error as? NSError {
-                    // Must have received a network error.
-                    completionHandler(responseObject: .None, error: CloudFlareError.NetworkError(error: error))
-                }
-                else {
-                    fatalError("ResponseObject received an error that was neither a CloudFlareError nor an NSError.")
-                }
-            }
+        let fullCompletionHandler = { (request: NSURLRequest?, response: NSHTTPURLResponse?, data: NSData?, result: Result<T, CloudFlareError>) in
+            self.log(request, response: response, data: data, result: result)
+            dispatchMain { completionHandler(responseObject: result.value, error: result.error) }
         }
         
-        return response(responseSerializer: Request.CloudFlareResponseSerializer(), completionHandler: fullCompletionHandler)
+        return response(queue: Request.responseQueue, responseSerializer: Request.CloudFlareResponseSerializer(), completionHandler: fullCompletionHandler)
     }
     
-    static func CloudFlareResponseSerializer<T: Decodable where T == T.DecodedType>() -> GenericResponseSerializer<T> {
-        return GenericResponseSerializer { (request, response, data) -> Result<T> in
+    static func CloudFlareResponseSerializer<T: Decodable where T == T.DecodedType>() -> GenericResponseSerializer<T, CloudFlareError> {
+        return GenericResponseSerializer { (request, response, data, error) in
+            guard error == nil else {
+                return .Failure(CloudFlareError.NetworkError(error: error!))
+            }
+            
             guard let validData = data else {
                 let failureReason = "Tried to decode response with nil data."
                 let error = Error.errorWithCode(.DataSerializationFailed, failureReason: failureReason)
-                return .Failure(data, CloudFlareError.SerializationError(error: error))
+                return .Failure(CloudFlareError.SerializationError(error: error))
             }
             
             let JSONSerializer = Request.JSONResponseSerializer(options: .AllowFragments)
-            let JSONResult = JSONSerializer.serializeResponse(request, response, validData)
+            let JSONResult = JSONSerializer.serializeResponse(request, response, validData, nil)
             guard case let .Success(responseJSON) = JSONResult else {
-                return .Failure(data, CloudFlareError.SerializationError(error: JSONResult.error! as NSError))
+                return .Failure(CloudFlareError.SerializationError(error: JSONResult.error!))
             }
             
             let decodedCloudFlareResponse = CloudFlareResponse.decode(JSON.parse(responseJSON))
             guard case let .Success(cloudFlareResponse) = decodedCloudFlareResponse else {
-                let errorString: String
-                switch decodedCloudFlareResponse {
-                case let .TypeMismatch(error):
-                    errorString = error
-                case let .MissingKey(error):
-                    errorString = error
-                default:
-                    errorString = "Should never see this."
+                var errorString = "Unknown error."
+                if case let .Failure(decodeError) = decodedCloudFlareResponse {
+                    errorString = decodeError.description
                 }
                 
-                return .Failure(data, CloudFlareError.DecodingError(decodedString: errorString))
+                return .Failure(CloudFlareError.DecodingError(decodedString: errorString))
             }
             
-            if !cloudFlareResponse.success {
-                return .Failure(data, CloudFlareError.ResponseError(response: cloudFlareResponse))
+            guard cloudFlareResponse.success else {
+                return .Failure(CloudFlareError.ResponseError(response: cloudFlareResponse))
             }
             
             let decodedResponseObject = T.decode(cloudFlareResponse.result)
             guard case let .Success(responseObject) = decodedResponseObject else {
-                let errorString: String
-                switch decodedResponseObject {
-                case let .TypeMismatch(error):
-                    errorString = error
-                case let .MissingKey(error):
-                    errorString = error
-                default:
-                    errorString = "Should never see this."
+                var errorString = "Unknown error."
+                if case let .Failure(decodeError) = decodedResponseObject {
+                    errorString = decodeError.description
                 }
                 
-                return .Failure(data, CloudFlareError.DecodingError(decodedString: errorString))
+                return .Failure(CloudFlareError.DecodingError(decodedString: errorString))
             }
             
             return .Success(responseObject)
         }
+    }
+    
+    func log<T: Decodable where T == T.DecodedType>(request: NSURLRequest?, response: NSHTTPURLResponse?, data: NSData?, result: Result<T, CloudFlareError>) {
+        var printStream = ""
+        print("*** START RESPONSE LOG ***\n", toStream: &printStream)
+        
+        print("\(self)\n", toStream: &printStream)
+        
+        if let sessionHeaders = session.configuration.HTTPAdditionalHeaders {
+            print("Session Headers:", toStream: &printStream)
+            print(stringFromHeaders(sessionHeaders), toStream: &printStream)
+        }
+        else {
+            print("No session headers.\n", toStream: &printStream)
+        }
+        
+        if let requestHeaders = request?.allHTTPHeaderFields {
+            print("Request Headers:", toStream: &printStream)
+            print(stringFromHeaders(requestHeaders), toStream: &printStream)
+        }
+        else {
+            print("No request headers.\n", toStream: &printStream)
+        }
+        
+        if let requestBody = request?.HTTPBody,
+            bodyString = NSString(data: requestBody, encoding: NSUTF8StringEncoding) {
+            print("Request Body:", toStream: &printStream)
+            print(bodyString, toStream: &printStream)
+        }
+        else {
+            print("No request body.\n", toStream: &printStream)
+        }
+        
+        if let responseHeaders = response?.allHeaderFields {
+            print("Response Headers:", toStream: &printStream)
+            print(stringFromHeaders(responseHeaders), toStream: &printStream)
+        }
+        else {
+            print("No response headers.\n", toStream: &printStream)
+        }
+        
+        let stringSerializer = Request.stringResponseSerializer()
+        let stringResult = stringSerializer.serializeResponse(request, response, data, nil)
+        switch stringResult {
+        case let .Success(string):
+            print("Response String:", toStream: &printStream)
+            print("\(string)\n", toStream: &printStream)
+        case let .Failure(error):
+            print("Could not deserialize response as string due to error:", toStream: &printStream)
+            print("\(error)\n", toStream: &printStream)
+        }
+        
+        let JSONSerializer = Request.JSONResponseSerializer()
+        let JSONResult = JSONSerializer.serializeResponse(request, response, data, nil)
+        switch JSONResult {
+        case let .Success(responseJSON):
+            print("Response JSON:", toStream: &printStream)
+            print("\(responseJSON)\n", toStream: &printStream)
+        case let .Failure(error):
+            print("Could not deserialize response as JSON due to error:", toStream: &printStream)
+            print("\(error)", toStream: &printStream)
+        }
+        
+        switch result {
+        case let .Success(object):
+            print("Response Object:", toStream: &printStream)
+            print("\(object)\n", toStream: &printStream)
+        case let .Failure(error):
+            print("Could not deserialize response object due to error:", toStream: &printStream)
+            print("\(error)", toStream: &printStream)
+        }
+        
+        debugPrint(self, toStream: &printStream)
+        
+        print("\n*** END RESPONSE LOG ***", toStream: &printStream)
+        
+        print(printStream)
+    }
+    
+    func stringFromHeaders(headers: [NSObject : AnyObject]) -> String {
+        var printStream = ""
+        
+        let sortedKeys = headers.keys.sort { $0.description.caseInsensitiveCompare($1.description) == .OrderedAscending }
+        sortedKeys.forEach { print("\t\($0) : \(headers[$0]!)", toStream: &printStream) }
+        
+        return printStream
     }
 }
