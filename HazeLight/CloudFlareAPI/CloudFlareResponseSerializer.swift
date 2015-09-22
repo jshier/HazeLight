@@ -13,16 +13,16 @@ extension Request {
     static let responseQueue = dispatch_queue_create("com.jonshier.hazelight.responseQueue", DISPATCH_QUEUE_CONCURRENT)
     
     func responseObject<T: Decodable where T == T.DecodedType>(completionHandler: (responseObject: T?, error: CloudFlareError?) -> Void) -> Self {
-        let fullCompletionHandler = { (request: NSURLRequest?, response: NSHTTPURLResponse?, data: NSData?, result: Result<T, CloudFlareError>) in
-            self.log(request, response: response, data: data, result: result)
-            dispatchMain { completionHandler(responseObject: result.value, error: result.error) }
+        let fullCompletionHandler = { (response: Response<T, CloudFlareError>) in
+            self.log(response.request, response: response.response, data: response.data, result: response.result)
+            dispatchMain { completionHandler(responseObject: response.result.value, error: response.result.error) }
         }
         
         return response(queue: Request.responseQueue, responseSerializer: Request.CloudFlareResponseSerializer(), completionHandler: fullCompletionHandler)
     }
     
-    static func CloudFlareResponseSerializer<T: Decodable where T == T.DecodedType>() -> GenericResponseSerializer<T, CloudFlareError> {
-        return GenericResponseSerializer { (request, response, data, error) in
+    static func CloudFlareResponseSerializer<T: Decodable where T == T.DecodedType>() -> ResponseSerializer<T, CloudFlareError> {
+        return ResponseSerializer { (request, response, data, error) in
             guard error == nil else {
                 return .Failure(CloudFlareError.NetworkError(error: error!))
             }

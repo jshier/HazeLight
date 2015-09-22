@@ -1,5 +1,5 @@
 PODS:
-  - Alamofire (2.0.1)
+  - Alamofire (3.0.0-beta.1)
   - Argo (2.0.0)
   - Curry (1.2.0)
   - Keys (1.0.0)
@@ -11,12 +11,12 @@ PODS:
   - OHHTTPStubs/OHPathHelpers (4.3.0)
   - OHHTTPStubs/Swift (4.3.0):
     - OHHTTPStubs/Core
-  - Operations (2.0.2):
-    - Operations/Base (= 2.0.2)
-  - Operations/Base (2.0.2)
+  - Operations (2.1.0):
+    - Operations/App (= 2.1.0)
+  - Operations/App (2.1.0)
 
 DEPENDENCIES:
-  - Alamofire (from `https://github.com/Alamofire/Alamofire.git`, branch `feature/double_generic_results`)
+  - Alamofire (from `https://github.com/Alamofire/Alamofire.git`, branch `master`)
   - Argo
   - Curry
   - Keys (from `Pods/CocoaPodsKeys`)
@@ -29,22 +29,22 @@ DEPENDENCIES:
 
 EXTERNAL SOURCES:
   Alamofire:
-    :branch: feature/double_generic_results
+    :branch: master
     :git: https://github.com/Alamofire/Alamofire.git
   Keys:
     :path: Pods/CocoaPodsKeys
 
 CHECKOUT OPTIONS:
   Alamofire:
-    :commit: 096beb854ffc028d906972e4681c3358aa52ef5f
+    :commit: cdeb5c190be329140af9f1e311391891a81c923f
     :git: https://github.com/Alamofire/Alamofire.git
 
 SPEC CHECKSUMS:
-  Alamofire: 1d8e208d616fbbfd2391b15eae766d07c96cdc49
+  Alamofire: b1b493dfb758bb73e6eafce616ea529aca18b2ad
   Argo: 43133aa1612b249bbadd24aca94605aa0f13690d
   Curry: d0bd819af242d78cf068e1e9e914ae9f476e84ed
   Keys: 7d2ff6ff42f6903358267ce56e9392f83c31acfe
   OHHTTPStubs: 0aec5755528693a165bd616cb79f69387de306a8
-  Operations: 9f90837ac6f00aa2b3b0fd3e31261bb821b56f63
+  Operations: c7fa8aeeb0b970f178a865ebd1578c7712a0b7a0
 
 COCOAPODS: 0.39.0.beta.4

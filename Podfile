@@ -4,7 +4,7 @@ use_frameworks!
 inhibit_all_warnings!
 
 target :'HazeLight', :exclusive => true do
-  pod 'Alamofire', :git => 'https://github.com/Alamofire/Alamofire.git', :branch => 'feature/double_generic_results'
+  pod 'Alamofire', :git => 'https://github.com/Alamofire/Alamofire.git', :branch => 'master'
   pod 'Argo'
   pod 'Operations'
   pod 'Curry'
