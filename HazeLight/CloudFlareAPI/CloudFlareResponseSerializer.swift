@@ -26,27 +26,15 @@ extension Request {
             guard error == nil else {
                 return .Failure(CloudFlareError.NetworkError(error: error!))
             }
-            
-            guard let validData = data else {
-                let failureReason = "Tried to decode response with nil data."
-                let error = Error.errorWithCode(.DataSerializationFailed, failureReason: failureReason)
-                return .Failure(CloudFlareError.SerializationError(error: error))
-            }
-            
-            let JSONSerializer = Request.JSONResponseSerializer(options: .AllowFragments)
-            let JSONResult = JSONSerializer.serializeResponse(request, response, validData, nil)
+
+            let JSONResult = Request.JSONResponseSerializer().serializeResponse(request, response, data, nil)
             guard case let .Success(responseJSON) = JSONResult else {
                 return .Failure(CloudFlareError.SerializationError(error: JSONResult.error!))
             }
             
             let decodedCloudFlareResponse = CloudFlareResponse.decode(JSON.parse(responseJSON))
             guard case let .Success(cloudFlareResponse) = decodedCloudFlareResponse else {
-                var errorString = "Unknown error."
-                if case let .Failure(decodeError) = decodedCloudFlareResponse {
-                    errorString = decodeError.description
-                }
-                
-                return .Failure(CloudFlareError.DecodingError(decodedString: errorString))
+                return .Failure(CloudFlareError.DecodingError(decodedString: decodedCloudFlareResponse.error!.description))
             }
             
             guard cloudFlareResponse.success else {
@@ -55,12 +43,7 @@ extension Request {
             
             let decodedResponseObject = T.decode(cloudFlareResponse.result)
             guard case let .Success(responseObject) = decodedResponseObject else {
-                var errorString = "Unknown error."
-                if case let .Failure(decodeError) = decodedResponseObject {
-                    errorString = decodeError.description
-                }
-                
-                return .Failure(CloudFlareError.DecodingError(decodedString: errorString))
+                return .Failure(CloudFlareError.DecodingError(decodedString: decodedResponseObject.error!.description))
             }
             
             return .Success(responseObject)
