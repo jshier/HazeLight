@@ -1,6 +1,6 @@
 PODS:
-  - Alamofire (3.0.0-beta.1)
-  - Argo (2.0.0)
+  - Alamofire (3.0.0-beta.3)
+  - Argo (2.1.0)
   - Curry (1.2.0)
   - Keys (1.0.0)
   - OHHTTPStubs/Core (4.3.0)
@@ -16,7 +16,7 @@ PODS:
   - Operations/App (2.1.0)
 
 DEPENDENCIES:
-  - Alamofire (from `https://github.com/Alamofire/Alamofire.git`, branch `master`)
+  - Alamofire (~> 3.0.0-beta.3)
   - Argo
   - Curry
   - Keys (from `Pods/CocoaPodsKeys`)
@@ -28,23 +28,15 @@ DEPENDENCIES:
   - Operations
 
 EXTERNAL SOURCES:
-  Alamofire:
-    :branch: master
-    :git: https://github.com/Alamofire/Alamofire.git
   Keys:
     :path: Pods/CocoaPodsKeys
 
-CHECKOUT OPTIONS:
-  Alamofire:
-    :commit: cdeb5c190be329140af9f1e311391891a81c923f
-    :git: https://github.com/Alamofire/Alamofire.git
-
 SPEC CHECKSUMS:
-  Alamofire: b1b493dfb758bb73e6eafce616ea529aca18b2ad
-  Argo: 43133aa1612b249bbadd24aca94605aa0f13690d
+  Alamofire: c89149e58431f6f94527e8c01f920456afe39bd0
+  Argo: f65db7f50301f7a623514cca2b15aa63e147b91a
   Curry: d0bd819af242d78cf068e1e9e914ae9f476e84ed
   Keys: 7d2ff6ff42f6903358267ce56e9392f83c31acfe
   OHHTTPStubs: 0aec5755528693a165bd616cb79f69387de306a8
   Operations: c7fa8aeeb0b970f178a865ebd1578c7712a0b7a0
 
-COCOAPODS: 0.39.0.beta.4
+COCOAPODS: 0.39.0.beta.5
