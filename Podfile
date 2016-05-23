@@ -3,27 +3,31 @@ platform :ios, '9.0'
 use_frameworks!
 inhibit_all_warnings!
 
-target :'HazeLight', :exclusive => true do
-  pod 'Alamofire', '~> 3.0.0-beta.3'
+def stubs
+  pod 'OHHTTPStubs/Core'
+  pod 'OHHTTPStubs/NSURLSession'
+  pod 'OHHTTPStubs/JSON'
+  pod 'OHHTTPStubs/OHPathHelpers'
+  pod 'OHHTTPStubs/Swift'
+end
+
+target 'HazeLight' do
+  pod 'Alamofire'
   pod 'Argo'
-  pod 'Operations'
   pod 'Curry'
-end
-
-target :'HazeLightTests', :exclusive => true do
-  pod 'OHHTTPStubs/Core'
-  pod 'OHHTTPStubs/NSURLSession'
-  pod 'OHHTTPStubs/JSON'
-  pod 'OHHTTPStubs/OHPathHelpers'
-  pod 'OHHTTPStubs/Swift'
-end
-
-target :'HazeLightUITests', :exclusive => true do
-  pod 'OHHTTPStubs/Core'
-  pod 'OHHTTPStubs/NSURLSession'
-  pod 'OHHTTPStubs/JSON'
-  pod 'OHHTTPStubs/OHPathHelpers'
-  pod 'OHHTTPStubs/Swift'
+  pod 'Operations'
+  
+  target 'HazeLightTests' do
+    inherit! :search_paths
+    
+    stubs
+  end
+  
+  target 'HazeLightUITests' do
+    inherit! :search_paths
+    
+    stubs
+  end
 end
 
 plugin 'cocoapods-keys', {

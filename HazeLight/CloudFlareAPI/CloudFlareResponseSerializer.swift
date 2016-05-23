@@ -12,10 +12,10 @@ import Argo
 extension Request {
     static let responseQueue = dispatch_queue_create("com.jonshier.hazelight.responseQueue", DISPATCH_QUEUE_CONCURRENT)
     
-    func responseObject<T: Decodable where T == T.DecodedType>(completionHandler: (responseObject: T?, error: CloudFlareError?) -> Void) -> Self {
+    func responseObject<T: Decodable where T == T.DecodedType>(completionHandler: (result: Result<T, CloudFlareError>) -> Void) -> Self {
         let fullCompletionHandler = { (response: Response<T, CloudFlareError>) in
             self.log(response.request, response: response.response, data: response.data, result: response.result)
-            dispatchMain { completionHandler(responseObject: response.result.value, error: response.result.error) }
+            dispatchMain { completionHandler(result: response.result) }
         }
         
         return response(queue: Request.responseQueue, responseSerializer: Request.CloudFlareResponseSerializer(), completionHandler: fullCompletionHandler)
@@ -32,7 +32,7 @@ extension Request {
                 return .Failure(CloudFlareError.SerializationError(error: JSONResult.error!))
             }
             
-            let decodedCloudFlareResponse = CloudFlareResponse.decode(JSON.parse(responseJSON))
+            let decodedCloudFlareResponse = CloudFlareResponse.decode(JSON(responseJSON))
             guard case let .Success(cloudFlareResponse) = decodedCloudFlareResponse else {
                 return .Failure(CloudFlareError.DecodingError(decodedString: decodedCloudFlareResponse.error!.description))
             }

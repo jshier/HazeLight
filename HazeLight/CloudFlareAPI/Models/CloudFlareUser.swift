@@ -29,7 +29,9 @@ struct CloudFlareUser {
 
 extension CloudFlareUser : Decodable {
     static func decode(j: JSON) -> Decoded<CloudFlareUser> {
-        let part1 = curry(self.init)
+        let cinit = curry(self.init)
+            
+        return cinit
             <^> j <| "id"
             <*> j <| "email"
             <*> j <|? "first_name"
@@ -37,8 +39,6 @@ extension CloudFlareUser : Decodable {
             <*> j <| "username"
             <*> j <|? "telephone"
             <*> j <|? "country"
-            
-        let part2 = part1
             <*> j <|? "zipcode"
             <*> (j <| "created_on" >>- toISO8601Date)
             <*> (j <| "modified_on" >>- toISO8601Date)
@@ -46,8 +46,6 @@ extension CloudFlareUser : Decodable {
             <*> j <| "two_factor_authentication_locked"
             <*> j <| "has_pro_zones"
             <*> j <| "has_business_zones"
-        
-        return part2
             <*> j <| "has_enterprise_zones"
     }
 }

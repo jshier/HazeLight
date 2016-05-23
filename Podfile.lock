@@ -1,22 +1,22 @@
 PODS:
-  - Alamofire (3.0.0-beta.3)
-  - Argo (2.1.0)
-  - Curry (1.2.0)
+  - Alamofire (3.4.0)
+  - Argo (3.0.1)
+  - Curry (2.2.0)
   - Keys (1.0.0)
-  - OHHTTPStubs/Core (4.3.0)
-  - OHHTTPStubs/JSON (4.3.0):
+  - OHHTTPStubs/Core (5.0.0)
+  - OHHTTPStubs/JSON (5.0.0):
     - OHHTTPStubs/Core
-  - OHHTTPStubs/NSURLSession (4.3.0):
+  - OHHTTPStubs/NSURLSession (5.0.0):
     - OHHTTPStubs/Core
-  - OHHTTPStubs/OHPathHelpers (4.3.0)
-  - OHHTTPStubs/Swift (4.3.0):
+  - OHHTTPStubs/OHPathHelpers (5.0.0)
+  - OHHTTPStubs/Swift (5.0.0):
     - OHHTTPStubs/Core
-  - Operations (2.1.0):
-    - Operations/App (= 2.1.0)
-  - Operations/App (2.1.0)
+  - Operations (2.10.1):
+    - Operations/Standard (= 2.10.1)
+  - Operations/Standard (2.10.1)
 
 DEPENDENCIES:
-  - Alamofire (~> 3.0.0-beta.3)
+  - Alamofire
   - Argo
   - Curry
   - Keys (from `Pods/CocoaPodsKeys`)
@@ -32,11 +32,13 @@ EXTERNAL SOURCES:
     :path: Pods/CocoaPodsKeys
 
 SPEC CHECKSUMS:
-  Alamofire: c89149e58431f6f94527e8c01f920456afe39bd0
-  Argo: f65db7f50301f7a623514cca2b15aa63e147b91a
-  Curry: d0bd819af242d78cf068e1e9e914ae9f476e84ed
-  Keys: 7d2ff6ff42f6903358267ce56e9392f83c31acfe
-  OHHTTPStubs: 0aec5755528693a165bd616cb79f69387de306a8
-  Operations: c7fa8aeeb0b970f178a865ebd1578c7712a0b7a0
+  Alamofire: c19a627cefd6a95f840401c49ab1f124e07f54ee
+  Argo: 22c5d62b7967020a641468c91dc9488bea9523b8
+  Curry: c22d80fff7f5a4b1bbd531455c3e2dbb099658a3
+  Keys: 9c35bf00f612ee1d48556f4a4b9b4551e224e90f
+  OHHTTPStubs: a5d2e9eea07869d42ec03338325f398bc520e159
+  Operations: b787ef012ec50752f6247b7f0efb7746fb8934ae
 
-COCOAPODS: 0.39.0.beta.5
+PODFILE CHECKSUM: 93512ace85f0a12efcbbc190fd22f611386edde0
+
+COCOAPODS: 1.0.0
