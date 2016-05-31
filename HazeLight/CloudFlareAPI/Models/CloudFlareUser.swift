@@ -20,18 +20,21 @@ struct CloudFlareUser {
     let zipCode: String?
     let creationDate: NSDate
     let lastModifiedDate: NSDate
+    
     let isTwoFactorAuthenticationEnabled: Bool
     let isTwoFactorAuthenticationLocked: Bool
     let hasProZones: Bool
     let hasBusinessZones: Bool
     let hasEnterpriseZones: Bool
+    let betas: [String]
+    let organizations: [CloudFlareUserOrganization]?
 }
 
 extension CloudFlareUser : Decodable {
     static func decode(j: JSON) -> Decoded<CloudFlareUser> {
         let cinit = curry(self.init)
             
-        return cinit
+        let part1 = cinit
             <^> j <| "id"
             <*> j <| "email"
             <*> j <|? "first_name"
@@ -42,10 +45,14 @@ extension CloudFlareUser : Decodable {
             <*> j <|? "zipcode"
             <*> (j <| "created_on" >>- toISO8601Date)
             <*> (j <| "modified_on" >>- toISO8601Date)
+            
+        return part1
             <*> j <| "two_factor_authentication_enabled"
             <*> j <| "two_factor_authentication_locked"
             <*> j <| "has_pro_zones"
             <*> j <| "has_business_zones"
             <*> j <| "has_enterprise_zones"
+            <*> j <|| "betas"
+            <*> j <||? "organizations"
     }
 }

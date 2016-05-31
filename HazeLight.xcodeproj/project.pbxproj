@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		312362051CFAB83E0090FF57 /* CloudFlareUserOrganization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312362041CFAB83E0090FF57 /* CloudFlareUserOrganization.swift */; };
 		312385351B3618AD000576CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312385341B3618AD000576CE /* AppDelegate.swift */; };
 		312385371B3618AD000576CE /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312385361B3618AD000576CE /* MasterViewController.swift */; };
 		312385391B3618AD000576CE /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312385381B3618AD000576CE /* DetailViewController.swift */; };
@@ -47,6 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		312362041CFAB83E0090FF57 /* CloudFlareUserOrganization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudFlareUserOrganization.swift; sourceTree = "<group>"; };
 		312385311B3618AD000576CE /* HazeLight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HazeLight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		312385341B3618AD000576CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		312385361B3618AD000576CE /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
@@ -210,6 +212,7 @@
 				3170D8331B8994EB009B0613 /* CloudFlareError.swift */,
 				3170D8351B899512009B0613 /* CloudFlareResponseError.swift */,
 				31C00F551B8AA091005E49ED /* CloudFlareUser.swift */,
+				312362041CFAB83E0090FF57 /* CloudFlareUserOrganization.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -507,6 +510,7 @@
 				3187D1C01B93E51B0029361D /* CloudFlareDateFormatter.swift in Sources */,
 				31C00F561B8AA091005E49ED /* CloudFlareUser.swift in Sources */,
 				3170D8341B8994EB009B0613 /* CloudFlareError.swift in Sources */,
+				312362051CFAB83E0090FF57 /* CloudFlareUserOrganization.swift in Sources */,
 				3170D8361B899512009B0613 /* CloudFlareResponseError.swift in Sources */,
 				312385351B3618AD000576CE /* AppDelegate.swift in Sources */,
 				31A4BFC91B3630BE00B0BA22 /* CloudFlareRouter.swift in Sources */,
