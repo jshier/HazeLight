@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>HazeLight.xcscheme_^#shared#^_</key>
+		<key>HazeLight.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,22 +12,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>316936F51A06186200D05FBA</key>
+		<key>312385301B3618AD000576CE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>316937091A0618BC00D05FBA</key>
+		<key>312385461B3618AD000576CE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>31AE88471A060DC800657D20</key>
+		<key>312385511B3618AD000576CE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>31AE88631A060DC800657D20</key>
+		<key>316C5BE91B900B8C00FD7C8F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>316C5BF71B900B9400FD7C8F</key>
 		<dict>
 			<key>primary</key>
 			<true/>

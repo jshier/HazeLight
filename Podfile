@@ -1,18 +1,38 @@
-source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '10.0'
 
-platform :ios, "8.1"
+use_frameworks!
 inhibit_all_warnings!
 
-target "HazeLight" do
-
+def stubs
+  pod 'OHHTTPStubs/Core'
+  pod 'OHHTTPStubs/NSURLSession'
+  pod 'OHHTTPStubs/JSON'
+  pod 'OHHTTPStubs/OHPathHelpers'
+  pod 'OHHTTPStubs/Swift'
 end
 
-target :HazeLightTests, :exclusive => true do
-	pod 'Kiwi'
-	pod 'OHHTTPStubs'
+target 'HazeLight' do
+  pod 'Alamofire'
+  pod 'Argo'
+  pod 'Curry'
+  pod 'Runes'
+  
+  target 'HazeLightTests' do
+    inherit! :search_paths
+    
+    stubs
+  end
+  
+  target 'HazeLightUITests' do
+    inherit! :search_paths
+    
+    stubs
+  end
 end
 
-target :HazeLightUITests, :exclusive => true do
-	pod 'KIF-Kiwi'
-end
-
+plugin 'cocoapods-keys', {
+  :project => "HazeLight",
+  :target => "HazeLight",
+  :keys => [
+    "CloudFlareAPIKey"
+]}
