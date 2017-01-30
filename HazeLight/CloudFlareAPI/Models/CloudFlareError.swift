@@ -7,49 +7,48 @@
 //
 
 import Foundation
-import Argo
 
-enum CloudFlareError : ErrorType {
-    case NetworkError(error: NSError)
-    case SerializationError(error: NSError)
-    case DecodingError(decodedString: String)
-    case ResponseError(response: CloudFlareResponse)
+enum CloudFlareError: Error {
+    case network(error: Error)
+    case serialization(error: Error)
+    case decoding(error: Error)
+    case response(response: CloudFlareResponse)
     
     var errorDescription: String {
         switch self {
-        case let .NetworkError(error):
-            return error.description
-        case let .SerializationError(error):
-            return error.description
-        case let .DecodingError(decodedString):
-            return decodedString
-        case let .ResponseError(response):
-            let messages = response.errors.map { "\($0.message) [\($0.code)]" }
-            return messages.joinWithSeparator("\n\n")
+        case let .network(error):
+            return error.localizedDescription
+        case let .serialization(error):
+            return error.localizedDescription
+        case let .decoding(error):
+            return error.localizedDescription
+        case let .response(response):
+            return response.errors.map { "\($0.message) [\($0.code)]" }
+                                  .joined(separator: "\n\n")
         }
     }
     
     var type: String {
         switch self {
-        case .NetworkError:
+        case .network:
             return "NetworkError"
-        case .SerializationError:
+        case .serialization:
             return "SerializationError"
-        case .DecodingError:
+        case .decoding:
             return "DecodingError"
-        case .ResponseError:
+        case .response:
             return "ResponseError"
         }
     }
 }
 
-extension CloudFlareError : CustomStringConvertible {
+extension CloudFlareError: CustomStringConvertible {
     var description: String {
         return "\(type): \(errorDescription)"
     }
 }
 
-extension CloudFlareError : CustomDebugStringConvertible {
+extension CloudFlareError: CustomDebugStringConvertible {
     var debugDescription: String {
         return "\(self)"
     }

@@ -8,6 +8,7 @@
 
 import Argo
 import Curry
+import Runes
 
 struct CloudFlareUserOrganization {
     let ID: String
@@ -18,7 +19,7 @@ struct CloudFlareUserOrganization {
 }
 
 extension CloudFlareUserOrganization: Decodable {
-    static func decode(json: JSON) -> Decoded<CloudFlareUserOrganization> {
+    static func decode(_ json: JSON) -> Decoded<CloudFlareUserOrganization> {
         let cinit = curry(self.init)
         
         return cinit
@@ -31,8 +32,8 @@ extension CloudFlareUserOrganization: Decodable {
 }
 
 enum CloudFlareUserOrganizationStatus: String {
-    case Member = "member"
-    case Invited = "invited"
+    case member
+    case invited
 }
 
 extension CloudFlareUserOrganizationStatus: Decodable { }

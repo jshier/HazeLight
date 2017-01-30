@@ -11,21 +11,23 @@ import Alamofire
 import Keys
 
 enum CloudFlareRouter : URLRequestConvertible {
-    static let baseURL = NSURL(string: "https://api.cloudflare.com/client/v4/")!
-    static let token = HazelightKeys().cloudFlareAPIKey()
-    
-    case User
 
-    var method: Alamofire.Method {
+
+    static let baseURL = URL(string: "https://api.cloudflare.com/client/v4/")!
+    static let token = HazeLightKeys().cloudFlareAPIKey
+    
+    case user
+
+    var method: Alamofire.HTTPMethod {
         switch self {
-        case User:
-            return .GET
+        case .user:
+            return .get
         }
     }
     
     var path: String {
         switch self {
-        case User:
+        case .user:
             return "user"
         }
     }
@@ -38,26 +40,26 @@ enum CloudFlareRouter : URLRequestConvertible {
     
     var parameters: [String : String]? {
         switch self {
-        case User:
+        case .user:
             return nil
         }
     }
     
     var parameterEncoding: ParameterEncoding {
         switch self {
-        case .User:
-            return .URL
+        case .user:
+            return URLEncoding.default
         }
     }
     
-    var URLRequest: NSMutableURLRequest {
-        let request = NSMutableURLRequest(URL: CloudFlareRouter.baseURL.URLByAppendingPathComponent(path))
-        request.HTTPMethod = method.rawValue
+    func asURLRequest() throws -> URLRequest {
+        var request = URLRequest(url: CloudFlareRouter.baseURL.appendingPathComponent(path))
+        request.httpMethod = method.rawValue
         
         for (key, value) in headers {
             request.setValue(value, forHTTPHeaderField: key)
         }
         
-        return parameterEncoding.encode(request, parameters: parameters).0
+        return try parameterEncoding.encode(request, with: parameters)
     }
 }

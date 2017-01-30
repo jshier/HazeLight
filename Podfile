@@ -1,4 +1,4 @@
-platform :ios, '9.0'
+platform :ios, '10.0'
 
 use_frameworks!
 inhibit_all_warnings!
@@ -15,7 +15,7 @@ target 'HazeLight' do
   pod 'Alamofire'
   pod 'Argo'
   pod 'Curry'
-  pod 'Operations'
+  pod 'Runes'
   
   target 'HazeLightTests' do
     inherit! :search_paths

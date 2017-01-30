@@ -8,15 +8,17 @@
 
 import Argo
 import Curry
+import Runes
 
 struct CloudFlareResponseError {
     let code: Int
     let message: String
 }
 
-extension CloudFlareResponseError : Decodable {
-    static func decode(json: JSON) -> Decoded<CloudFlareResponseError> {
-        return curry(self.init)
+extension CloudFlareResponseError: Decodable {
+    static func decode(_ json: JSON) -> Decoded<CloudFlareResponseError> {
+        let cinit = curry(self.init)
+        return cinit
             <^> json <| "code"
             <*> json <| "message"
     }

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0700"
+   LastUpgradeVersion = "0830"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -32,7 +32,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "312385461B3618AD000576CE"
+               BlueprintIdentifier = "316C5BE91B900B8C00FD7C8F"
                BuildableName = "HazeLightTests.xctest"
                BlueprintName = "HazeLightTests"
                ReferencedContainer = "container:HazeLight.xcodeproj">
@@ -42,7 +42,7 @@
             skipped = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "312385511B3618AD000576CE"
+               BlueprintIdentifier = "316C5BF71B900B9400FD7C8F"
                BuildableName = "HazeLightUITests.xctest"
                BlueprintName = "HazeLightUITests"
                ReferencedContainer = "container:HazeLight.xcodeproj">

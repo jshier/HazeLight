@@ -8,6 +8,7 @@
 
 import Argo
 import Curry
+import Runes
 
 struct CloudFlareUser {
     let ID: String
@@ -18,8 +19,8 @@ struct CloudFlareUser {
     let phoneNumber: String?
     let country: String?
     let zipCode: String?
-    let creationDate: NSDate
-    let lastModifiedDate: NSDate
+    let creationDate: Date
+    let lastModifiedDate: Date
     
     let isTwoFactorAuthenticationEnabled: Bool
     let isTwoFactorAuthenticationLocked: Bool
@@ -31,7 +32,7 @@ struct CloudFlareUser {
 }
 
 extension CloudFlareUser : Decodable {
-    static func decode(j: JSON) -> Decoded<CloudFlareUser> {
+    static func decode(_ j: JSON) -> Decoded<CloudFlareUser> {
         let cinit = curry(self.init)
             
         let part1 = cinit

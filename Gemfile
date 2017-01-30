@@ -1,5 +1,5 @@
 source "https://rubygems.org"
 
-gem 'cocoapods', '~> 1.0.0'
+gem 'cocoapods', git: "https://github.com/CocoaPods/CocoaPods.git"
 gem 'cocoapods-keys'
 gem 'fastlane'
