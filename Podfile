@@ -1,38 +1,21 @@
-platform :ios, '10.0'
-
-use_frameworks!
-inhibit_all_warnings!
-
-def stubs
-  pod 'OHHTTPStubs/Core'
-  pod 'OHHTTPStubs/NSURLSession'
-  pod 'OHHTTPStubs/JSON'
-  pod 'OHHTTPStubs/OHPathHelpers'
-  pod 'OHHTTPStubs/Swift'
-end
+platform :ios, '12.0'
 
 target 'HazeLight' do
-  pod 'Alamofire'
-  pod 'Argo'
-  pod 'Curry'
-  pod 'Runes'
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  # use_frameworks!
   
+  pod 'Alamofire', git: "https://github.com/Alamofire/Alamofire", branch: "alamofire5"
+  pod 'SwiftLint'
+  pod 'Valet'
+
   target 'HazeLightTests' do
     inherit! :search_paths
-    
-    stubs
+    # Pods for testing
   end
-  
+
   target 'HazeLightUITests' do
     inherit! :search_paths
-    
-    stubs
+    # Pods for testing
   end
-end
 
-plugin 'cocoapods-keys', {
-  :project => "HazeLight",
-  :target => "HazeLight",
-  :keys => [
-    "CloudFlareAPIKey"
-]}
+end

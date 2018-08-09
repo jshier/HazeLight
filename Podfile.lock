@@ -1,43 +1,33 @@
 PODS:
-  - Alamofire (4.3.0)
-  - Argo (4.1.2):
-    - Runes (>= 4.0.0)
-  - Curry (3.0.0)
-  - Keys (1.0.0)
-  - OHHTTPStubs/Core (5.2.3)
-  - OHHTTPStubs/JSON (5.2.3):
-    - OHHTTPStubs/Core
-  - OHHTTPStubs/NSURLSession (5.2.3):
-    - OHHTTPStubs/Core
-  - OHHTTPStubs/OHPathHelpers (5.2.3)
-  - OHHTTPStubs/Swift (5.2.3):
-    - OHHTTPStubs/Core
-  - Runes (4.0.1)
+  - Alamofire (5.0.0.beta.1)
+  - SwiftLint (0.27.0)
+  - Valet (3.1.4)
 
 DEPENDENCIES:
-  - Alamofire
-  - Argo
-  - Curry
-  - Keys (from `Pods/CocoaPodsKeys`)
-  - OHHTTPStubs/Core
-  - OHHTTPStubs/JSON
-  - OHHTTPStubs/NSURLSession
-  - OHHTTPStubs/OHPathHelpers
-  - OHHTTPStubs/Swift
-  - Runes
+  - Alamofire (from `https://github.com/Alamofire/Alamofire`, branch `alamofire5`)
+  - SwiftLint
+  - Valet
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - SwiftLint
+    - Valet
 
 EXTERNAL SOURCES:
-  Keys:
-    :path: Pods/CocoaPodsKeys
+  Alamofire:
+    :branch: alamofire5
+    :git: https://github.com/Alamofire/Alamofire
+
+CHECKOUT OPTIONS:
+  Alamofire:
+    :commit: d927d24f38f5b4bf3ae10fa8db4df2c5a2ef4ff2
+    :git: https://github.com/Alamofire/Alamofire
 
 SPEC CHECKSUMS:
-  Alamofire: 856a113053a7bc9cbe5d6367a555d773fc5cfef7
-  Argo: 5db06502fc1222d83011f574243089dab25202ff
-  Curry: eb3d2c75aec678b3cc7fb2729d2ad6dd121531d1
-  Keys: 9c35bf00f612ee1d48556f4a4b9b4551e224e90f
-  OHHTTPStubs: e238cd5b66d8efa51c861db45895de8fe079f4a7
-  Runes: ff20f163b478ac2c0e18158d6086fd5b1997f983
+  Alamofire: eafeeb206da2148045e57a5dc3c6a4acc65b9eb2
+  SwiftLint: 3207c1faa2240bf8973b191820a116113cd11073
+  Valet: c06af94b443de7e490b3fc5fd28256637ab7fdbd
 
-PODFILE CHECKSUM: 8fb9a21214668ecda889ee4a8993727f1dc59a83
+PODFILE CHECKSUM: 032d4991cf21c99c1a468a97dee0d152ff8ccd22
 
-COCOAPODS: 1.2.0
+COCOAPODS: 1.5.3
