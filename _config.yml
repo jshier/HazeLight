@@ -1,0 +1,8 @@
+title: HazeLight
+description: HazeLight is a basic client for CloudFlare™ on iOS 7. Developed using the Cocoa Touch APIs and test driven development, it is still a work in progress.
+google_analytics: 
+show_downloads: true
+theme: jekyll-theme-slate
+
+gems:
+  - jekyll-mentions
