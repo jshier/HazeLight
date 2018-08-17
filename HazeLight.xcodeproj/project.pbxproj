@@ -15,6 +15,12 @@
 		315A05CC211CEEF300260CFE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 315A05CA211CEEF300260CFE /* LaunchScreen.storyboard */; };
 		315A05D7211CEEF300260CFE /* HazeLightTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315A05D6211CEEF300260CFE /* HazeLightTests.swift */; };
 		315A05E2211CEEF300260CFE /* HazeLightUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315A05E1211CEEF300260CFE /* HazeLightUITests.swift */; };
+		31C9A8CF2127617F00088D89 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C9A8CE2127617F00088D89 /* Account.swift */; };
+		31C9A8D2212763B800088D89 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C9A8D1212763B800088D89 /* Router.swift */; };
+		31C9A8D52127730300088D89 /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C9A8D42127730300088D89 /* BaseResponse.swift */; };
+		31C9A8D72127730E00088D89 /* RawDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C9A8D62127730E00088D89 /* RawDecodable.swift */; };
+		31C9A8D9212789D100088D89 /* BaseResponseSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C9A8D8212789D100088D89 /* BaseResponseSerializer.swift */; };
+		31C9A8DB21278E5B00088D89 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C9A8DA21278E5B00088D89 /* User.swift */; };
 		503DB62C19E93F560010CB5D /* libPods-HazeLightTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A1F4A4AED346F390A1752DA /* libPods-HazeLightTests.a */; };
 		695460F5538FC2BF5BD333A4 /* libPods-HazeLightUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 29862957887F63935C6D847B /* libPods-HazeLightUITests.a */; };
 /* End PBXBuildFile section */
@@ -52,6 +58,12 @@
 		315A05DD211CEEF300260CFE /* HazeLightUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HazeLightUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		315A05E1211CEEF300260CFE /* HazeLightUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HazeLightUITests.swift; sourceTree = "<group>"; };
 		315A05E3211CEEF300260CFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		31C9A8CE2127617F00088D89 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		31C9A8D1212763B800088D89 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		31C9A8D42127730300088D89 /* BaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
+		31C9A8D62127730E00088D89 /* RawDecodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RawDecodable.swift; sourceTree = "<group>"; };
+		31C9A8D8212789D100088D89 /* BaseResponseSerializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponseSerializer.swift; sourceTree = "<group>"; };
+		31C9A8DA21278E5B00088D89 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		413D39DC01109CDB46223B67 /* Pods-HazeLight.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HazeLight.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HazeLight/Pods-HazeLight.debug.xcconfig"; sourceTree = "<group>"; };
 		4A1F4A4AED346F390A1752DA /* libPods-HazeLightTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HazeLightTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		72B10481C99A64F504772497 /* Pods-HazeLightUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HazeLightUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HazeLightUITests/Pods-HazeLightUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -114,6 +126,7 @@
 		315A05C0211CEEF200260CFE /* HazeLight */ = {
 			isa = PBXGroup;
 			children = (
+				31C9A8CD2127613100088D89 /* CloudflareAPI */,
 				315A05C1211CEEF200260CFE /* AppDelegate.swift */,
 				315A05C3211CEEF200260CFE /* ViewController.swift */,
 				315A05C5211CEEF200260CFE /* Main.storyboard */,
@@ -140,6 +153,35 @@
 				315A05E3211CEEF300260CFE /* Info.plist */,
 			);
 			path = HazeLightUITests;
+			sourceTree = "<group>";
+		};
+		31C9A8CD2127613100088D89 /* CloudflareAPI */ = {
+			isa = PBXGroup;
+			children = (
+				31C9A8D0212763AA00088D89 /* Network */,
+				31C9A8CE2127617F00088D89 /* Account.swift */,
+			);
+			path = CloudflareAPI;
+			sourceTree = "<group>";
+		};
+		31C9A8D0212763AA00088D89 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				31C9A8D3212772EA00088D89 /* Responses */,
+				31C9A8D1212763B800088D89 /* Router.swift */,
+				31C9A8D62127730E00088D89 /* RawDecodable.swift */,
+				31C9A8D8212789D100088D89 /* BaseResponseSerializer.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		31C9A8D3212772EA00088D89 /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				31C9A8D42127730300088D89 /* BaseResponse.swift */,
+				31C9A8DA21278E5B00088D89 /* User.swift */,
+			);
+			path = Responses;
 			sourceTree = "<group>";
 		};
 		492BAB4929B6AB634CD5C8A0 /* Pods */ = {
@@ -375,8 +417,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31C9A8D52127730300088D89 /* BaseResponse.swift in Sources */,
+				31C9A8D2212763B800088D89 /* Router.swift in Sources */,
+				31C9A8D9212789D100088D89 /* BaseResponseSerializer.swift in Sources */,
 				315A05C4211CEEF200260CFE /* ViewController.swift in Sources */,
+				31C9A8DB21278E5B00088D89 /* User.swift in Sources */,
 				315A05C2211CEEF200260CFE /* AppDelegate.swift in Sources */,
+				31C9A8D72127730E00088D89 /* RawDecodable.swift in Sources */,
+				31C9A8CF2127617F00088D89 /* Account.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
