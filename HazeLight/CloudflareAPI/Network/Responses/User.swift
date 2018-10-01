@@ -18,6 +18,22 @@ extension User: RawDecodable {
     }
 }
 
+extension User {
+    struct Request { }
+}
+
+extension User.Request: Requestable {
+    var route: Router { return .user }
+}
+
 struct RawUser: Decodable {
     let id: String
+}
+
+extension User {
+    struct Get { }
+}
+
+extension User.Get: Requestable {
+    var route: Router { return .user }
 }

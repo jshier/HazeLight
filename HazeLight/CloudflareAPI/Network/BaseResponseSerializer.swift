@@ -21,6 +21,13 @@ final class BaseResponseSerializer<Value: RawDecodable>: DataResponseSerializerP
     }
 }
 
+extension DataRequest {
+    @discardableResult
+    func responseValue<Value: RawDecodable>(queue: DispatchQueue? = nil, handler: @escaping (_ response: DataResponse<BaseResponse<Value>>) -> Void) -> Self {
+        return response(queue: queue, responseSerializer: BaseResponseSerializer(), completionHandler: handler)
+    }
+}
+
 enum ResponseError: Error {
     case noData
 }

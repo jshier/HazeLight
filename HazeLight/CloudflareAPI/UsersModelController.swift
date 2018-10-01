@@ -8,10 +8,34 @@
 
 import Foundation
 
-final class Accounts {
-    struct Account {
+final class UsersModelController {
+    struct UserCredential {
         let email: String
         let token: String
+    }
+    
+    static let shared = UsersModelController()
+    
+    private var credentials: [UserCredential] = []
+    var currentCredential: UserCredential?
+    var pendingCredential: UserCredential?
+    
+    let network: NetworkController
+    
+    init(network: NetworkController = .shared) {
+        self.network = network
+    }
+    
+    func addUser(email: String, token: String) {
+        let credential = UserCredential(email: email, token: token)
+        pendingCredential = credential
+        
+        network.fetchUser { (response) in
+            print("Fetch user was: \(response.result)")
+        }
+        // Pending credential
+        // Observe something
+        // On return, update list of credentials?
     }
     
     // let accountAddtion: Observable<AccountAdditionAttempt>
@@ -20,7 +44,7 @@ final class Accounts {
     // AccountAdditionAttempt { let account: Account, let response: DataResponse }
     // Update UI for attempt coming in
     // Add -> automatically dismiss if successful, reenable UI if failed
-    private var accounts: [Account] = []
+//    private var accounts: [Account] = []
     
 //    func validateAccount(_ account: Account, isValid: (_ isValid: Bool) -> Void) {
 //        // network.validateAccount()
@@ -30,9 +54,9 @@ final class Accounts {
 //
 //    }
     
-    func addAccount(_ account: Account) {
-        
-    }
+//    func addAccount(_ account: Account) {
+//
+//    }
 }
 
 // validateAccount()
@@ -45,3 +69,7 @@ final class Accounts {
 // observe accounts for successful addition
 // future, response, values,
 // accountAdditionAttempt(response)
+
+protocol UserStorage {
+    
+}

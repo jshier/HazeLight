@@ -15,12 +15,15 @@
 		315A05CC211CEEF300260CFE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 315A05CA211CEEF300260CFE /* LaunchScreen.storyboard */; };
 		315A05D7211CEEF300260CFE /* HazeLightTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315A05D6211CEEF300260CFE /* HazeLightTests.swift */; };
 		315A05E2211CEEF300260CFE /* HazeLightUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315A05E1211CEEF300260CFE /* HazeLightUITests.swift */; };
-		31C9A8CF2127617F00088D89 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C9A8CE2127617F00088D89 /* Account.swift */; };
+		31980A142141C7B700667684 /* Requestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31980A132141C7B700667684 /* Requestable.swift */; };
+		31A606DD21543B7600C51B73 /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A606DC21543B7600C51B73 /* NetworkController.swift */; };
+		31C9A8CF2127617F00088D89 /* UsersModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C9A8CE2127617F00088D89 /* UsersModelController.swift */; };
 		31C9A8D2212763B800088D89 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C9A8D1212763B800088D89 /* Router.swift */; };
 		31C9A8D52127730300088D89 /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C9A8D42127730300088D89 /* BaseResponse.swift */; };
 		31C9A8D72127730E00088D89 /* RawDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C9A8D62127730E00088D89 /* RawDecodable.swift */; };
 		31C9A8D9212789D100088D89 /* BaseResponseSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C9A8D8212789D100088D89 /* BaseResponseSerializer.swift */; };
 		31C9A8DB21278E5B00088D89 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C9A8DA21278E5B00088D89 /* User.swift */; };
+		31F57E71214AF9A9008CB3F6 /* AddUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F57E70214AF9A9008CB3F6 /* AddUserViewController.swift */; };
 		503DB62C19E93F560010CB5D /* libPods-HazeLightTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A1F4A4AED346F390A1752DA /* libPods-HazeLightTests.a */; };
 		695460F5538FC2BF5BD333A4 /* libPods-HazeLightUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 29862957887F63935C6D847B /* libPods-HazeLightUITests.a */; };
 /* End PBXBuildFile section */
@@ -58,12 +61,15 @@
 		315A05DD211CEEF300260CFE /* HazeLightUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HazeLightUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		315A05E1211CEEF300260CFE /* HazeLightUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HazeLightUITests.swift; sourceTree = "<group>"; };
 		315A05E3211CEEF300260CFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		31C9A8CE2127617F00088D89 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		31980A132141C7B700667684 /* Requestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requestable.swift; sourceTree = "<group>"; };
+		31A606DC21543B7600C51B73 /* NetworkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
+		31C9A8CE2127617F00088D89 /* UsersModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersModelController.swift; sourceTree = "<group>"; };
 		31C9A8D1212763B800088D89 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		31C9A8D42127730300088D89 /* BaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
 		31C9A8D62127730E00088D89 /* RawDecodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RawDecodable.swift; sourceTree = "<group>"; };
 		31C9A8D8212789D100088D89 /* BaseResponseSerializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponseSerializer.swift; sourceTree = "<group>"; };
 		31C9A8DA21278E5B00088D89 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		31F57E70214AF9A9008CB3F6 /* AddUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserViewController.swift; sourceTree = "<group>"; };
 		413D39DC01109CDB46223B67 /* Pods-HazeLight.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HazeLight.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HazeLight/Pods-HazeLight.debug.xcconfig"; sourceTree = "<group>"; };
 		4A1F4A4AED346F390A1752DA /* libPods-HazeLightTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HazeLightTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		72B10481C99A64F504772497 /* Pods-HazeLightUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HazeLightUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HazeLightUITests/Pods-HazeLightUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -129,6 +135,7 @@
 				31C9A8CD2127613100088D89 /* CloudflareAPI */,
 				315A05C1211CEEF200260CFE /* AppDelegate.swift */,
 				315A05C3211CEEF200260CFE /* ViewController.swift */,
+				31F57E70214AF9A9008CB3F6 /* AddUserViewController.swift */,
 				315A05C5211CEEF200260CFE /* Main.storyboard */,
 				315A05C8211CEEF300260CFE /* Assets.xcassets */,
 				315A05CA211CEEF300260CFE /* LaunchScreen.storyboard */,
@@ -159,7 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				31C9A8D0212763AA00088D89 /* Network */,
-				31C9A8CE2127617F00088D89 /* Account.swift */,
+				31C9A8CE2127617F00088D89 /* UsersModelController.swift */,
 			);
 			path = CloudflareAPI;
 			sourceTree = "<group>";
@@ -168,9 +175,11 @@
 			isa = PBXGroup;
 			children = (
 				31C9A8D3212772EA00088D89 /* Responses */,
-				31C9A8D1212763B800088D89 /* Router.swift */,
-				31C9A8D62127730E00088D89 /* RawDecodable.swift */,
 				31C9A8D8212789D100088D89 /* BaseResponseSerializer.swift */,
+				31C9A8D62127730E00088D89 /* RawDecodable.swift */,
+				31980A132141C7B700667684 /* Requestable.swift */,
+				31C9A8D1212763B800088D89 /* Router.swift */,
+				31A606DC21543B7600C51B73 /* NetworkController.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -417,14 +426,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31A606DD21543B7600C51B73 /* NetworkController.swift in Sources */,
 				31C9A8D52127730300088D89 /* BaseResponse.swift in Sources */,
 				31C9A8D2212763B800088D89 /* Router.swift in Sources */,
 				31C9A8D9212789D100088D89 /* BaseResponseSerializer.swift in Sources */,
+				31980A142141C7B700667684 /* Requestable.swift in Sources */,
 				315A05C4211CEEF200260CFE /* ViewController.swift in Sources */,
+				31F57E71214AF9A9008CB3F6 /* AddUserViewController.swift in Sources */,
 				31C9A8DB21278E5B00088D89 /* User.swift in Sources */,
 				315A05C2211CEEF200260CFE /* AppDelegate.swift in Sources */,
 				31C9A8D72127730E00088D89 /* RawDecodable.swift in Sources */,
-				31C9A8CF2127617F00088D89 /* Account.swift in Sources */,
+				31C9A8CF2127617F00088D89 /* UsersModelController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -537,6 +549,7 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 4.2;
+				VALID_ARCHS = arm64;
 			};
 			name = Debug;
 		};
@@ -592,6 +605,7 @@
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 4.2;
 				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = arm64;
 			};
 			name = Release;
 		};

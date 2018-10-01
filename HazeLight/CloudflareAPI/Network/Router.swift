@@ -6,8 +6,25 @@
 //  Copyright © 2018 Jon Shier. All rights reserved.
 //
 
+import Alamofire
 import Foundation
 
 enum Router {
-    case account
+    case user
+    
+    var baseURL: URL {
+        return URL(string: "https://api.cloudflare.com/client/v4/")!
+    }
+    
+    var httpMethod: HTTPMethod {
+        return .get
+    }
+    
+    var parameterEncoding: ParameterEncoding? {
+        return nil
+    }
+    
+    var path: String {
+        return "user"
+    }
 }

@@ -7,7 +7,7 @@ target 'HazeLight' do
   # use_frameworks!
   
   pod 'Alamofire', git: "https://github.com/Alamofire/Alamofire", branch: "alamofire5"
-  pod 'Valet', git: "https://github.com/square/Valet"
+  pod 'Valet'
 
   target 'HazeLightTests' do
     inherit! :search_paths
