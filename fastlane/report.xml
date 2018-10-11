@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="fastlane.lanes">
+    
+    
+    
+      
+      <testcase classname="fastlane.lanes" name="00: default_platform" time="0.010203">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="01: Verifying fastlane version" time="0.001884">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="02: default_platform" time="0.001104">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="03: import_from_git" time="0.485425">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="04: xcversion" time="0.241277">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="05: cocoapods" time="3.393447">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="06: scan" time="40.184124">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="07: Switch to ios cleanup lane" time="0.001511">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="08: Switch to ios cleanupSimulator lane" time="0.000916">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="09: killall Simulator || :" time="0.021335">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="10: killall -9 com.apple.CoreSimulator.CoreSimulatorService || :" time="0.186108">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="11: Switch to ios cleanupArchive lane" time="0.002669">
+        
+      </testcase>
+    
+  </testsuite>
+</testsuites>

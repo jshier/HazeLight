@@ -3,7 +3,6 @@ platform :ios, '12.0'
 pod 'SwiftLint'
 
 target 'HazeLight' do
-  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   # use_frameworks!
   
   pod 'Alamofire', git: "https://github.com/Alamofire/Alamofire", branch: "alamofire5"

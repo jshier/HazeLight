@@ -16,11 +16,11 @@ final class UsersModelController {
     
     static let shared = UsersModelController()
     
-    private var credentials: [UserCredential] = []
-    var currentCredential: UserCredential?
-    var pendingCredential: UserCredential?
+    let credentials = Observer<[UserCredential]>()
+    let currentCredential = Observer<UserCredential?>()
+    let pendingCredential = Observer<UserCredential?>()
     
-    let network: NetworkController
+    private let network: NetworkController
     
     init(network: NetworkController = .shared) {
         self.network = network
@@ -28,9 +28,15 @@ final class UsersModelController {
     
     func addUser(email: String, token: String) {
         let credential = UserCredential(email: email, token: token)
-        pendingCredential = credential
+        pendingCredential.updateValue(with: credential)
         
         network.fetchUser { (response) in
+            self.pendingCredential.updateValue(with: nil)
+            response.result.ifSuccess {
+                self.currentCredential.updateValue(with: credential)
+                self.credentials.appendValue(with: credential)
+            }
+            
             print("Fetch user was: \(response.result)")
         }
         // Pending credential

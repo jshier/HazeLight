@@ -15,6 +15,8 @@
 		315A05CC211CEEF300260CFE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 315A05CA211CEEF300260CFE /* LaunchScreen.storyboard */; };
 		315A05D7211CEEF300260CFE /* HazeLightTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315A05D6211CEEF300260CFE /* HazeLightTests.swift */; };
 		315A05E2211CEEF300260CFE /* HazeLightUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315A05E1211CEEF300260CFE /* HazeLightUITests.swift */; };
+		3184C217216FEFEC00565436 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3184C216216FEFEC00565436 /* Observable.swift */; };
+		3184C21A216FF02200565436 /* ObservableNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3184C219216FF02200565436 /* ObservableNotifications.swift */; };
 		31980A142141C7B700667684 /* Requestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31980A132141C7B700667684 /* Requestable.swift */; };
 		31A606DD21543B7600C51B73 /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A606DC21543B7600C51B73 /* NetworkController.swift */; };
 		31C9A8CF2127617F00088D89 /* UsersModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C9A8CE2127617F00088D89 /* UsersModelController.swift */; };
@@ -61,6 +63,8 @@
 		315A05DD211CEEF300260CFE /* HazeLightUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HazeLightUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		315A05E1211CEEF300260CFE /* HazeLightUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HazeLightUITests.swift; sourceTree = "<group>"; };
 		315A05E3211CEEF300260CFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3184C216216FEFEC00565436 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		3184C219216FF02200565436 /* ObservableNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableNotifications.swift; sourceTree = "<group>"; };
 		31980A132141C7B700667684 /* Requestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requestable.swift; sourceTree = "<group>"; };
 		31A606DC21543B7600C51B73 /* NetworkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
 		31C9A8CE2127617F00088D89 /* UsersModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersModelController.swift; sourceTree = "<group>"; };
@@ -132,6 +136,7 @@
 		315A05C0211CEEF200260CFE /* HazeLight */ = {
 			isa = PBXGroup;
 			children = (
+				3184C215216FEFD600565436 /* Observable */,
 				31C9A8CD2127613100088D89 /* CloudflareAPI */,
 				315A05C1211CEEF200260CFE /* AppDelegate.swift */,
 				315A05C3211CEEF200260CFE /* ViewController.swift */,
@@ -160,6 +165,15 @@
 				315A05E3211CEEF300260CFE /* Info.plist */,
 			);
 			path = HazeLightUITests;
+			sourceTree = "<group>";
+		};
+		3184C215216FEFD600565436 /* Observable */ = {
+			isa = PBXGroup;
+			children = (
+				3184C216216FEFEC00565436 /* Observable.swift */,
+				3184C219216FF02200565436 /* ObservableNotifications.swift */,
+			);
+			path = Observable;
 			sourceTree = "<group>";
 		};
 		31C9A8CD2127613100088D89 /* CloudflareAPI */ = {
@@ -430,6 +444,8 @@
 				31C9A8D52127730300088D89 /* BaseResponse.swift in Sources */,
 				31C9A8D2212763B800088D89 /* Router.swift in Sources */,
 				31C9A8D9212789D100088D89 /* BaseResponseSerializer.swift in Sources */,
+				3184C217216FEFEC00565436 /* Observable.swift in Sources */,
+				3184C21A216FF02200565436 /* ObservableNotifications.swift in Sources */,
 				31980A142141C7B700667684 /* Requestable.swift in Sources */,
 				315A05C4211CEEF200260CFE /* ViewController.swift in Sources */,
 				31F57E71214AF9A9008CB3F6 /* AddUserViewController.swift in Sources */,
@@ -549,7 +565,6 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 4.2;
-				VALID_ARCHS = arm64;
 			};
 			name = Debug;
 		};
@@ -605,7 +620,6 @@
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 4.2;
 				VALIDATE_PRODUCT = YES;
-				VALID_ARCHS = arm64;
 			};
 			name = Release;
 		};

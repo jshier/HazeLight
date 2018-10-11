@@ -1,7 +1,7 @@
 PODS:
   - Alamofire (5.0.0.beta.1)
   - SwiftLint (0.27.0)
-  - Valet (3.1.6)
+  - Valet (3.2.2)
 
 DEPENDENCIES:
   - Alamofire (from `https://github.com/Alamofire/Alamofire`, branch `alamofire5`)
@@ -26,8 +26,8 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   Alamofire: eafeeb206da2148045e57a5dc3c6a4acc65b9eb2
   SwiftLint: 3207c1faa2240bf8973b191820a116113cd11073
-  Valet: d11fac6ffa0541755b2ae5aa11dc88daa44f29bd
+  Valet: 0babf5737029004185a7a009c1135f0c073011d1
 
-PODFILE CHECKSUM: 565905c2dfe1f45e6b0d736db82b2a3bef22f8d9
+PODFILE CHECKSUM: d334a15fb74e4c0c5d7c5a66ef5278068fe29984
 
 COCOAPODS: 1.6.0.beta.1

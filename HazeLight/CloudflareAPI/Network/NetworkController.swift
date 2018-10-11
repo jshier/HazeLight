@@ -42,7 +42,7 @@ final class UserCredentialAdapter: RequestAdapter {
     func adapt(_ urlRequest: URLRequest) throws -> URLRequest {
         var urlRequest = urlRequest
         
-        let credential = try (users().pendingCredential ?? users().currentCredential).unwrapped()
+        let credential = try (users().pendingCredential.value ?? users().currentCredential.value).unwrapped().unwrapped()
         
         urlRequest.addValue(credential.email, forHTTPHeaderField: "X-Auth-Email")
         urlRequest.addValue(credential.token, forHTTPHeaderField: "X-Auth-Key")

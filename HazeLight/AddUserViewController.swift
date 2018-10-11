@@ -17,7 +17,7 @@ final class AddUserViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // logicController.listen { }
+        logicController.listen { print($0) }
     }
     
     @IBAction func addUser() {
@@ -27,15 +27,22 @@ final class AddUserViewController: UIViewController {
     }
 }
 
-final class AddUserLogicController {
-    let users: UsersModelController
+final class AddUserLogicController: Listenable {
+    struct State {
+        let isLoading: Bool
+    }
+    
+    private let users: UsersModelController
+    private var token: NotificationToken?
+    
+    let listener = Listener<State>()
     
     init(users: UsersModelController = .shared) {
-        // Add observations to other bits
-        // users.observe { }
-        // Pending user add
-        // Sees result
         self.users = users
+        
+        token = users.pendingCredential.observe { [weak self] (credential) in
+            self?.listener.updateState(State(isLoading: (credential != nil)))
+        }
     }
     
     func addUser(email: String, token: String) {
@@ -44,3 +51,34 @@ final class AddUserLogicController {
 }
 
 // Validation of UI input
+// Encapsulate LogicController observation
+// Break strong reference cycle.
+// Include debug origination information for observations.
+
+protocol Listenable {
+    associatedtype State
+    
+    var listener: Listener<State> { get }
+}
+
+extension Listenable {
+    func listen(listener: @escaping (State) -> Void) {
+        self.listener.listen(listener: listener)
+    }
+}
+
+class Listener<State> {
+    private var state: State? {
+        didSet { state.map { listener?($0) } }
+    }
+    private var listener: ((State) -> Void)?
+    
+    func listen(listener: @escaping (State) -> Void) {
+        self.listener = listener
+        state.map(listener)
+    }
+    
+    func updateState(_ state: State) {
+        self.state = state
+    }
+}
