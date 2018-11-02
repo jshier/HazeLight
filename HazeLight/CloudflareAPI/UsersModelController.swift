@@ -16,9 +16,9 @@ final class UsersModelController {
     
     static let shared = UsersModelController()
     
-    let credentials = Observer<[UserCredential]>()
-    let currentCredential = Observer<UserCredential?>()
-    let pendingCredential = Observer<UserCredential?>()
+    let credentials = NotificationObservable<[UserCredential]>()
+    let currentCredential = NotificationObservable<UserCredential?>()
+    let pendingCredential = NotificationObservable<UserCredential?>()
     
     private let network: NetworkController
     
@@ -79,3 +79,5 @@ final class UsersModelController {
 protocol UserStorage {
     
 }
+
+// Keypath observable

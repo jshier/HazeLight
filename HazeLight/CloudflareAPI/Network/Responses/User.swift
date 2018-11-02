@@ -22,7 +22,7 @@ extension User {
     struct Request { }
 }
 
-extension User.Request: Requestable {
+extension User.Request: Requestable {    
     var route: Router { return .user }
 }
 

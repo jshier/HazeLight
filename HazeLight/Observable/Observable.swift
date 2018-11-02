@@ -30,28 +30,28 @@ import Foundation
 //}
 
 // All updates go through `updateValue(with:)`.
-public final class Observer<Value> {
-    public typealias ObservationClosure<T> = (_ value: T) -> Void
+final class NotificationObservable<Value>: Observable {
+    typealias ObservationClosure<T> = (_ value: T) -> Void
     
-    public private(set) var value: Value?
+    private(set) var value: Value?
     
     private let center: NotificationCenter
-    public let name: Notification.Name
+    let name: Notification.Name
     
-    public init(name: String = UUID().uuidString, center: NotificationCenter = .default) {
+    init(name: String = UUID().uuidString, center: NotificationCenter = .default) {
         self.name = Notification.Name(rawValue: name)
         self.center = center
     }
     
-    public func updateValue(with value: Value) {
+    func updateValue(with value: Value) {
         self.value = value
         
         center.postNotification(named: name, with: value)
     }
     
-    public func observe(returningCurrentValue: Bool = true,
-                        queue: OperationQueue = .main,
-                        handler: @escaping ObservationClosure<Value>) -> NotificationToken {
+    func observe(returningCurrentValue: Bool = true,
+                 queue: OperationQueue = .main,
+                 handler: @escaping ObservationClosure<Value>) -> NotificationToken {
         if returningCurrentValue, let value = value {
             handler(value)
         }
@@ -60,8 +60,17 @@ public final class Observer<Value> {
     }
 }
 
-extension Observer where Value: RangeReplaceableCollection {
+extension NotificationObservable where Value: RangeReplaceableCollection {
     func appendValue(with value: Value.Element) {
         self.value?.append(value)
     }
+}
+
+protocol Observable {
+    associatedtype Value
+    associatedtype Token
+    
+    typealias Observation = (_ value: Value) -> Void
+    
+    func observe(returningCurrentValue: Bool, queue: OperationQueue, handler: @escaping Observation) -> Token
 }

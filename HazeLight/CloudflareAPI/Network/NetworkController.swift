@@ -39,15 +39,16 @@ final class UserCredentialAdapter: RequestAdapter {
         self.users = users
     }
     
-    func adapt(_ urlRequest: URLRequest) throws -> URLRequest {
-        var urlRequest = urlRequest
-        
-        let credential = try (users().pendingCredential.value ?? users().currentCredential.value).unwrapped().unwrapped()
-        
-        urlRequest.addValue(credential.email, forHTTPHeaderField: "X-Auth-Email")
-        urlRequest.addValue(credential.token, forHTTPHeaderField: "X-Auth-Key")
-        
-        return urlRequest
+    func adapt(_ urlRequest: URLRequest, completion: @escaping (Result<URLRequest>) -> Void) {
+        completion(Result {
+            var urlRequest = urlRequest
+            
+            let credential = try (users().pendingCredential.value ?? users().currentCredential.value).unwrapped().unwrapped()
+            urlRequest.httpHeaders.update(name: "X-Auth-Email", value: credential.email)
+            urlRequest.httpHeaders.update(name: "X-Auth-Key", value: credential.token)
+            
+            return urlRequest
+        })
     }
 }
 

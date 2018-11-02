@@ -17,7 +17,7 @@ final class AddUserViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        logicController.listen { print($0) }
+        logicController.observe { print($0) }
     }
     
     @IBAction func addUser() {
@@ -27,21 +27,20 @@ final class AddUserViewController: UIViewController {
     }
 }
 
-final class AddUserLogicController: Listenable {
+final class AddUserLogicController: ObservableLogicController<AddUserLogicController.State> {
     struct State {
         let isLoading: Bool
     }
     
     private let users: UsersModelController
-    private var token: NotificationToken?
-    
-    let listener = Listener<State>()
     
     init(users: UsersModelController = .shared) {
         self.users = users
         
-        token = users.pendingCredential.observe { [weak self] (credential) in
-            self?.listener.updateState(State(isLoading: (credential != nil)))
+        super.init(state: .init(isLoading: false))
+        
+        addObservations { [weak self] in
+            [users.pendingCredential.observe { self?.state = State(isLoading: ($0 != nil)) }]
         }
     }
     
@@ -50,24 +49,43 @@ final class AddUserLogicController: Listenable {
     }
 }
 
+class ObservableLogicController<State>: Observable {
+    var state: State {
+        didSet {
+            observer?(state)
+        }
+    }
+    
+    private var observer: Observation?
+    private var tokens: [NotificationToken] = []
+    
+    init(state: State) {
+        self.state = state
+    }
+    
+    func observe(returningCurrentValue: Bool = true,
+                 queue: OperationQueue = .main,
+                 handler: @escaping (State) -> Void) {
+        observer = { state in
+            queue.addOperation { handler(state) }
+        }
+        
+        if returningCurrentValue {
+            observer?(state)
+        }
+    }
+    
+    func addObservations(_ observations: () -> [NotificationToken]) {
+        self.tokens += observations()
+    }
+}
+
 // Validation of UI input
 // Encapsulate LogicController observation
 // Break strong reference cycle.
 // Include debug origination information for observations.
 
-protocol Listenable {
-    associatedtype State
-    
-    var listener: Listener<State> { get }
-}
-
-extension Listenable {
-    func listen(listener: @escaping (State) -> Void) {
-        self.listener.listen(listener: listener)
-    }
-}
-
-class Listener<State> {
+class ClosureObservable<State> {
     private var state: State? {
         didSet { state.map { listener?($0) } }
     }

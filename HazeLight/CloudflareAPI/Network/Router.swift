@@ -20,7 +20,7 @@ enum Router {
         return .get
     }
     
-    var parameterEncoding: ParameterEncoding? {
+    var parameterEncoder: ParameterEncoder? {
         return nil
     }
     
