@@ -8,7 +8,7 @@
 
 import Alamofire
 
-final class BaseResponseSerializer<Value: RawDecodable>: DataResponseSerializerProtocol {
+final class BaseResponseSerializer<Value: RawResponseDecodable>: DataResponseSerializerProtocol {
     func serialize(request: URLRequest?, response: HTTPURLResponse?, data: Data?, error: Error?) throws -> BaseResponse<Value> {
         guard error == nil else { throw error! }
         
@@ -23,7 +23,7 @@ final class BaseResponseSerializer<Value: RawDecodable>: DataResponseSerializerP
 
 extension DataRequest {
     @discardableResult
-    func responseValue<Value: RawDecodable>(queue: DispatchQueue? = nil, handler: @escaping (_ response: DataResponse<BaseResponse<Value>>) -> Void) -> Self {
+    func responseValue<Value: RawResponseDecodable>(queue: DispatchQueue? = nil, handler: @escaping (_ response: DataResponse<BaseResponse<Value>>) -> Void) -> Self {
         return response(queue: queue, responseSerializer: BaseResponseSerializer(), completionHandler: handler)
     }
 }

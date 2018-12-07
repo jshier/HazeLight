@@ -12,7 +12,7 @@ struct User {
     let id: String
 }
 
-extension User: RawDecodable {
+extension User: RawResponseDecodable {
     init(_ rawValue: RawUser) throws {
         id = rawValue.id
     }
@@ -22,8 +22,12 @@ extension User {
     struct Request { }
 }
 
-extension User.Request: Requestable {    
-    var route: Router { return .user }
+extension User.Request: Requestable, Encodable {
+    typealias Response = User
+    
+    func router() throws -> RequestRouter {
+        return Router.user
+    }
 }
 
 struct RawUser: Decodable {
@@ -31,9 +35,21 @@ struct RawUser: Decodable {
 }
 
 extension User {
-    struct Get { }
+    struct Edit: RawRequestEncodable {
+        typealias Response = User
+        
+        let zipCode: String
+        
+        func asRequest() throws -> User.RawEdit {
+            return User.RawEdit(zipcode: zipCode)
+        }
+    }
 }
 
-extension User.Get: Requestable {
-    var route: Router { return .user }
+extension User {
+    struct RawEdit: ParameterizedRequestable, Encodable {
+        let zipcode: String
+        
+        func router() throws -> RequestRouter { return Router.editUser }
+    }
 }

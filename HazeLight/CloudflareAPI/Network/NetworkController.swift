@@ -18,8 +18,20 @@ final class NetworkController {
         self.session = session
     }
     
-    func fetchUser(_ completion: @escaping (_ response: DataResponse<BaseResponse<User>>) -> Void) {
-        session.request(User.Get()).responseValue(handler: completion)
+    typealias Completion<Request: Requestable> = (_ response: DataResponse<BaseResponse<Request.Response>>) -> Void
+    
+    func fetchUser(_ completion: @escaping Completion<User.Request>) {
+        perform(User.Request(), completion: completion)
+    }
+    
+    func editUser(_ user: User.Edit, completion: @escaping Completion<User.Edit>) {
+        
+    }
+    
+//    func editUser(_ user: User.Edit, completion: @escaping)
+    
+    func perform<Request: Requestable>(_ request: Request, completion: @escaping Completion<Request>) {
+        session.request(request).responseValue(handler: completion)
     }
 }
 
@@ -44,8 +56,8 @@ final class UserCredentialAdapter: RequestAdapter {
             var urlRequest = urlRequest
             
             let credential = try (users().pendingCredential.value ?? users().currentCredential.value).unwrapped().unwrapped()
-            urlRequest.httpHeaders.update(name: "X-Auth-Email", value: credential.email)
-            urlRequest.httpHeaders.update(name: "X-Auth-Key", value: credential.token)
+            urlRequest.httpHeaders.add(name: "X-Auth-Email", value: credential.email)
+            urlRequest.httpHeaders.add(name: "X-Auth-Key", value: credential.token)
             
             return urlRequest
         })
@@ -55,5 +67,7 @@ final class UserCredentialAdapter: RequestAdapter {
 final class LoggingMonitor: EventMonitor {
     func request<Value>(_ request: DataRequest, didParseResponse response: DataResponse<Value>) {
         debugPrint(response)
+        let body = request.data.flatMap { String(data: $0, encoding: .utf8) } ?? "No body."
+        print("[Body]: \(body)")
     }
 }

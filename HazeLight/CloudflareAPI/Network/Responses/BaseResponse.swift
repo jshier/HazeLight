@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct BaseResponse<Value: RawDecodable> {
+struct BaseResponse<Value: RawResponseDecodable> {
     struct Error: Decodable {
         let code: Int
         let message: String
@@ -27,7 +27,7 @@ struct BaseResponse<Value: RawDecodable> {
     let messages: [String]
 }
 
-extension BaseResponse: RawDecodable {
+extension BaseResponse: RawResponseDecodable {
     init(_ rawValue: RawBaseResponse<Value>) throws {
         value = try rawValue.result.map { try Value($0) }
         info = try rawValue.result_info.map { try Info($0) }
@@ -37,7 +37,7 @@ extension BaseResponse: RawDecodable {
     }
 }
 
-extension BaseResponse.Info: RawDecodable {
+extension BaseResponse.Info: RawResponseDecodable {
     init(_ rawValue: RawBaseResponse<Value>.RawInfo) throws {
         page = rawValue.page
         perPage = rawValue.per_page
@@ -46,7 +46,7 @@ extension BaseResponse.Info: RawDecodable {
     }
 }
 
-struct RawBaseResponse<Value: RawDecodable>: Decodable {
+struct RawBaseResponse<Value: RawResponseDecodable>: Decodable {
     struct RawInfo: Decodable {
         let page: Int
         let per_page: Int
@@ -54,7 +54,7 @@ struct RawBaseResponse<Value: RawDecodable>: Decodable {
         let total_count: Int
     }
     
-    let result: Value.RawType?
+    let result: Value.RawResponse?
     let result_info: RawInfo?
     let success: Bool
     let messages: [String]

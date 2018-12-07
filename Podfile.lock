@@ -1,10 +1,10 @@
 PODS:
   - Alamofire (5.0.0.beta.1)
-  - SwiftLint (0.27.0)
+  - SwiftLint (0.29.1)
   - Valet (3.2.2)
 
 DEPENDENCIES:
-  - Alamofire (from `https://github.com/Alamofire/Alamofire`, branch `feature/encodable-requests`)
+  - Alamofire (from `https://github.com/Alamofire/Alamofire`, branch `alamofire5`)
   - SwiftLint
   - Valet
 
@@ -15,19 +15,19 @@ SPEC REPOS:
 
 EXTERNAL SOURCES:
   Alamofire:
-    :branch: feature/encodable-requests
+    :branch: alamofire5
     :git: https://github.com/Alamofire/Alamofire
 
 CHECKOUT OPTIONS:
   Alamofire:
-    :commit: 7f2d4bd399be4f6bf2cacc96c4eeb4c619768c49
+    :commit: ccf852a42598b00888341d5fb02825c142a7c41a
     :git: https://github.com/Alamofire/Alamofire
 
 SPEC CHECKSUMS:
-  Alamofire: eafeeb206da2148045e57a5dc3c6a4acc65b9eb2
-  SwiftLint: 3207c1faa2240bf8973b191820a116113cd11073
+  Alamofire: 2ef6d6c984c5d21c366e9b41a9ae7dfee2b67a44
+  SwiftLint: 6772320e40b52049053a518c17db9b0634a0b45a
   Valet: 0babf5737029004185a7a009c1135f0c073011d1
 
-PODFILE CHECKSUM: 1edc9bc796833bc31ea692610a67b144ef90ba06
+PODFILE CHECKSUM: d334a15fb74e4c0c5d7c5a66ef5278068fe29984
 
 COCOAPODS: 1.6.0.beta.2

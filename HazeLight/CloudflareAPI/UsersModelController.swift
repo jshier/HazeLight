@@ -44,6 +44,10 @@ final class UsersModelController {
         // On return, update list of credentials?
     }
     
+    func editCurrentUser(zipCode: String) {
+        
+    }
+    
     // let accountAddtion: Observable<AccountAdditionAttempt>
     // Accounts.shared.accountAddtion.observe { }
     // nil == nothing, non-nil == adding
