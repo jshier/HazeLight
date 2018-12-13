@@ -25,6 +25,10 @@ final class AddUserViewController: UIViewController {
         
         logicController.addUser(email: email, token: token)
     }
+    
+    @IBAction func editUser(_ sender: UIButton) {
+        logicController.editUser()
+    }
 }
 
 final class AddUserLogicController: ObservableLogicController<AddUserLogicController.State> {
@@ -46,6 +50,10 @@ final class AddUserLogicController: ObservableLogicController<AddUserLogicContro
     
     func addUser(email: String, token: String) {
         users.addUser(email: email, token: token)
+    }
+    
+    func editUser() {
+        users.editCurrentUser(zipCode: "48421")
     }
 }
 

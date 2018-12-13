@@ -36,8 +36,6 @@ struct RawUser: Decodable {
 
 extension User {
     struct Edit: RawRequestEncodable {
-        typealias Response = User
-        
         let zipCode: String
         
         func asRequest() throws -> User.RawEdit {
@@ -47,7 +45,9 @@ extension User {
 }
 
 extension User {
-    struct RawEdit: ParameterizedRequestable, Encodable {
+    struct RawEdit: Requestable, Encodable {
+        typealias Response = User
+        
         let zipcode: String
         
         func router() throws -> RequestRouter { return Router.editUser }

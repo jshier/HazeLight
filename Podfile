@@ -5,7 +5,7 @@ pod 'SwiftLint'
 target 'HazeLight' do
   # use_frameworks!
   
-  pod 'Alamofire', git: "https://github.com/Alamofire/Alamofire", branch: "alamofire5"
+  pod 'Alamofire', '~> 5.0.0.beta.1'
   pod 'Valet'
 
   target 'HazeLightTests' do

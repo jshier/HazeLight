@@ -24,8 +24,8 @@ final class NetworkController {
         perform(User.Request(), completion: completion)
     }
     
-    func editUser(_ user: User.Edit, completion: @escaping Completion<User.Edit>) {
-        
+    func editUser(_ userEdit: User.Edit, completion: @escaping Completion<User.Edit>) {
+        perform(userEdit, completion: completion)
     }
     
 //    func editUser(_ user: User.Edit, completion: @escaping)
@@ -55,7 +55,7 @@ final class UserCredentialAdapter: RequestAdapter {
         completion(Result {
             var urlRequest = urlRequest
             
-            let credential = try (users().pendingCredential.value ?? users().currentCredential.value).unwrapped().unwrapped()
+            let credential = try (users().pendingCredential.value.unwrapped() ?? users().currentCredential.value.unwrapped()).unwrapped()
             urlRequest.httpHeaders.add(name: "X-Auth-Email", value: credential.email)
             urlRequest.httpHeaders.add(name: "X-Auth-Key", value: credential.token)
             
@@ -67,7 +67,7 @@ final class UserCredentialAdapter: RequestAdapter {
 final class LoggingMonitor: EventMonitor {
     func request<Value>(_ request: DataRequest, didParseResponse response: DataResponse<Value>) {
         debugPrint(response)
-        let body = request.data.flatMap { String(data: $0, encoding: .utf8) } ?? "No body."
+        let body = request.data.map { String(decoding: $0, as: UTF8.self) } ?? "No body."
         print("[Body]: \(body)")
     }
 }

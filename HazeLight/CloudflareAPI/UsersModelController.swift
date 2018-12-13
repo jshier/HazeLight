@@ -45,7 +45,9 @@ final class UsersModelController {
     }
     
     func editCurrentUser(zipCode: String) {
-        
+        network.editUser(User.Edit(zipCode: zipCode)) { (response) in
+            print(response.result)
+        }
     }
     
     // let accountAddtion: Observable<AccountAdditionAttempt>
