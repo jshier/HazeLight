@@ -65,6 +65,8 @@ protocol Requestable: URLRequestConvertible {
     /// - Returns: The `Parameters`.
     /// - Throws:  Any error produced while creating the `Parameters`.
     func parameters() throws -> Parameters?
+    
+    func headers() throws -> HTTPHeaders?
 }
 
 extension Requestable {
@@ -72,6 +74,7 @@ extension Requestable {
         let url = try router().baseURL.appendingPathComponent(try router().path)
         var request = URLRequest(url: url)
         request.httpMethod = try router().method.rawValue
+        try headers().map { $0.forEach { request.httpHeaders.add($0) } }
         
         return try router().parameterEncoder.encode(try parameters(), into: request)
     }
@@ -79,6 +82,7 @@ extension Requestable {
 
 extension Requestable {
     func parameters() -> Self? { return Optional<Self>.none }
+    func headers() -> HTTPHeaders? { return nil }
 }
 
 /// Allow `Requestable` types which are `Encodable` too to be their own parameters.

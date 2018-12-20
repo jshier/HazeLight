@@ -6,6 +6,7 @@
 //  Copyright © 2018 Jon Shier. All rights reserved.
 //
 
+import Alamofire
 import Foundation
 
 struct User {
@@ -51,5 +52,24 @@ extension User {
         let zipcode: String
         
         func router() throws -> RequestRouter { return Router.editUser }
+    }
+}
+
+extension User {
+    // TODO: Need to define how we make requests with non-Encodable Parameters.
+    struct Validate: Requestable {
+        typealias Response = User
+        
+        let email: String
+        let token: String
+        
+        func router() throws -> RequestRouter {
+            return Router.user
+        }
+        
+        func headers() throws -> HTTPHeaders {
+            return [.xAuthEmail(email),
+                    .xAuthKey(token)]
+        }
     }
 }

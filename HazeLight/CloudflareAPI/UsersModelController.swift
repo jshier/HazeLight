@@ -39,9 +39,6 @@ final class UsersModelController {
             
             print("Fetch user was: \(response.result)")
         }
-        // Pending credential
-        // Observe something
-        // On return, update list of credentials?
     }
     
     func editCurrentUser(zipCode: String) {
@@ -49,15 +46,17 @@ final class UsersModelController {
             print(response.result)
         }
     }
-    
-    // let accountAddtion: Observable<AccountAdditionAttempt>
-    // Accounts.shared.accountAddtion.observe { }
-    // nil == nothing, non-nil == adding
-    // AccountAdditionAttempt { let account: Account, let response: DataResponse }
-    // Update UI for attempt coming in
-    // Add -> automatically dismiss if successful, reenable UI if failed
+}
+
+
+// let accountAddtion: Observable<AccountAdditionAttempt>
+// Accounts.shared.accountAddtion.observe { }
+// nil == nothing, non-nil == adding
+// AccountAdditionAttempt { let account: Account, let response: DataResponse }
+// Update UI for attempt coming in
+// Add -> automatically dismiss if successful, reenable UI if failed
 //    private var accounts: [Account] = []
-    
+
 //    func validateAccount(_ account: Account, isValid: (_ isValid: Bool) -> Void) {
 //        // network.validateAccount()
 //    }
@@ -65,11 +64,10 @@ final class UsersModelController {
 //    func validate(email: String, token: String) -> Account {
 //
 //    }
-    
+
 //    func addAccount(_ account: Account) {
 //
 //    }
-}
 
 // validateAccount()
 // validationAttempt(account, isValid)

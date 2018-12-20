@@ -20,6 +20,10 @@ final class NetworkController {
     
     typealias Completion<Request: Requestable> = (_ response: DataResponse<BaseResponse<Request.Response>>) -> Void
     
+//    func validate(email: String, token: String, completion: @escaping Completion<User.Request>) {
+//        perform
+//    }
+    
     func fetchUser(_ completion: @escaping Completion<User.Request>) {
         perform(User.Request(), completion: completion)
     }
@@ -27,9 +31,7 @@ final class NetworkController {
     func editUser(_ userEdit: User.Edit, completion: @escaping Completion<User.Edit>) {
         perform(userEdit, completion: completion)
     }
-    
-//    func editUser(_ user: User.Edit, completion: @escaping)
-    
+
     func perform<Request: Requestable>(_ request: Request, completion: @escaping Completion<Request>) {
         session.request(request).responseValue(handler: completion)
     }
@@ -56,11 +58,21 @@ final class UserCredentialAdapter: RequestAdapter {
             var urlRequest = urlRequest
             
             let credential = try (users().pendingCredential.value.unwrapped() ?? users().currentCredential.value.unwrapped()).unwrapped()
-            urlRequest.httpHeaders.add(name: "X-Auth-Email", value: credential.email)
-            urlRequest.httpHeaders.add(name: "X-Auth-Key", value: credential.token)
+            urlRequest.httpHeaders.add(.xAuthEmail(credential.email))
+            urlRequest.httpHeaders.add(.xAuthKey(credential.token))
             
             return urlRequest
         })
+    }
+}
+
+extension HTTPHeader {
+    static func xAuthEmail(_ email: String) -> HTTPHeader {
+        return HTTPHeader(name: "X-Auth-Email", value: email)
+    }
+    
+    static func xAuthKey(_ key: String) -> HTTPHeader {
+        return HTTPHeader(name: "X-Auth-Key", value: key)
     }
 }
 
