@@ -97,7 +97,6 @@ extension Requestable where Self: Encodable {
 protocol RawRequestEncodable: Requestable {
     /// The underlying `Requestable` which `Self` will tranform into.
     associatedtype RawRequest: Requestable
-    associatedtype Response = Self.RawRequest.Response
     
     /// Transforms `Self` into a `Requestable` type.
     ///
