@@ -19,39 +19,37 @@ extension User: RawResponseDecodable {
     }
 }
 
-extension User {
-    struct Request { }
-}
-
-extension User.Request: Requestable, Encodable {
-    typealias Response = User
-    
-    func router() throws -> RequestRouter {
-        return Router.user
-    }
-}
-
 struct RawUser: Decodable {
     let id: String
 }
 
 extension User {
-    struct Edit: RawRequestEncodable {
-        let zipCode: String
+    struct Request {
+        typealias Response = User
         
-        func asRequest() throws -> User.RawEdit {
-            return User.RawEdit(zipcode: zipCode)
+        func router() throws -> RequestRouter {
+            return Router.user
         }
     }
 }
 
 extension User {
-    struct RawEdit: Requestable, Encodable {
+    struct Edit: RawRequestEncodable {
         typealias Response = User
         
-        let zipcode: String
+        let zipCode: String
+        
+        func asRequest() throws -> Raw {
+            return Raw(zipcode: zipCode)
+        }
         
         func router() throws -> RequestRouter { return Router.editUser }
+    }
+}
+
+extension User.Edit {
+    struct Raw: Encodable {
+        let zipcode: String
     }
 }
 

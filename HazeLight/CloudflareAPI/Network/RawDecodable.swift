@@ -96,7 +96,7 @@ extension Requestable where Self: Encodable {
 ///
 protocol RawRequestEncodable: Requestable {
     /// The underlying `Requestable` which `Self` will tranform into.
-    associatedtype RawRequest: Requestable
+    associatedtype RawRequest: Encodable
     
     /// Transforms `Self` into a `Requestable` type.
     ///
@@ -105,15 +105,9 @@ protocol RawRequestEncodable: Requestable {
     func asRequest() throws -> RawRequest
 }
 
-/// Extensions connecting a `RawRequestEncodable` type's `RawRequest` type to its `Requestable` conformance. This
-/// ensures conforming types only need to implement the `asRequest()` requirement.
-extension RawRequestEncodable {
-    func router() throws -> RequestRouter {
-        return try asRequest().router()
-    }
-    
-    func parameters() throws -> Self.RawRequest.Parameters? {
-        return try asRequest().parameters()
+extension Requestable where Self: RawRequestEncodable {
+    func parameters() throws  -> RawRequest? {
+        return try asRequest()
     }
 }
 
