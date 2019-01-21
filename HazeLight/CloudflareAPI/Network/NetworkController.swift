@@ -20,9 +20,9 @@ final class NetworkController {
     
     typealias Completion<Request: Requestable> = (_ response: DataResponse<BaseResponse<Request.Response>>) -> Void
     
-//    func validate(email: String, token: String, completion: @escaping Completion<User.Request>) {
-//        perform
-//    }
+    func validate(email: String, token: String, completion: @escaping Completion<User.Validate>) {
+        perform(User.Validate(email: email, token: token), completion: completion)
+    }
     
     func fetchUser(_ completion: @escaping Completion<User.Request>) {
         perform(User.Request(), completion: completion)
@@ -57,9 +57,9 @@ final class UserCredentialAdapter: RequestAdapter {
         completion(Result {
             var urlRequest = urlRequest
             
-            let credential = try (users().pendingCredential.value.unwrapped() ?? users().currentCredential.value.unwrapped()).unwrapped()
-            urlRequest.httpHeaders.add(.xAuthEmail(credential.email))
-            urlRequest.httpHeaders.add(.xAuthKey(credential.token))
+//            let credential = try (users().pendingCredential.value.unwrapped() ?? users().currentCredential.value.unwrapped()).unwrapped()
+//            urlRequest.httpHeaders.add(.xAuthEmail(credential.email))
+//            urlRequest.httpHeaders.add(.xAuthKey(credential.token))
             
             return urlRequest
         })

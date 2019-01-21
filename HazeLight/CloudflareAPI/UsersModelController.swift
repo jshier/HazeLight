@@ -9,36 +9,32 @@
 import Foundation
 
 final class UsersModelController {
-    struct UserCredential {
-        let email: String
-        let token: String
-    }
-    
     static let shared = UsersModelController()
     
-    let credentials = NotificationObservable<[UserCredential]>()
-    let currentCredential = NotificationObservable<UserCredential?>()
-    let pendingCredential = NotificationObservable<UserCredential?>()
-    
     private let network: NetworkController
+    private let credentialsController: CredentialsModelController
     
-    init(network: NetworkController = .shared) {
+    init(network: NetworkController = .shared, credentialsController: CredentialsModelController = .shared) {
         self.network = network
+        self.credentialsController = credentialsController
+        
+//        self.credentialsController.currentCredential
     }
     
     func addUser(email: String, token: String) {
-        let credential = UserCredential(email: email, token: token)
-        pendingCredential.updateValue(with: credential)
-        
-        network.fetchUser { (response) in
-            self.pendingCredential.updateValue(with: nil)
-            response.result.ifSuccess {
-                self.currentCredential.updateValue(with: credential)
-                self.credentials.appendValue(with: credential)
-            }
-            
-            print("Fetch user was: \(response.result)")
-        }
+        credentialsController.addCredential(email: email, token: token)
+//        let credential = UserCredential(email: email, token: token)
+//        pendingCredential.updateValue(with: credential)
+//
+//        network.fetchUser { (response) in
+//            self.pendingCredential.updateValue(with: nil)
+//            response.result.ifSuccess {
+//                self.currentCredential.updateValue(with: credential)
+//                self.credentials.appendValue(with: credential)
+//            }
+//
+//            print("Fetch user was: \(response.result)")
+//        }
     }
     
     func editCurrentUser(zipCode: String) {
@@ -47,7 +43,6 @@ final class UsersModelController {
         }
     }
 }
-
 
 // let accountAddtion: Observable<AccountAdditionAttempt>
 // Accounts.shared.accountAddtion.observe { }
@@ -80,8 +75,6 @@ final class UsersModelController {
 // future, response, values,
 // accountAdditionAttempt(response)
 
-protocol UserStorage {
-    
-}
+protocol UserStorage { }
 
 // Keypath observable

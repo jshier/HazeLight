@@ -52,19 +52,12 @@ protocol RequestRouter {
 protocol Requestable: URLRequestConvertible {
     /// The expected response type.
     associatedtype Response: RawResponseDecodable
-    /// The `Encodable` parameters that will be encoded into a request.
-    associatedtype Parameters: Encodable
     
     /// Returns the `RequestRouter` used to make the request.
     ///
     /// - Returns: The `RequestRouter` value.
     /// - Throws:  Any error produced while creating or returning the `RequestRouter`.
     func router() throws -> RequestRouter
-    /// Returns the `Parameters` to be encoded into the request.
-    ///
-    /// - Returns: The `Parameters`.
-    /// - Throws:  Any error produced while creating the `Parameters`.
-    func parameters() throws -> Parameters?
     
     func headers() throws -> HTTPHeaders?
 }
@@ -76,25 +69,37 @@ extension Requestable {
         request.httpMethod = try router().method.rawValue
         try headers().map { $0.forEach { request.httpHeaders.add($0) } }
         
-        return try router().parameterEncoder.encode(try parameters(), into: request)
+        return request
     }
 }
 
 extension Requestable {
-    func parameters() -> Self? { return Optional<Self>.none }
-    func headers() -> HTTPHeaders? { return nil }
+    func headers() throws -> HTTPHeaders? { return nil }
 }
 
-/// Allow `Requestable` types which are `Encodable` too to be their own parameters.
-extension Requestable where Self: Encodable {
-    func parameters() -> Self? { return self }
+protocol ParameterizedRequestable: Requestable {
+    /// The `Encodable` parameters that will be encoded into a request.
+    associatedtype Parameters: Encodable
+    /// Returns the `Parameters` to be encoded into the request.
+    ///
+    /// - Returns: The `Parameters`.
+    /// - Throws:  Any error produced while creating the `Parameters`.
+    func parameters() throws -> Parameters
 }
 
-/// Protocol describing types that can be transformed into types which go over the wire.
-///
-/// - Note: Inherits from `Requestable` so that conforming types are also `Requestable`.
-///
-protocol RawRequestEncodable: Requestable {
+extension ParameterizedRequestable {
+    func asURLRequest() throws -> URLRequest {
+        let url = try router().baseURL.appendingPathComponent(try router().path)
+        var request = URLRequest(url: url)
+        request.httpMethod = try router().method.rawValue
+        try headers().map { $0.forEach { request.httpHeaders.add($0) } }
+        
+        return try router().parameterEncoder.encode(try parameters(), into: request)
+    }
+}
+
+/// Protocol describing types that have counterpart `RawRequest` types to be used as parameters when sent over the wire.
+protocol RawRequestEncodable: ParameterizedRequestable {
     /// The underlying `Requestable` which `Self` will tranform into.
     associatedtype RawRequest: Encodable
     
@@ -105,8 +110,8 @@ protocol RawRequestEncodable: Requestable {
     func asRequest() throws -> RawRequest
 }
 
-extension Requestable where Self: RawRequestEncodable {
-    func parameters() throws  -> RawRequest? {
+extension RawRequestEncodable {
+    func parameters() throws -> RawRequest {
         return try asRequest()
     }
 }

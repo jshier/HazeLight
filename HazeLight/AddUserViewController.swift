@@ -42,10 +42,10 @@ final class AddUserLogicController: ObservableLogicController<AddUserLogicContro
         self.users = users
         
         super.init(state: .init(isLoading: false))
-        
-        addObservations { [weak self] in
-            [users.pendingCredential.observe { self?.state = State(isLoading: ($0 != nil)) }]
-        }
+//        
+//        addObservations { [weak self] in
+////            [users.pendingCredential.observe { self?.state = State(isLoading: ($0 != nil)) }]
+//        }
     }
     
     func addUser(email: String, token: String) {

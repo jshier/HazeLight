@@ -15,27 +15,42 @@ final class CredentialsModelController {
         let token: String
     }
     
+    static let shared = CredentialsModelController()
+    
     let storage: CredentialStorage
+    let network: NetworkController
     
     let allCredentials = NotificationObservable<[UserCredential]>()
     let currentCredential = NotificationObservable<UserCredential?>()
     let isVerifyingCredential = NotificationObservable<Bool>()
     
-    init(storage: CredentialStorage = Keychain.shared) {
+    init(storage: CredentialStorage = Keychain.shared, network: NetworkController = .shared) {
         self.storage = storage
+        self.network = network
         
         allCredentials.updateValue(with: storage.allCredentials)
         currentCredential.updateValue(with: storage.currentCredential)
         isVerifyingCredential.updateValue(with: false)
     }
     
+    // TODO: Properly synchronize observable update and storage.
     func addCredential(email: String, token: String) {
         isVerifyingCredential.updateValue(with: true)
-        
+        network.validate(email: email, token: token) { (response) in
+            self.isVerifyingCredential.updateValue(with: false)
+            response.result.ifSuccess {
+                let credential = UserCredential(email: email, token: token)
+                self.storage.allCredentials.append(credential)
+                self.allCredentials.appendValue(with: credential)
+                
+                self.storage.currentCredential = credential
+                self.currentCredential.updateValue(with: credential)
+            }
+        }
     }
 }
 
-protocol CredentialStorage {
+protocol CredentialStorage: AnyObject {
     var allCredentials: [CredentialsModelController.UserCredential] { get set }
     var currentCredential: CredentialsModelController.UserCredential? { get set }
 }

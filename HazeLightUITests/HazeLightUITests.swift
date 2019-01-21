@@ -8,6 +8,4 @@
 
 import XCTest
 
-class HazeLightUITests: XCTestCase {
-
-}
+class HazeLightUITests: XCTestCase { }

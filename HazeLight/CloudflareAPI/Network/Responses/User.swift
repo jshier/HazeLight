@@ -14,22 +14,24 @@ struct User {
 }
 
 extension User: RawResponseDecodable {
-    init(_ rawValue: RawUser) throws {
+    init(_ rawValue: Raw) throws {
         id = rawValue.id
+    }
+    
+    struct Raw: Decodable {
+        let id: String
     }
 }
 
-struct RawUser: Decodable {
-    let id: String
+extension User {
+    struct Request { }
 }
 
-extension User {
-    struct Request {
-        typealias Response = User
-        
-        func router() throws -> RequestRouter {
-            return Router.user
-        }
+extension User.Request: Requestable {
+    typealias Response = User
+    
+    func router() throws -> RequestRouter {
+        return Router.user
     }
 }
 
@@ -39,11 +41,13 @@ extension User {
         
         let zipCode: String
         
-        func asRequest() throws -> Raw {
-            return Raw(zipcode: zipCode)
+        func router() throws -> RequestRouter {
+            return Router.editUser
         }
         
-        func router() throws -> RequestRouter { return Router.editUser }
+        func asRequest() throws -> User.Edit.Raw {
+            return User.Edit.Raw(zipcode: zipCode)
+        }
     }
 }
 
@@ -54,17 +58,16 @@ extension User.Edit {
 }
 
 extension User {
-    // TODO: Need to define how we make requests with non-Encodable Parameters.
     struct Validate: Requestable {
         typealias Response = User
-        
+
         let email: String
         let token: String
-        
+
         func router() throws -> RequestRouter {
             return Router.user
         }
-        
+
         func headers() throws -> HTTPHeaders {
             return [.xAuthEmail(email),
                     .xAuthKey(token)]

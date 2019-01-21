@@ -37,3 +37,5 @@ opt_in_rules:
   - sorted_first_last
   - sorted_imports
   - trailing_closure
+  - vertical_whitespace_closing_braces
+  - vertical_whitespace_opening_braces
