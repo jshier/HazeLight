@@ -46,20 +46,24 @@ extension Session {
 }
 
 final class UserCredentialAdapter: RequestAdapter {
-    // TODO: Observe UserModelController
-    private let users: () -> UsersModelController
+    private var token: NotificationToken?
+    private var currentCredential: CredentialsModelController.UserCredential?
     
-    init(users: @escaping @autoclosure () -> UsersModelController = .shared) {
-        self.users = users
+    init(credentials: CredentialsModelController = .shared) {
+        token = credentials.currentCredential.observe { self.currentCredential = $0 }
     }
     
     func adapt(_ urlRequest: URLRequest, completion: @escaping (Result<URLRequest>) -> Void) {
         completion(Result {
+            guard urlRequest.httpHeaders["X-Auth-Email"] == nil, urlRequest.httpHeaders["X-Auth-Key"] == nil else {
+                return urlRequest
+            }
+            
             var urlRequest = urlRequest
             
-//            let credential = try (users().pendingCredential.value.unwrapped() ?? users().currentCredential.value.unwrapped()).unwrapped()
-//            urlRequest.httpHeaders.add(.xAuthEmail(credential.email))
-//            urlRequest.httpHeaders.add(.xAuthKey(credential.token))
+            let credential = try currentCredential.unwrapped()
+            urlRequest.httpHeaders.add(.xAuthEmail(credential.email))
+            urlRequest.httpHeaders.add(.xAuthKey(credential.token))
             
             return urlRequest
         })
@@ -83,3 +87,12 @@ final class LoggingMonitor: EventMonitor {
         print("[Body]: \(body)")
     }
 }
+
+//protocol NetworkObservable {
+//    static var loading
+//    static var response
+//    static var result
+//    static var value
+//}
+// observable.map({ }, into: otherObservable)
+// otherObservable.ingest(from: observable, using: { (currentValue) })

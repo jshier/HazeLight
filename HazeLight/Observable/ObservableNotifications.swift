@@ -27,11 +27,11 @@ extension NotificationCenter {
 }
 
 public extension Notification {
-    public init<Payload>(name: Notification.Name, payload: Payload) {
+    init<Payload>(name: Notification.Name, payload: Payload) {
         self.init(name: name, object: nil, userInfo: [String.payload: payload])
     }
     
-    public func payload<Payload>() -> Payload {
+    func payload<Payload>() -> Payload {
         guard let payload = userInfo?[String.payload] as? Payload else {
             fatalError("Unexpected payload type: \(Payload.self)")
         }
@@ -39,7 +39,7 @@ public extension Notification {
         return payload
     }
     
-    public func transform<T, U>(_ closure: (_ payload: T) -> U) -> U {
+    func transform<T, U>(_ closure: (_ payload: T) -> U) -> U {
         return closure(payload())
     }
 }

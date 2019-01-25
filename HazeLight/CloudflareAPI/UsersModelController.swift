@@ -13,6 +13,7 @@ final class UsersModelController {
     
     private let network: NetworkController
     private let credentialsController: CredentialsModelController
+    private let isAddingUser = NotificationObservable<Bool>(initialValue: false)
     
     init(network: NetworkController = .shared, credentialsController: CredentialsModelController = .shared) {
         self.network = network
@@ -23,18 +24,6 @@ final class UsersModelController {
     
     func addUser(email: String, token: String) {
         credentialsController.addCredential(email: email, token: token)
-//        let credential = UserCredential(email: email, token: token)
-//        pendingCredential.updateValue(with: credential)
-//
-//        network.fetchUser { (response) in
-//            self.pendingCredential.updateValue(with: nil)
-//            response.result.ifSuccess {
-//                self.currentCredential.updateValue(with: credential)
-//                self.credentials.appendValue(with: credential)
-//            }
-//
-//            print("Fetch user was: \(response.result)")
-//        }
     }
     
     func editCurrentUser(zipCode: String) {

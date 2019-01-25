@@ -38,7 +38,8 @@ final class NotificationObservable<Value>: Observable {
     private let center: NotificationCenter
     let name: Notification.Name
     
-    init(name: String = UUID().uuidString, center: NotificationCenter = .default) {
+    init(initialValue: Value? = nil, name: String = UUID().uuidString, center: NotificationCenter = .default) {
+        value = initialValue
         self.name = Notification.Name(rawValue: name)
         self.center = center
     }
