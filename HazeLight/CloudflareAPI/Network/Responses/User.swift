@@ -67,8 +67,8 @@ extension User {
         func router() throws -> RequestRouter {
             return Router.user
         }
-
-        func headers() throws -> HTTPHeaders {
+        
+        func headers() throws -> HTTPHeaders? {
             return [.xAuthEmail(email),
                     .xAuthKey(token)]
         }

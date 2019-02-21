@@ -12,40 +12,50 @@ import Foundation
 final class NetworkController {
     static let shared = NetworkController()
     
-    let session: Session
+    let session: () -> Session
     
-    init(session: Session = .hazeLight) {
+    init(session: @escaping @autoclosure () -> Session = .hazeLight) {
         self.session = session
     }
     
     typealias Completion<Request: Requestable> = (_ response: DataResponse<BaseResponse<Request.Response>>) -> Void
     
     func validate(email: String, token: String, completion: @escaping Completion<User.Validate>) {
-        perform(User.Validate(email: email, token: token), completion: completion)
+        performs(User.Validate(email: email, token: token), completion: completion)
     }
     
     func fetchUser(_ completion: @escaping Completion<User.Request>) {
-        perform(User.Request(), completion: completion)
+        performs(User.Request(), completion: completion)
     }
     
     func editUser(_ userEdit: User.Edit, completion: @escaping Completion<User.Edit>) {
-        perform(userEdit, completion: completion)
+        performs(userEdit, completion: completion)
     }
 
     func perform<Request: Requestable>(_ request: Request, completion: @escaping Completion<Request>) {
-        session.request(request).responseValue(handler: completion)
+        session().request(request).responseValue(handler: completion)
+    }
+    
+    func performs<Request: Requestable, Response>(_ request: Request, completion: @escaping Completion<Request>)
+        where Response == Request.Response, Response: NetworkObservable {
+        Response.loading.updateValue(with: true)
+        perform(request) { (response) in
+            Response.loading.updateValue(with: false)
+            Response.response.updateValue(with: response)
+            completion(response)
+        }
     }
 }
 
 extension Session {
     static let hazeLight: Session = {
-        let session = Session(adapter: UserCredentialAdapter(), eventMonitors: [LoggingMonitor()])
+        let session = Session(interceptor: UserCredentialAdapter(), eventMonitors: [LoggingMonitor()])
         
         return session
     }()
 }
 
-final class UserCredentialAdapter: RequestAdapter {
+final class UserCredentialAdapter: RequestInterceptor {
     private var token: NotificationToken?
     private var currentCredential: CredentialsModelController.UserCredential?
     
@@ -53,7 +63,7 @@ final class UserCredentialAdapter: RequestAdapter {
         token = credentials.currentCredential.observe { self.currentCredential = $0 }
     }
     
-    func adapt(_ urlRequest: URLRequest, completion: @escaping (Result<URLRequest>) -> Void) {
+    func adapt(_ urlRequest: URLRequest, for session: Session, completion: @escaping (Result<URLRequest>) -> Void) {
         completion(Result {
             guard urlRequest.httpHeaders["X-Auth-Email"] == nil, urlRequest.httpHeaders["X-Auth-Key"] == nil else {
                 return urlRequest
@@ -88,11 +98,36 @@ final class LoggingMonitor: EventMonitor {
     }
 }
 
-//protocol NetworkObservable {
-//    static var loading
-//    static var response
-//    static var result
-//    static var value
-//}
+enum ResourceState {
+    case loading
+}
+
+protocol NetworkObservable where Self: RawResponseDecodable {
+    static var loading: NotificationObservable<Bool> { get }
+    static var response: NotificationObservable<DataResponse<BaseResponse<Self>>> { get }
+//    static var result: NotificationObservable<Result<Self>> { get }
+    static var value: NotificationObservable<Self> { get }
+}
+
+extension User: NetworkObservable {
+    static let loading = NotificationObservable(initialValue: false)
+    static let response = NotificationObservable<DataResponse<BaseResponse<User>>>()
+//    static let result = User.response.map { $0.result.value.value }
+    static let value = User.response.map { $0.result.value?.value }
+}
+
 // observable.map({ }, into: otherObservable)
 // otherObservable.ingest(from: observable, using: { (currentValue) })
+
+extension NotificationObservable {
+    func map<NewValue>(observingOnQueue queue: OperationQueue = .main, _ transform: @escaping (Value) -> NewValue?) -> NotificationObservable<NewValue> {
+        let observable = NotificationObservable<NewValue>()
+        let token = observe(returningCurrentValue: true, queue: queue) { (value) in
+            guard let newValue = transform(value) else { return }
+            observable.updateValue(with: newValue)
+        }
+        observable.persist(token)
+        
+        return observable
+    }
+}

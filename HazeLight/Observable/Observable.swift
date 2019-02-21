@@ -37,6 +37,7 @@ final class NotificationObservable<Value>: Observable {
     
     private let center: NotificationCenter
     let name: Notification.Name
+    private var parentToken: NotificationToken?
     
     init(initialValue: Value? = nil, name: String = UUID().uuidString, center: NotificationCenter = .default) {
         value = initialValue
@@ -58,6 +59,10 @@ final class NotificationObservable<Value>: Observable {
         }
         
         return center.observe(notificationNamed: name, queue: queue) { handler($0.payload()) }
+    }
+    
+    func persist(_ token: NotificationToken) {
+        parentToken = token
     }
 }
 

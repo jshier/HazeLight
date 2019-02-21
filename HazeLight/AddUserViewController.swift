@@ -29,6 +29,10 @@ final class AddUserViewController: UIViewController {
     @IBAction func editUser(_ sender: UIButton) {
         logicController.editUser()
     }
+    
+    @IBAction func dismiss() {
+        dismiss(animated: true, completion: nil)
+    }
 }
 
 final class AddUserLogicController: ObservableLogicController<AddUserLogicController.State> {
@@ -42,10 +46,10 @@ final class AddUserLogicController: ObservableLogicController<AddUserLogicContro
         self.users = users
         
         super.init(state: .init(isLoading: false))
-//        
-//        addObservations { [weak self] in
-////            [users.pendingCredential.observe { self?.state = State(isLoading: ($0 != nil)) }]
-//        }
+        
+        addObservations { [weak self] in
+            [self?.users.isAddingUser.observe { self?.state = State(isLoading: $0) }]
+        }
     }
     
     func addUser(email: String, token: String) {
@@ -58,16 +62,16 @@ final class AddUserLogicController: ObservableLogicController<AddUserLogicContro
 }
 
 class ObservableLogicController<State>: Observable {
-    var state: State {
+    var state: State? {
         didSet {
-            observer?(state)
+            state.map { observer?($0) }
         }
     }
     
     private var observer: Observation?
     private var tokens: [NotificationToken] = []
     
-    init(state: State) {
+    init(state: State? = nil) {
         self.state = state
     }
     
@@ -79,12 +83,12 @@ class ObservableLogicController<State>: Observable {
         }
         
         if returningCurrentValue {
-            observer?(state)
+            state.map { observer?($0) }
         }
     }
     
-    func addObservations(_ observations: () -> [NotificationToken]) {
-        self.tokens += observations()
+    func addObservations(_ observations: () -> [NotificationToken?]) {
+        tokens += observations().compactMap { $0 }
     }
 }
 

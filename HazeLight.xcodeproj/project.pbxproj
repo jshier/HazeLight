@@ -18,6 +18,7 @@
 		3184C217216FEFEC00565436 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3184C216216FEFEC00565436 /* Observable.swift */; };
 		3184C21A216FF02200565436 /* ObservableNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3184C219216FF02200565436 /* ObservableNotifications.swift */; };
 		31980A142141C7B700667684 /* Requestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31980A132141C7B700667684 /* Requestable.swift */; };
+		319FFBD0221F53820020625A /* ObservantSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319FFBCF221F53820020625A /* ObservantSplitViewController.swift */; };
 		31A606DD21543B7600C51B73 /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A606DC21543B7600C51B73 /* NetworkController.swift */; };
 		31C9A8CF2127617F00088D89 /* UsersModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C9A8CE2127617F00088D89 /* UsersModelController.swift */; };
 		31C9A8D2212763B800088D89 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C9A8D1212763B800088D89 /* Router.swift */; };
@@ -67,6 +68,7 @@
 		3184C216216FEFEC00565436 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		3184C219216FF02200565436 /* ObservableNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableNotifications.swift; sourceTree = "<group>"; };
 		31980A132141C7B700667684 /* Requestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requestable.swift; sourceTree = "<group>"; };
+		319FFBCF221F53820020625A /* ObservantSplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservantSplitViewController.swift; sourceTree = "<group>"; };
 		31A606DC21543B7600C51B73 /* NetworkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
 		31C9A8CE2127617F00088D89 /* UsersModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersModelController.swift; sourceTree = "<group>"; };
 		31C9A8D1212763B800088D89 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 				315A05C1211CEEF200260CFE /* AppDelegate.swift */,
 				315A05C3211CEEF200260CFE /* ViewController.swift */,
 				31F57E70214AF9A9008CB3F6 /* AddUserViewController.swift */,
+				319FFBCF221F53820020625A /* ObservantSplitViewController.swift */,
 				315A05C5211CEEF200260CFE /* Main.storyboard */,
 				315A05C8211CEEF300260CFE /* Assets.xcassets */,
 				315A05CA211CEEF300260CFE /* LaunchScreen.storyboard */,
@@ -443,6 +446,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				319FFBD0221F53820020625A /* ObservantSplitViewController.swift in Sources */,
 				31A606DD21543B7600C51B73 /* NetworkController.swift in Sources */,
 				31C9A8D52127730300088D89 /* BaseResponse.swift in Sources */,
 				31C9A8D2212763B800088D89 /* Router.swift in Sources */,
@@ -562,7 +566,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -617,7 +621,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";

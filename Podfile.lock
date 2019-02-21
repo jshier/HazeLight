@@ -1,5 +1,5 @@
 PODS:
-  - Alamofire (5.0.0.beta.1)
+  - Alamofire (5.0.0-beta.2)
   - SwiftLint (0.30.1)
   - Valet (3.2.3)
 
@@ -15,10 +15,10 @@ SPEC REPOS:
     - Valet
 
 SPEC CHECKSUMS:
-  Alamofire: 2ef6d6c984c5d21c366e9b41a9ae7dfee2b67a44
+  Alamofire: d1e5493588babe3e7b56ae29e8032942f4de09fe
   SwiftLint: a54bf1fe12b55c68560eb2a7689dfc81458508f7
   Valet: 4af0382d4a94db5c7861504f751884f653437d24
 
 PODFILE CHECKSUM: bd5a8d4908cc651339afae0e65df2d3236628e63
 
-COCOAPODS: 1.6.0.beta.2
+COCOAPODS: 1.6.1

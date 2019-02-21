@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EIw-0H-Wy8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.59" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EIw-0H-Wy8">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.45"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--User Details-->
         <scene sceneID="tph-Ox-9hA">
             <objects>
-                <viewController id="Zm5-Fj-TFD" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UserDetailsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Zm5-Fj-TFD" customClass="ViewController" customModule="HazeLight" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7jL-lw-RqC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -31,6 +32,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="FNn-qi-hPW"/>
                     </view>
+                    <navigationItem key="navigationItem" title="User Details" id="2vj-bL-HYB"/>
+                    <connections>
+                        <outlet property="accountNameLabel" destination="hyD-mo-b3z" id="XA6-Mc-58A"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SOe-aU-ndz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -136,12 +141,18 @@
                                     <action selector="addUser" destination="Yiy-1V-bd0" eventType="touchUpInside" id="t3P-xe-uxW"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IGA-r8-2dX">
-                                <rect key="frame" x="322" y="480" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IGA-r8-2dX">
+                                <rect key="frame" x="315" y="480" width="44" height="30"/>
                                 <state key="normal" title="Edit"/>
                                 <connections>
                                     <action selector="editUser:" destination="Yiy-1V-bd0" eventType="touchUpInside" id="8aZ-cK-T1g"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZMe-Pc-30R">
+                                <rect key="frame" x="315" y="508" width="44" height="30"/>
+                                <state key="normal" title="Done"/>
+                                <connections>
+                                    <action selector="dismiss" destination="Yiy-1V-bd0" eventType="touchUpInside" id="ooA-Ru-sGq"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -151,7 +162,13 @@
                             <constraint firstAttribute="trailingMargin" secondItem="hH8-l8-Zwx" secondAttribute="trailing" id="Fdl-9Y-YsI"/>
                             <constraint firstAttribute="trailingMargin" secondItem="AwJ-XJ-KSC" secondAttribute="trailing" id="GiQ-mG-6dC"/>
                             <constraint firstItem="AwJ-XJ-KSC" firstAttribute="top" secondItem="hH8-l8-Zwx" secondAttribute="bottom" constant="8" symbolic="YES" id="HNd-QJ-aAy"/>
+                            <constraint firstItem="IGA-r8-2dX" firstAttribute="leading" secondItem="AwJ-XJ-KSC" secondAttribute="leading" id="LCP-Hn-7Yu"/>
+                            <constraint firstItem="ZMe-Pc-30R" firstAttribute="leading" secondItem="IGA-r8-2dX" secondAttribute="leading" id="XLc-tF-nbb"/>
                             <constraint firstItem="hH8-l8-Zwx" firstAttribute="centerY" secondItem="zYw-2P-Y88" secondAttribute="centerY" id="clj-6s-Wmd"/>
+                            <constraint firstItem="ZMe-Pc-30R" firstAttribute="top" secondItem="IGA-r8-2dX" secondAttribute="bottom" constant="-2" id="dpn-KU-2k7"/>
+                            <constraint firstItem="IGA-r8-2dX" firstAttribute="top" secondItem="AwJ-XJ-KSC" secondAttribute="bottom" constant="-12" id="qwN-6R-T9H"/>
+                            <constraint firstItem="IGA-r8-2dX" firstAttribute="trailing" secondItem="AwJ-XJ-KSC" secondAttribute="trailing" id="uOe-Cj-lBn"/>
+                            <constraint firstItem="ZMe-Pc-30R" firstAttribute="trailing" secondItem="IGA-r8-2dX" secondAttribute="trailing" id="y1K-1Q-391"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="75B-YB-K7W"/>
                     </view>
@@ -180,10 +197,10 @@
             </objects>
             <point key="canvasLocation" x="1228" y="-259"/>
         </scene>
-        <!--Split View Controller-->
+        <!--Observant Split View Controller-->
         <scene sceneID="dci-RI-5Ri">
             <objects>
-                <splitViewController id="EIw-0H-Wy8" sceneMemberID="viewController">
+                <splitViewController id="EIw-0H-Wy8" customClass="ObservantSplitViewController" customModule="HazeLight" customModuleProvider="target" sceneMemberID="viewController">
                     <connections>
                         <segue destination="ktp-Za-sWF" kind="relationship" relationship="masterViewController" id="GJ2-3y-nMC"/>
                         <segue destination="Zm5-Fj-TFD" kind="relationship" relationship="detailViewController" id="Vdw-Dx-nbm"/>
