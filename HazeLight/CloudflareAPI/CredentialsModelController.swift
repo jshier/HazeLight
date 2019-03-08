@@ -10,7 +10,7 @@ import Foundation
 import Valet
 
 final class CredentialsModelController {
-    struct UserCredential: Codable {
+    struct UserCredential: Equatable, Codable {
         let email: String
         let token: String
     }
@@ -34,7 +34,11 @@ final class CredentialsModelController {
     }
     
     // TODO: Properly synchronize observable update and storage.
-    func addCredential(email: String, token: String) {
+    func addCredential(email: String, token: String) throws {
+        guard !storage.allCredentials.contains(UserCredential(email: email, token: token)) else {
+            throw Error.duplicateCredential
+        }
+        
         isVerifyingCredential.updateValue(with: true)
         network.validate(email: email, token: token) { (response) in
             self.isVerifyingCredential.updateValue(with: false)
@@ -47,6 +51,16 @@ final class CredentialsModelController {
                 self.currentCredential.updateValue(with: credential)
             }
         }
+    }
+    
+    func setCurrentCredential(at index: Int) {
+        currentCredential.updateValue(with: storage.allCredentials[index])
+    }
+}
+
+extension CredentialsModelController {
+    enum Error: Swift.Error {
+        case duplicateCredential
     }
 }
 

@@ -11,15 +11,36 @@ import Foundation
 
 struct User {
     let id: String
+    let username: String
+    let firstName: String?
+    let lastName: String?
+    let isTwoFactorEnabled: Bool
+    let isTwoFactorLocked: Bool
 }
 
 extension User: RawResponseDecodable {
     init(_ rawValue: Raw) throws {
         id = rawValue.id
+        username = rawValue.username
+        firstName = rawValue.first_name
+        lastName = rawValue.last_name
+        isTwoFactorEnabled = rawValue.two_factor_authentication_enabled
+        isTwoFactorLocked = rawValue.two_factor_authentication_locked
     }
     
     struct Raw: Decodable {
         let id: String
+        let username: String
+        let first_name: String?
+        let last_name: String?
+        let two_factor_authentication_enabled: Bool
+        let two_factor_authentication_locked: Bool
+    }
+}
+
+extension User: CustomStringConvertible {
+    var description: String {
+        return "User: \(username)"
     }
 }
 
@@ -59,7 +80,7 @@ extension User.Edit {
 
 extension User {
     struct Validate: Requestable {
-        typealias Response = User
+        typealias Response = ValidationResponse
 
         let email: String
         let token: String
@@ -72,5 +93,19 @@ extension User {
             return [.xAuthEmail(email),
                     .xAuthKey(token)]
         }
+    }
+    
+    struct ValidationResponse {
+        let id: String
+    }
+}
+
+extension User.ValidationResponse: RawResponseDecodable {
+    init(_ rawValue: RawResponse) throws {
+        self.id = rawValue.id
+    }
+    
+    struct RawResponse: Decodable {
+        let id: String
     }
 }

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.59" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EIw-0H-Wy8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EIw-0H-Wy8">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.45"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.47"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -24,27 +24,38 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="Fsi-DW-G57">
+                                <rect key="frame" x="8" y="424" width="359" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="FNn-qi-hPW" firstAttribute="trailing" secondItem="Fsi-DW-G57" secondAttribute="trailing" constant="8" id="IKd-3F-qXR"/>
+                            <constraint firstItem="Fsi-DW-G57" firstAttribute="centerX" secondItem="7jL-lw-RqC" secondAttribute="centerX" id="a9T-Hg-TrI"/>
                             <constraint firstItem="hyD-mo-b3z" firstAttribute="centerX" secondItem="7jL-lw-RqC" secondAttribute="centerX" id="hSc-Dh-uFg"/>
+                            <constraint firstItem="Fsi-DW-G57" firstAttribute="leading" secondItem="FNn-qi-hPW" secondAttribute="leading" constant="8" id="i9G-cA-kkv"/>
                             <constraint firstItem="hyD-mo-b3z" firstAttribute="centerY" secondItem="7jL-lw-RqC" secondAttribute="centerY" id="lVU-cF-iTq"/>
+                            <constraint firstItem="Fsi-DW-G57" firstAttribute="top" secondItem="hyD-mo-b3z" secondAttribute="bottom" constant="7.3333333333333144" id="ykm-EB-aFA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="FNn-qi-hPW"/>
                     </view>
                     <navigationItem key="navigationItem" title="User Details" id="2vj-bL-HYB"/>
                     <connections>
                         <outlet property="accountNameLabel" destination="hyD-mo-b3z" id="XA6-Mc-58A"/>
+                        <outlet property="dateLabel" destination="Fsi-DW-G57" id="1ZV-Ts-03l"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SOe-aU-ndz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1228" y="394"/>
+            <point key="canvasLocation" x="1228" y="480"/>
         </scene>
         <!--Accounts-->
         <scene sceneID="Vab-Ne-pGK">
             <objects>
-                <tableViewController storyboardIdentifier="AccountListViewController" title="Accounts" useStoryboardIdentifierAsRestorationIdentifier="YES" clearsSelectionOnViewWillAppear="NO" id="Lio-e0-HGC" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="AccountListViewController" title="Accounts" useStoryboardIdentifierAsRestorationIdentifier="YES" clearsSelectionOnViewWillAppear="NO" id="Lio-e0-HGC" customClass="AccountListViewController" customModule="HazeLight" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="2e3-id-deB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -73,6 +84,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="Zm5-Fj-TFD" kind="showDetail" identifier="showUserDetails" id="bH4-Am-AKh"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e70-nS-YBY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -211,4 +225,7 @@
             <point key="canvasLocation" x="276" y="67"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="bH4-Am-AKh"/>
+    </inferredMetricsTieBreakers>
 </document>

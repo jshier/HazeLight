@@ -13,20 +13,25 @@ final class UsersModelController {
     
     private let network: NetworkController
     private let credentialsController: CredentialsModelController
+    
+    private var token: NotificationToken?
+    
     lazy var isAddingUser = credentialsController.isVerifyingCredential
     lazy var currentUser = User.value
     
     init(network: NetworkController = .shared, credentialsController: CredentialsModelController = .shared) {
         self.network = network
         self.credentialsController = credentialsController
+        
+        token = credentialsController.currentCredential.observe { [weak self] _ in self?.fetchUser() }
     }
     
-    private func updateCurrentUser(using credential: CredentialsModelController.UserCredential) {
+    func fetchUser() {
         network.fetchUser { _ in }
     }
     
-    func addUser(email: String, token: String) {
-        credentialsController.addCredential(email: email, token: token)
+    func addUser(email: String, token: String) throws {
+        try credentialsController.addCredential(email: email, token: token)
     }
     
     func editCurrentUser(zipCode: String) {

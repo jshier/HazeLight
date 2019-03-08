@@ -15,9 +15,7 @@ class ObservantSplitViewController: UISplitViewController {
         super.viewDidLoad()
         
         logicController.observe { _ in
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let controller = storyboard.instantiateViewController(withIdentifier: "UserDetailsViewController")
-            self.showDetailViewController(controller, sender: nil)
+            //self.showDetailViewController(controller, sender: nil)
         }
     }
 }

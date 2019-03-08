@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1B61D1CD208F79CA08B927FE /* libPods-HazeLight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 23FF7448A55F4C0D056890DA /* libPods-HazeLight.a */; };
+		314C70F2222888740056C211 /* AccountListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314C70F1222888740056C211 /* AccountListViewController.swift */; };
 		315A05C2211CEEF200260CFE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315A05C1211CEEF200260CFE /* AppDelegate.swift */; };
 		315A05C4211CEEF200260CFE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315A05C3211CEEF200260CFE /* ViewController.swift */; };
 		315A05C7211CEEF200260CFE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 315A05C5211CEEF200260CFE /* Main.storyboard */; };
@@ -52,6 +53,7 @@
 /* Begin PBXFileReference section */
 		23FF7448A55F4C0D056890DA /* libPods-HazeLight.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HazeLight.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		29862957887F63935C6D847B /* libPods-HazeLightUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HazeLightUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		314C70F1222888740056C211 /* AccountListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountListViewController.swift; sourceTree = "<group>"; };
 		315A05BE211CEEF200260CFE /* HazeLight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HazeLight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		315A05C1211CEEF200260CFE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		315A05C3211CEEF200260CFE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 				31C9A8CD2127613100088D89 /* CloudflareAPI */,
 				315A05C1211CEEF200260CFE /* AppDelegate.swift */,
 				315A05C3211CEEF200260CFE /* ViewController.swift */,
+				314C70F1222888740056C211 /* AccountListViewController.swift */,
 				31F57E70214AF9A9008CB3F6 /* AddUserViewController.swift */,
 				319FFBCF221F53820020625A /* ObservantSplitViewController.swift */,
 				315A05C5211CEEF200260CFE /* Main.storyboard */,
@@ -448,6 +451,7 @@
 			files = (
 				319FFBD0221F53820020625A /* ObservantSplitViewController.swift in Sources */,
 				31A606DD21543B7600C51B73 /* NetworkController.swift in Sources */,
+				314C70F2222888740056C211 /* AccountListViewController.swift in Sources */,
 				31C9A8D52127730300088D89 /* BaseResponse.swift in Sources */,
 				31C9A8D2212763B800088D89 /* Router.swift in Sources */,
 				31C9A8D9212789D100088D89 /* BaseResponseSerializer.swift in Sources */,

@@ -10,13 +10,17 @@ import UIKit
 
 final class ViewController: UIViewController {
     @IBOutlet var accountNameLabel: UILabel!
+    @IBOutlet var dateLabel: UILabel!
     
     let logicController = LogicController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        logicController.observe { self.accountNameLabel.text = $0.latestUser.id }
+        logicController.observe { [weak self] (state) in
+            self?.accountNameLabel.text = state.latestUser.id
+            self?.dateLabel.text = Date().description + " \(String(describing: self))"
+        }
     }
 }
 

@@ -93,8 +93,6 @@ extension HTTPHeader {
 final class LoggingMonitor: EventMonitor {
     func request<Value>(_ request: DataRequest, didParseResponse response: DataResponse<Value>) {
         debugPrint(response)
-        let body = request.data.map { String(decoding: $0, as: UTF8.self) } ?? "No body."
-        print("[Body]: \(body)")
     }
 }
 
@@ -114,6 +112,13 @@ extension User: NetworkObservable {
     static let response = NotificationObservable<DataResponse<BaseResponse<User>>>()
 //    static let result = User.response.map { $0.result.value.value }
     static let value = User.response.map { $0.result.value?.value }
+}
+
+extension User.ValidationResponse: NetworkObservable {
+    static let loading = NotificationObservable(initialValue: false)
+    static let response = NotificationObservable<DataResponse<BaseResponse<User.ValidationResponse>>>()
+    //    static let result = User.response.map { $0.result.value.value }
+    static let value = User.ValidationResponse.response.map { $0.result.value?.value }
 }
 
 // observable.map({ }, into: otherObservable)
