@@ -23,7 +23,7 @@ final class BaseResponseSerializer<Value: RawResponseDecodable>: DataResponseSer
 
 extension DataRequest {
     @discardableResult
-    func responseValue<Value: RawResponseDecodable>(queue: DispatchQueue? = nil, handler: @escaping (_ response: DataResponse<BaseResponse<Value>>) -> Void) -> Self {
+    func responseValue<Value: RawResponseDecodable>(queue: DispatchQueue = .main, handler: @escaping (_ response: DataResponse<BaseResponse<Value>>) -> Void) -> Self {
         return response(queue: queue, responseSerializer: BaseResponseSerializer(), completionHandler: handler)
     }
 }

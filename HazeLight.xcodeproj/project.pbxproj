@@ -27,6 +27,7 @@
 		31C9A8D72127730E00088D89 /* RawDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C9A8D62127730E00088D89 /* RawDecodable.swift */; };
 		31C9A8D9212789D100088D89 /* BaseResponseSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C9A8D8212789D100088D89 /* BaseResponseSerializer.swift */; };
 		31C9A8DB21278E5B00088D89 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C9A8DA21278E5B00088D89 /* User.swift */; };
+		31E3DC2D225FDA3E00BDC0B6 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E3DC2C225FDA3E00BDC0B6 /* Extensions.swift */; };
 		31F18CBE21CC3C7A0088E662 /* CredentialsModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F18CBD21CC3C7A0088E662 /* CredentialsModelController.swift */; };
 		31F57E71214AF9A9008CB3F6 /* AddUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F57E70214AF9A9008CB3F6 /* AddUserViewController.swift */; };
 		503DB62C19E93F560010CB5D /* libPods-HazeLightTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A1F4A4AED346F390A1752DA /* libPods-HazeLightTests.a */; };
@@ -78,6 +79,7 @@
 		31C9A8D62127730E00088D89 /* RawDecodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RawDecodable.swift; sourceTree = "<group>"; };
 		31C9A8D8212789D100088D89 /* BaseResponseSerializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponseSerializer.swift; sourceTree = "<group>"; };
 		31C9A8DA21278E5B00088D89 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		31E3DC2C225FDA3E00BDC0B6 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		31F18CBD21CC3C7A0088E662 /* CredentialsModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialsModelController.swift; sourceTree = "<group>"; };
 		31F57E70214AF9A9008CB3F6 /* AddUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserViewController.swift; sourceTree = "<group>"; };
 		413D39DC01109CDB46223B67 /* Pods-HazeLight.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HazeLight.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HazeLight/Pods-HazeLight.debug.xcconfig"; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 				314C70F1222888740056C211 /* AccountListViewController.swift */,
 				31F57E70214AF9A9008CB3F6 /* AddUserViewController.swift */,
 				319FFBCF221F53820020625A /* ObservantSplitViewController.swift */,
+				31E3DC2C225FDA3E00BDC0B6 /* Extensions.swift */,
 				315A05C5211CEEF200260CFE /* Main.storyboard */,
 				315A05C8211CEEF300260CFE /* Assets.xcassets */,
 				315A05CA211CEEF300260CFE /* LaunchScreen.storyboard */,
@@ -463,6 +466,7 @@
 				31F57E71214AF9A9008CB3F6 /* AddUserViewController.swift in Sources */,
 				31C9A8DB21278E5B00088D89 /* User.swift in Sources */,
 				315A05C2211CEEF200260CFE /* AppDelegate.swift in Sources */,
+				31E3DC2D225FDA3E00BDC0B6 /* Extensions.swift in Sources */,
 				31C9A8D72127730E00088D89 /* RawDecodable.swift in Sources */,
 				31C9A8CF2127617F00088D89 /* UsersModelController.swift in Sources */,
 			);

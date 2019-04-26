@@ -38,4 +38,14 @@ final class AccountListViewController: UITableViewController {
         credentials.setCurrentCredential(at: indexPath.row)
         performSegue(withIdentifier: "showUserDetails", sender: nil)
     }
+    
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        guard case .delete = editingStyle else { return }
+        
+        credentials.removeCredential(id: allCredentials[indexPath.row].id)
+    }
 }

@@ -11,8 +11,15 @@ import Valet
 
 final class CredentialsModelController {
     struct UserCredential: Equatable, Codable {
+        let id: UUID
         let email: String
         let token: String
+        
+        init(id: UUID = UUID(), email: String, token: String) {
+            self.id = id
+            self.email = email
+            self.token = token
+        }
     }
     
     static let shared = CredentialsModelController()
@@ -42,7 +49,7 @@ final class CredentialsModelController {
         isVerifyingCredential.updateValue(with: true)
         network.validate(email: email, token: token) { (response) in
             self.isVerifyingCredential.updateValue(with: false)
-            response.result.ifSuccess {
+            if case .success = response.result {
                 let credential = UserCredential(email: email, token: token)
                 self.storage.allCredentials.append(credential)
                 self.allCredentials.appendValue(with: credential)
@@ -55,6 +62,15 @@ final class CredentialsModelController {
     
     func setCurrentCredential(at index: Int) {
         currentCredential.updateValue(with: storage.allCredentials[index])
+    }
+    
+    func removeCredential(id: UUID) {
+        allCredentials.removeAll { $0.id == id }
+        storage.allCredentials.removeAll { $0.id == id }
+        if currentCredential.value??.id == id {
+            currentCredential.updateValue(with: nil)
+            storage.currentCredential = nil
+        }
     }
 }
 
@@ -80,8 +96,12 @@ final class Keychain {
     let encoder = JSONEncoder()
     let decoder = JSONDecoder()
     
-    func setValue<T: Codable>(_ value: T, for key: Key) {
-        valet.set(object: try! encoder.encode(value), forKey: key.rawValue)
+    func setValue<T: Codable>(_ value: T?, for key: Key) {
+        if let value = value {
+            valet.set(object: try! encoder.encode(value), forKey: key.rawValue)
+        } else {
+            valet.removeObject(forKey: key.rawValue)
+        }
     }
     
     func value<T: Codable>(forKey key: Key) -> T? {

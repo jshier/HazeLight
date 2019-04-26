@@ -33,7 +33,11 @@ import Foundation
 final class NotificationObservable<Value>: Observable {
     typealias ObservationClosure<T> = (_ value: T) -> Void
     
-    private(set) var value: Value?
+    private(set) var value: Value? {
+        didSet {
+            center.postNotification(named: name, with: value)
+        }
+    }
     
     private let center: NotificationCenter
     let name: Notification.Name
@@ -47,8 +51,6 @@ final class NotificationObservable<Value>: Observable {
     
     func updateValue(with value: Value) {
         self.value = value
-        
-        center.postNotification(named: name, with: value)
     }
     
     func observe(returningCurrentValue: Bool = true,
@@ -69,6 +71,10 @@ final class NotificationObservable<Value>: Observable {
 extension NotificationObservable where Value: RangeReplaceableCollection {
     func appendValue(with value: Value.Element) {
         self.value?.append(value)
+    }
+    
+    func removeAll(matching predicate: (Value.Element) -> Bool) {
+        value?.removeAll(where: predicate)
     }
 }
 

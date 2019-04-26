@@ -63,7 +63,7 @@ final class UserCredentialAdapter: RequestInterceptor {
         token = credentials.currentCredential.observe { self.currentCredential = $0 }
     }
     
-    func adapt(_ urlRequest: URLRequest, for session: Session, completion: @escaping (Result<URLRequest>) -> Void) {
+    func adapt(_ urlRequest: URLRequest, for session: Session, completion: @escaping (Result<URLRequest, Error>) -> Void) {
         completion(Result {
             guard urlRequest.httpHeaders["X-Auth-Email"] == nil, urlRequest.httpHeaders["X-Auth-Key"] == nil else {
                 return urlRequest
