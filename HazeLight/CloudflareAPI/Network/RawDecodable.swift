@@ -67,7 +67,7 @@ extension Requestable {
         let url = try router().baseURL.appendingPathComponent(try router().path)
         var request = URLRequest(url: url)
         request.httpMethod = try router().method.rawValue
-        try headers().map { $0.forEach { request.httpHeaders.add($0) } }
+        try headers().map { $0.forEach { request.headers.add($0) } }
         
         return request
     }
@@ -92,7 +92,7 @@ extension ParameterizedRequestable {
         let url = try router().baseURL.appendingPathComponent(try router().path)
         var request = URLRequest(url: url)
         request.httpMethod = try router().method.rawValue
-        try headers().map { $0.forEach { request.httpHeaders.add($0) } }
+        try headers().map { $0.forEach { request.headers.add($0) } }
         
         return try router().parameterEncoder.encode(try parameters(), into: request)
     }
