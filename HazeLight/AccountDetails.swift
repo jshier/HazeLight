@@ -1,25 +1,23 @@
 //
-//  ContentView.swift
+//  AccountDetails.swift
 //  HazeLight
 //
 //  Created by Jon Shier on 6/13/19.
 //  Copyright © 2019 Jon Shier. All rights reserved.
 //
 
-import Alamofire
-import Valet
 import SwiftUI
 
-struct ContentView : View {
+struct AccountDetails : View {
     var body: some View {
-        Text("Hello World")
+        Text(/*@START_MENU_TOKEN@*/"Hello World!"/*@END_MENU_TOKEN@*/)
     }
 }
 
 #if DEBUG
-struct ContentView_Previews : PreviewProvider {
+struct AccountDetails_Previews : PreviewProvider {
     static var previews: some View {
-        ContentView()
+        AccountDetails()
     }
 }
 #endif

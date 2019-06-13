@@ -9,14 +9,17 @@
 /* Begin PBXBuildFile section */
 		3104E5A322B2DAA3007679F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3104E5A222B2DAA3007679F7 /* AppDelegate.swift */; };
 		3104E5A522B2DAA3007679F7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3104E5A422B2DAA3007679F7 /* SceneDelegate.swift */; };
-		3104E5A722B2DAA3007679F7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3104E5A622B2DAA3007679F7 /* ContentView.swift */; };
+		3104E5A722B2DAA3007679F7 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3104E5A622B2DAA3007679F7 /* RootView.swift */; };
 		3104E5A922B2DAA4007679F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3104E5A822B2DAA4007679F7 /* Assets.xcassets */; };
 		3104E5AC22B2DAA4007679F7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3104E5AB22B2DAA4007679F7 /* Preview Assets.xcassets */; };
 		3104E5AF22B2DAA4007679F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3104E5AD22B2DAA4007679F7 /* LaunchScreen.storyboard */; };
 		3104E5BA22B2DAA4007679F7 /* HazeLightTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3104E5B922B2DAA4007679F7 /* HazeLightTests.swift */; };
 		3104E5C522B2DAA4007679F7 /* HazeLightUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3104E5C422B2DAA4007679F7 /* HazeLightUITests.swift */; };
+		316CB51922B2E9140078FE66 /* AccountDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316CB51822B2E9140078FE66 /* AccountDetails.swift */; };
+		316CB51B22B2EA9A0078FE66 /* AddAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316CB51A22B2EA9A0078FE66 /* AddAccount.swift */; };
 		3191817B22B2DDDB00BFEFBC /* Valet in Frameworks */ = {isa = PBXBuildFile; productRef = 3191817A22B2DDDB00BFEFBC /* Valet */; };
 		3191817E22B2DE2F00BFEFBC /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 3191817D22B2DE2F00BFEFBC /* Alamofire */; };
+		3191FFA422B2E80100D768E4 /* AccountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3191FFA322B2E80100D768E4 /* AccountCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +43,7 @@
 		3104E59F22B2DAA3007679F7 /* HazeLight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HazeLight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3104E5A222B2DAA3007679F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3104E5A422B2DAA3007679F7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3104E5A622B2DAA3007679F7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		3104E5A622B2DAA3007679F7 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		3104E5A822B2DAA4007679F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3104E5AB22B2DAA4007679F7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3104E5AE22B2DAA4007679F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +54,9 @@
 		3104E5C022B2DAA4007679F7 /* HazeLightUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HazeLightUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3104E5C422B2DAA4007679F7 /* HazeLightUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HazeLightUITests.swift; sourceTree = "<group>"; };
 		3104E5C622B2DAA4007679F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		316CB51822B2E9140078FE66 /* AccountDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDetails.swift; sourceTree = "<group>"; };
+		316CB51A22B2EA9A0078FE66 /* AddAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAccount.swift; sourceTree = "<group>"; };
+		3191FFA322B2E80100D768E4 /* AccountCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,7 +111,10 @@
 			children = (
 				3104E5A222B2DAA3007679F7 /* AppDelegate.swift */,
 				3104E5A422B2DAA3007679F7 /* SceneDelegate.swift */,
-				3104E5A622B2DAA3007679F7 /* ContentView.swift */,
+				3104E5A622B2DAA3007679F7 /* RootView.swift */,
+				3191FFA322B2E80100D768E4 /* AccountCell.swift */,
+				316CB51822B2E9140078FE66 /* AccountDetails.swift */,
+				316CB51A22B2EA9A0078FE66 /* AddAccount.swift */,
 				3104E5A822B2DAA4007679F7 /* Assets.xcassets */,
 				3104E5AD22B2DAA4007679F7 /* LaunchScreen.storyboard */,
 				3104E5B022B2DAA4007679F7 /* Info.plist */,
@@ -280,8 +289,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				3104E5A322B2DAA3007679F7 /* AppDelegate.swift in Sources */,
+				316CB51922B2E9140078FE66 /* AccountDetails.swift in Sources */,
+				3191FFA422B2E80100D768E4 /* AccountCell.swift in Sources */,
+				316CB51B22B2EA9A0078FE66 /* AddAccount.swift in Sources */,
 				3104E5A522B2DAA3007679F7 /* SceneDelegate.swift in Sources */,
-				3104E5A722B2DAA3007679F7 /* ContentView.swift in Sources */,
+				3104E5A722B2DAA3007679F7 /* RootView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -610,7 +622,7 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/square/Valet.git";
 			requirement = {
-                branch = "dfed--spm";
+				branch = "dfed--spm";
 				kind = branch;
 			};
 		};
