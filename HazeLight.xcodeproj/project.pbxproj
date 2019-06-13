@@ -610,8 +610,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/square/Valet.git";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 3.2.5;
+                branch = "dfed--spm";
+				kind = branch;
 			};
 		};
 		3191817C22B2DE2F00BFEFBC /* XCRemoteSwiftPackageReference "Alamofire" */ = {

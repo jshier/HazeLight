@@ -6,6 +6,8 @@
 //  Copyright © 2019 Jon Shier. All rights reserved.
 //
 
+import Alamofire
+import Valet
 import SwiftUI
 
 struct ContentView : View {
