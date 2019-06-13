@@ -2,34 +2,33 @@
 //  HazeLightTests.swift
 //  HazeLightTests
 //
-//  Created by Jon Shier on 8/9/18.
-//  Copyright © 2018 Jon Shier. All rights reserved.
+//  Created by Jon Shier on 6/13/19.
+//  Copyright © 2019 Jon Shier. All rights reserved.
 //
 
-@testable import HazeLight
 import XCTest
+@testable import HazeLight
 
 class HazeLightTests: XCTestCase {
-    func testObservableMapping() {
-        // Given
-        var firstValue: String?
-        var secondValue: Int?
-        let observer = NotificationObservable<String>()
-        var firstToken: NotificationToken? = observer.observe { firstValue = $0 }
-        let mappedObserver = observer.map(Int.init)
-        let expect = expectation(description: "observer should fire")
-        var secondToken: NotificationToken? = mappedObserver.observe { secondValue = $0; expect.fulfill() }
-        
-        // When
-        observer.updateValue(with: "10")
-        
-        waitForExpectations(timeout: 1, handler: nil)
-        
-        if firstToken != nil { firstToken = nil }
-        if secondToken != nil { secondToken = nil }
-        
-        // Then
-        XCTAssertEqual(firstValue, "10")
-        XCTAssertEqual(secondValue, 10)
+
+    override func setUp() {
+        // Put setup code here. This method is called before the invocation of each test method in the class.
     }
+
+    override func tearDown() {
+        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    }
+
+    func testExample() {
+        // This is an example of a functional test case.
+        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    }
+
+    func testPerformanceExample() {
+        // This is an example of a performance test case.
+        self.measure {
+            // Put the code you want to measure the time of here.
+        }
+    }
+
 }
