@@ -20,9 +20,9 @@ struct RootView : View {
             }
             .navigationBarTitle(Text("Accounts"))
             .navigationBarItems(trailing:
-                    PresentationButton(
-                        Image(systemName: "plus.circle").imageScale(.large),
-                        destination: AddAccount()))
+                    PresentationButton(destination: AddAccount()) {
+                        Image(systemName: "plus.circle").imageScale(.large)
+                    })
         }
     }
     
