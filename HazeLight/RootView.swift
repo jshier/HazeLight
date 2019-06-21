@@ -11,8 +11,14 @@ import Valet
 import SwiftUI
 
 struct RootView : View {
+    @State var addingAccount = false
     var body: some View {
         NavigationView {
+            if addingAccount {
+                AddAccount()
+            } else {
+                Button(action: addAccount) { Text("Add Account") }
+            }
             List {
                 NavigationButton(destination: AccountDetails()) {
                     AccountCell()
@@ -27,7 +33,7 @@ struct RootView : View {
     }
     
     func addAccount() {
-        
+        addingAccount = true
     }
 }
 
