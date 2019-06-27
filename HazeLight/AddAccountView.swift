@@ -8,7 +8,9 @@
 
 import SwiftUI
 
-struct AddAccount : View {
+struct AddAccountView : View {
+    let cancelAction: () -> Void
+    
     @State private var email = ""
     @State private var token = ""
     
@@ -20,8 +22,15 @@ struct AddAccount : View {
             Text("Cloudflare API Token")
             TextField($token, placeholder: Text("Cloudflare API Token"))
                 .padding()
-            Button(action: addAccount) {
-                Text("Add Account")
+            HStack {
+                Button(action: cancelAddingAccount) {
+                    Text("Cancel")
+                }
+                Spacer()
+                Button(action: addAccount) {
+                    Text("Add Account")
+                        .fontWeight(.bold)
+                }
             }
         }
         .padding()
@@ -30,12 +39,16 @@ struct AddAccount : View {
     func addAccount() {
         
     }
+    
+    func cancelAddingAccount() {
+        cancelAction()
+    }
 }
 
 #if DEBUG
 struct AddAccount_Previews : PreviewProvider {
     static var previews: some View {
-        AddAccount()
+        AddAccountView(cancelAction: {})
     }
 }
 #endif

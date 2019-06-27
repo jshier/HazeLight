@@ -14,8 +14,8 @@
         "package": "Valet",
         "repositoryURL": "https://github.com/square/Valet.git",
         "state": {
-          "branch": "dfed--spm",
-          "revision": "38fea7d4a2557a99e0b68327bd20deb09ecf467e",
+          "branch": "master",
+          "revision": "0d3fb186e1b235e8c99bead4af5146afb9ca3ca1",
           "version": null
         }
       }

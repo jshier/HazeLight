@@ -7,6 +7,7 @@
 //
 
 import Alamofire
+import Foundation
 
 final class BaseResponseSerializer<Value: RawResponseDecodable>: DataResponseSerializerProtocol {
     func serialize(request: URLRequest?, response: HTTPURLResponse?, data: Data?, error: Error?) throws -> BaseResponse<Value> {

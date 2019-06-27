@@ -18,6 +18,10 @@ struct User {
     let isTwoFactorLocked: Bool
 }
 
+extension User {
+    static let placeholder = User(id: "1", username: "jsmith", firstName: "John", lastName: "Smith", isTwoFactorEnabled: false, isTwoFactorLocked: false)
+}
+
 extension User: RawResponseDecodable {
     init(_ rawValue: Raw) throws {
         id = rawValue.id
@@ -107,5 +111,15 @@ extension User.ValidationResponse: RawResponseDecodable {
     
     struct RawResponse: Decodable {
         let id: String
+    }
+}
+
+extension HTTPHeader {
+    static func xAuthEmail(_ email: String) -> HTTPHeader {
+        return HTTPHeader(name: "X-Auth-Email", value: email)
+    }
+    
+    static func xAuthKey(_ key: String) -> HTTPHeader {
+        return HTTPHeader(name: "X-Auth-Key", value: key)
     }
 }

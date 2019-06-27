@@ -12,28 +12,34 @@ import SwiftUI
 
 struct RootView : View {
     @State var addingAccount = false
+    
     var body: some View {
         NavigationView {
-            if addingAccount {
-                AddAccount()
-            } else {
-                Button(action: addAccount) { Text("Add Account") }
-            }
             List {
-                NavigationButton(destination: AccountDetails()) {
-                    AccountCell()
+                Section {
+                    if addingAccount {
+                        AddAccountView(cancelAction: cancelAddingAccount)
+                    } else {
+                        Button(action: addAccount) { Text("Add Account") }
+                    }
+                }
+                Section {
+                    NavigationButton(destination: AccountDetails(user: CurrentUser(user: .placeholder))) {
+                        AccountCell()
+                    }
                 }
             }
             .navigationBarTitle(Text("Accounts"))
-            .navigationBarItems(trailing:
-                    PresentationButton(destination: AddAccount()) {
-                        Image(systemName: "plus.circle").imageScale(.large)
-                    })
+            .listStyle(.grouped)
         }
     }
     
     func addAccount() {
         addingAccount = true
+    }
+    
+    func cancelAddingAccount() {
+        addingAccount = false
     }
 }
 

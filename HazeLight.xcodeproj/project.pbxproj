@@ -15,8 +15,15 @@
 		3104E5AF22B2DAA4007679F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3104E5AD22B2DAA4007679F7 /* LaunchScreen.storyboard */; };
 		3104E5BA22B2DAA4007679F7 /* HazeLightTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3104E5B922B2DAA4007679F7 /* HazeLightTests.swift */; };
 		3104E5C522B2DAA4007679F7 /* HazeLightUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3104E5C422B2DAA4007679F7 /* HazeLightUITests.swift */; };
+		31681BB622C560EE005CF4D6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31681BB422C560EE005CF4D6 /* User.swift */; };
+		31681BB722C560EE005CF4D6 /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31681BB522C560EE005CF4D6 /* BaseResponse.swift */; };
+		31681BBD22C56110005CF4D6 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31681BB922C5610F005CF4D6 /* Router.swift */; };
+		31681BBE22C56110005CF4D6 /* BaseResponseSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31681BBA22C5610F005CF4D6 /* BaseResponseSerializer.swift */; };
+		31681BBF22C56110005CF4D6 /* RawDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31681BBB22C5610F005CF4D6 /* RawDecodable.swift */; };
+		31681BC022C56110005CF4D6 /* Requestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31681BBC22C5610F005CF4D6 /* Requestable.swift */; };
+		31681BC222C56607005CF4D6 /* Networkvalue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31681BC122C56607005CF4D6 /* Networkvalue.swift */; };
 		316CB51922B2E9140078FE66 /* AccountDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316CB51822B2E9140078FE66 /* AccountDetails.swift */; };
-		316CB51B22B2EA9A0078FE66 /* AddAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316CB51A22B2EA9A0078FE66 /* AddAccount.swift */; };
+		316CB51B22B2EA9A0078FE66 /* AddAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316CB51A22B2EA9A0078FE66 /* AddAccountView.swift */; };
 		3191817B22B2DDDB00BFEFBC /* Valet in Frameworks */ = {isa = PBXBuildFile; productRef = 3191817A22B2DDDB00BFEFBC /* Valet */; };
 		3191817E22B2DE2F00BFEFBC /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 3191817D22B2DE2F00BFEFBC /* Alamofire */; };
 		3191FFA422B2E80100D768E4 /* AccountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3191FFA322B2E80100D768E4 /* AccountCell.swift */; };
@@ -54,8 +61,15 @@
 		3104E5C022B2DAA4007679F7 /* HazeLightUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HazeLightUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3104E5C422B2DAA4007679F7 /* HazeLightUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HazeLightUITests.swift; sourceTree = "<group>"; };
 		3104E5C622B2DAA4007679F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		31681BB422C560EE005CF4D6 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Old/HazeLight/CloudflareAPI/Network/Responses/User.swift; sourceTree = SOURCE_ROOT; };
+		31681BB522C560EE005CF4D6 /* BaseResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseResponse.swift; path = Old/HazeLight/CloudflareAPI/Network/Responses/BaseResponse.swift; sourceTree = SOURCE_ROOT; };
+		31681BB922C5610F005CF4D6 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Router.swift; path = Old/HazeLight/CloudflareAPI/Network/Router.swift; sourceTree = SOURCE_ROOT; };
+		31681BBA22C5610F005CF4D6 /* BaseResponseSerializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseResponseSerializer.swift; path = Old/HazeLight/CloudflareAPI/Network/BaseResponseSerializer.swift; sourceTree = SOURCE_ROOT; };
+		31681BBB22C5610F005CF4D6 /* RawDecodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RawDecodable.swift; path = Old/HazeLight/CloudflareAPI/Network/RawDecodable.swift; sourceTree = SOURCE_ROOT; };
+		31681BBC22C5610F005CF4D6 /* Requestable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Requestable.swift; path = Old/HazeLight/CloudflareAPI/Network/Requestable.swift; sourceTree = SOURCE_ROOT; };
+		31681BC122C56607005CF4D6 /* Networkvalue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networkvalue.swift; sourceTree = "<group>"; };
 		316CB51822B2E9140078FE66 /* AccountDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDetails.swift; sourceTree = "<group>"; };
-		316CB51A22B2EA9A0078FE66 /* AddAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAccount.swift; sourceTree = "<group>"; };
+		316CB51A22B2EA9A0078FE66 /* AddAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAccountView.swift; sourceTree = "<group>"; };
 		3191FFA322B2E80100D768E4 /* AccountCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -109,12 +123,13 @@
 		3104E5A122B2DAA3007679F7 /* HazeLight */ = {
 			isa = PBXGroup;
 			children = (
+				31681BB222C560B3005CF4D6 /* CloudflareAPI */,
 				3104E5A222B2DAA3007679F7 /* AppDelegate.swift */,
 				3104E5A422B2DAA3007679F7 /* SceneDelegate.swift */,
 				3104E5A622B2DAA3007679F7 /* RootView.swift */,
 				3191FFA322B2E80100D768E4 /* AccountCell.swift */,
 				316CB51822B2E9140078FE66 /* AccountDetails.swift */,
-				316CB51A22B2EA9A0078FE66 /* AddAccount.swift */,
+				316CB51A22B2EA9A0078FE66 /* AddAccountView.swift */,
 				3104E5A822B2DAA4007679F7 /* Assets.xcassets */,
 				3104E5AD22B2DAA4007679F7 /* LaunchScreen.storyboard */,
 				3104E5B022B2DAA4007679F7 /* Info.plist */,
@@ -147,6 +162,36 @@
 				3104E5C622B2DAA4007679F7 /* Info.plist */,
 			);
 			path = HazeLightUITests;
+			sourceTree = "<group>";
+		};
+		31681BB222C560B3005CF4D6 /* CloudflareAPI */ = {
+			isa = PBXGroup;
+			children = (
+				31681BB822C56105005CF4D6 /* Protocols */,
+				31681BB322C560C1005CF4D6 /* Models */,
+				31681BC122C56607005CF4D6 /* Networkvalue.swift */,
+			);
+			path = CloudflareAPI;
+			sourceTree = "<group>";
+		};
+		31681BB322C560C1005CF4D6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				31681BB522C560EE005CF4D6 /* BaseResponse.swift */,
+				31681BB422C560EE005CF4D6 /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		31681BB822C56105005CF4D6 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				31681BBA22C5610F005CF4D6 /* BaseResponseSerializer.swift */,
+				31681BBB22C5610F005CF4D6 /* RawDecodable.swift */,
+				31681BBC22C5610F005CF4D6 /* Requestable.swift */,
+				31681BB922C5610F005CF4D6 /* Router.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,12 +333,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31681BC222C56607005CF4D6 /* Networkvalue.swift in Sources */,
+				31681BBF22C56110005CF4D6 /* RawDecodable.swift in Sources */,
 				3104E5A322B2DAA3007679F7 /* AppDelegate.swift in Sources */,
 				316CB51922B2E9140078FE66 /* AccountDetails.swift in Sources */,
 				3191FFA422B2E80100D768E4 /* AccountCell.swift in Sources */,
-				316CB51B22B2EA9A0078FE66 /* AddAccount.swift in Sources */,
+				316CB51B22B2EA9A0078FE66 /* AddAccountView.swift in Sources */,
+				31681BBD22C56110005CF4D6 /* Router.swift in Sources */,
+				31681BBE22C56110005CF4D6 /* BaseResponseSerializer.swift in Sources */,
 				3104E5A522B2DAA3007679F7 /* SceneDelegate.swift in Sources */,
 				3104E5A722B2DAA3007679F7 /* RootView.swift in Sources */,
+				31681BC022C56110005CF4D6 /* Requestable.swift in Sources */,
+				31681BB622C560EE005CF4D6 /* User.swift in Sources */,
+				31681BB722C560EE005CF4D6 /* BaseResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -622,7 +674,7 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/square/Valet.git";
 			requirement = {
-				branch = "dfed--spm";
+				branch = master;
 				kind = branch;
 			};
 		};
