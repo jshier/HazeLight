@@ -24,7 +24,7 @@ struct RootView : View {
                     }
                 }
                 Section {
-                    NavigationButton(destination: AccountDetails(user: CurrentUser(user: .placeholder))) {
+                    NavigationLink(destination: AccountDetails(user: CurrentUser(user: .placeholder))) {
                         AccountCell()
                     }
                 }

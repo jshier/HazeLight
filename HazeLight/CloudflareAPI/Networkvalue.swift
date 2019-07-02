@@ -10,9 +10,9 @@ import Alamofire
 import Combine
 import protocol SwiftUI.BindableObject
 
-final class NetworkValue<T>: BindableObject {
-    var request: DataReqest?
-    var response: DataResponse<T>
-    var result: Result<T, Error>
-    var value: T
-}
+//final class NetworkValue<T>: BindableObject {
+//    var request: DataRequest?
+//    var response: DataResponse<T>
+//    var result: Result<T, Error>
+//    var value: T
+//}

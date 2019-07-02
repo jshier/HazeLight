@@ -17,10 +17,10 @@ struct AddAccountView : View {
     var body: some View {
         VStack(alignment: .leading) {
             Text("Cloudflare Email Address")
-            TextField($email, placeholder: Text("Email Address"))
+            TextField("Email Address", text: $email)
                 .padding()
             Text("Cloudflare API Token")
-            TextField($token, placeholder: Text("Cloudflare API Token"))
+            TextField("Cloudflare API Token", text: $token)
                 .padding()
             HStack {
                 Button(action: cancelAddingAccount) {
