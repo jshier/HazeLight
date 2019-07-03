@@ -20,7 +20,7 @@ struct RootView : View {
                     if addingAccount {
                         AddAccountView(cancelAction: cancelAddingAccount)
                     } else {
-                        Button(action: addAccount) { Text("Add Account") }
+                        Button("Add Account", action: addAccount)
                     }
                 }
                 Section {
@@ -29,7 +29,7 @@ struct RootView : View {
                     }
                 }
             }
-            .navigationBarTitle(Text("Accounts"))
+            .navigationBarTitle("Accounts")
             .listStyle(.grouped)
         }
     }
