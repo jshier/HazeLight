@@ -30,7 +30,7 @@ struct RootView : View {
                 }
             }
             .navigationBarTitle("Accounts")
-            .listStyle(.grouped)
+            .listStyle(GroupedListStyle())
         }
     }
     

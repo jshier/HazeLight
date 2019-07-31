@@ -21,9 +21,10 @@
 		31681BBE22C56110005CF4D6 /* BaseResponseSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31681BBA22C5610F005CF4D6 /* BaseResponseSerializer.swift */; };
 		31681BBF22C56110005CF4D6 /* RawDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31681BBB22C5610F005CF4D6 /* RawDecodable.swift */; };
 		31681BC022C56110005CF4D6 /* Requestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31681BBC22C5610F005CF4D6 /* Requestable.swift */; };
-		31681BC222C56607005CF4D6 /* Networkvalue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31681BC122C56607005CF4D6 /* Networkvalue.swift */; };
+		31681BC222C56607005CF4D6 /* NetworkValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31681BC122C56607005CF4D6 /* NetworkValue.swift */; };
 		316CB51922B2E9140078FE66 /* AccountDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316CB51822B2E9140078FE66 /* AccountDetails.swift */; };
 		316CB51B22B2EA9A0078FE66 /* AddAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316CB51A22B2EA9A0078FE66 /* AddAccountView.swift */; };
+		31800E7122F2352F009BB379 /* ObservableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31800E7022F2352F009BB379 /* ObservableTests.swift */; };
 		3191817B22B2DDDB00BFEFBC /* Valet in Frameworks */ = {isa = PBXBuildFile; productRef = 3191817A22B2DDDB00BFEFBC /* Valet */; };
 		3191817E22B2DE2F00BFEFBC /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 3191817D22B2DE2F00BFEFBC /* Alamofire */; };
 		3191FFA422B2E80100D768E4 /* AccountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3191FFA322B2E80100D768E4 /* AccountCell.swift */; };
@@ -67,9 +68,10 @@
 		31681BBA22C5610F005CF4D6 /* BaseResponseSerializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseResponseSerializer.swift; path = Old/HazeLight/CloudflareAPI/Network/BaseResponseSerializer.swift; sourceTree = SOURCE_ROOT; };
 		31681BBB22C5610F005CF4D6 /* RawDecodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RawDecodable.swift; path = Old/HazeLight/CloudflareAPI/Network/RawDecodable.swift; sourceTree = SOURCE_ROOT; };
 		31681BBC22C5610F005CF4D6 /* Requestable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Requestable.swift; path = Old/HazeLight/CloudflareAPI/Network/Requestable.swift; sourceTree = SOURCE_ROOT; };
-		31681BC122C56607005CF4D6 /* Networkvalue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networkvalue.swift; sourceTree = "<group>"; };
+		31681BC122C56607005CF4D6 /* NetworkValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkValue.swift; sourceTree = "<group>"; };
 		316CB51822B2E9140078FE66 /* AccountDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDetails.swift; sourceTree = "<group>"; };
 		316CB51A22B2EA9A0078FE66 /* AddAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAccountView.swift; sourceTree = "<group>"; };
+		31800E7022F2352F009BB379 /* ObservableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableTests.swift; sourceTree = "<group>"; };
 		3191FFA322B2E80100D768E4 /* AccountCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -150,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				3104E5B922B2DAA4007679F7 /* HazeLightTests.swift */,
+				31800E7022F2352F009BB379 /* ObservableTests.swift */,
 				3104E5BB22B2DAA4007679F7 /* Info.plist */,
 			);
 			path = HazeLightTests;
@@ -169,7 +172,7 @@
 			children = (
 				31681BB822C56105005CF4D6 /* Protocols */,
 				31681BB322C560C1005CF4D6 /* Models */,
-				31681BC122C56607005CF4D6 /* Networkvalue.swift */,
+				31681BC122C56607005CF4D6 /* NetworkValue.swift */,
 			);
 			path = CloudflareAPI;
 			sourceTree = "<group>";
@@ -333,7 +336,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				31681BC222C56607005CF4D6 /* Networkvalue.swift in Sources */,
+				31681BC222C56607005CF4D6 /* NetworkValue.swift in Sources */,
 				31681BBF22C56110005CF4D6 /* RawDecodable.swift in Sources */,
 				3104E5A322B2DAA3007679F7 /* AppDelegate.swift in Sources */,
 				316CB51922B2E9140078FE66 /* AccountDetails.swift in Sources */,
@@ -353,6 +356,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31800E7122F2352F009BB379 /* ObservableTests.swift in Sources */,
 				3104E5BA22B2DAA4007679F7 /* HazeLightTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -10,7 +10,7 @@ import Combine
 import SwiftUI
 
 struct AccountDetails : View {
-    @ObjectBinding var user: CurrentUser
+    @ObservedObject var user: CurrentUser
     
     var body: some View {
         VStack {
@@ -20,16 +20,16 @@ struct AccountDetails : View {
     }
 }
 
-final class CurrentUser: BindableObject {
-    var didChange = PassthroughSubject<Void, Never>()
+final class CurrentUser: ObservableObject {
+    var objectWillChange = PassthroughSubject<Void, Never>()
     
     init(user: User) {
         self.user = user
     }
     
     var user: User {
-        didSet {
-            didChange.send()
+        willSet {
+            objectWillChange.send()
         }
     }
 }
