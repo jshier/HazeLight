@@ -25,9 +25,9 @@
 		316CB51922B2E9140078FE66 /* AccountDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316CB51822B2E9140078FE66 /* AccountDetails.swift */; };
 		316CB51B22B2EA9A0078FE66 /* AddAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316CB51A22B2EA9A0078FE66 /* AddAccountView.swift */; };
 		31800E7122F2352F009BB379 /* ObservableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31800E7022F2352F009BB379 /* ObservableTests.swift */; };
-		3191817B22B2DDDB00BFEFBC /* Valet in Frameworks */ = {isa = PBXBuildFile; productRef = 3191817A22B2DDDB00BFEFBC /* Valet */; };
 		3191817E22B2DE2F00BFEFBC /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 3191817D22B2DE2F00BFEFBC /* Alamofire */; };
 		3191FFA422B2E80100D768E4 /* AccountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3191FFA322B2E80100D768E4 /* AccountCell.swift */; };
+		31E6D55E23072560005AAD5D /* Valet in Frameworks */ = {isa = PBXBuildFile; productRef = 31E6D55D23072560005AAD5D /* Valet */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,8 +80,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3191817B22B2DDDB00BFEFBC /* Valet in Frameworks */,
 				3191817E22B2DE2F00BFEFBC /* Alamofire in Frameworks */,
+				31E6D55E23072560005AAD5D /* Valet in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,8 +214,8 @@
 			);
 			name = HazeLight;
 			packageProductDependencies = (
-				3191817A22B2DDDB00BFEFBC /* Valet */,
 				3191817D22B2DE2F00BFEFBC /* Alamofire */,
+				31E6D55D23072560005AAD5D /* Valet */,
 			);
 			productName = HazeLight;
 			productReference = 3104E59F22B2DAA3007679F7 /* HazeLight.app */;
@@ -290,8 +290,8 @@
 			);
 			mainGroup = 3104E59622B2DAA3007679F7;
 			packageReferences = (
-				3191817922B2DDDB00BFEFBC /* XCRemoteSwiftPackageReference "Valet" */,
 				3191817C22B2DE2F00BFEFBC /* XCRemoteSwiftPackageReference "Alamofire" */,
+				31E6D55C23072560005AAD5D /* XCRemoteSwiftPackageReference "Valet" */,
 			);
 			productRefGroup = 3104E5A022B2DAA3007679F7 /* Products */;
 			projectDirPath = "";
@@ -670,14 +670,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		3191817922B2DDDB00BFEFBC /* XCRemoteSwiftPackageReference "Valet" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/square/Valet.git";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
 		3191817C22B2DE2F00BFEFBC /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
@@ -686,18 +678,26 @@
 				kind = branch;
 			};
 		};
+		31E6D55C23072560005AAD5D /* XCRemoteSwiftPackageReference "Valet" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/square/Valet";
+			requirement = {
+				kind = revision;
+				revision = 0d3fb186e1b235e8c99bead4af5146afb9ca3ca1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		3191817A22B2DDDB00BFEFBC /* Valet */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 3191817922B2DDDB00BFEFBC /* XCRemoteSwiftPackageReference "Valet" */;
-			productName = Valet;
-		};
 		3191817D22B2DE2F00BFEFBC /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 3191817C22B2DE2F00BFEFBC /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		31E6D55D23072560005AAD5D /* Valet */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 31E6D55C23072560005AAD5D /* XCRemoteSwiftPackageReference "Valet" */;
+			productName = Valet;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

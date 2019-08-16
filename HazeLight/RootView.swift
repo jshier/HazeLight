@@ -7,7 +7,7 @@
 //
 
 import Alamofire
-import Valet
+//import Valet
 import SwiftUI
 
 struct RootView : View {
