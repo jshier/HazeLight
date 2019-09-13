@@ -6,17 +6,17 @@
         "repositoryURL": "https://github.com/Alamofire/Alamofire.git",
         "state": {
           "branch": "feature/initial-combine-support",
-          "revision": "94356d362d1dde8e615b2f620d8fbe4fbe652f28",
+          "revision": "43f9ebf03413baf1782d7516b4f475f98723cd02",
           "version": null
         }
       },
       {
         "package": "Valet",
-        "repositoryURL": "https://github.com/square/Valet",
+        "repositoryURL": "https://github.com/square/Valet.git",
         "state": {
           "branch": null,
-          "revision": "0d3fb186e1b235e8c99bead4af5146afb9ca3ca1",
-          "version": null
+          "revision": "0e3d9a9eb514310b1fcc93d79526278fc8b860fa",
+          "version": "3.2.6"
         }
       }
     ]

@@ -9,8 +9,14 @@
 import SwiftUI
 
 struct AccountCell : View {
+    // enum State {
+    // @EvironmentObject var networkState: NetworkState
+    // @State var state: State
     var body: some View {
         Text("Account Cell")
+        // switch state
+        // if networkState.current.isLoading { Text("Loading") } else { Text(networkState.currentUser.name) }
+        // (networkState.currentUser, networkState.userBillInfo, networkState.something)
     }
 }
 
